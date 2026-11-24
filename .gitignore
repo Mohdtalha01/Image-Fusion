@@ -1,0 +1,8 @@
+data/
+results/fused/
+*.pth
+*.pkl
+*.model*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

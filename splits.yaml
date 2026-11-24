@@ -1,0 +1,569 @@
+protocol:
+  description: Strict Zero-Tuning Protocol. Hyperparameters frozen on dev set only.
+  random_seed: 0
+  dev_set_summary:
+    msrs_train_sampled: 100
+    harvard_ct_mri_heldout: 5
+    harvard_pet_mri_heldout: 5
+    harvard_spect_mri_heldout: 5
+    lytro_heldout: 5
+    total_dev_pairs: 120
+  test_set_summary:
+    msrs_test_pairs: 361
+    roadscene_test_pairs: 221
+    tno_test_pairs: 42
+    harvard_ct_mri_test_pairs: 15
+    harvard_pet_mri_test_pairs: 15
+    harvard_spect_mri_test_pairs: 15
+    lytro_test_pairs: 15
+dev:
+  msrs:
+  - id: msrs_train_00003N
+    ir: data\raw\msrs_repo\train\ir\00003N.png
+    vi: data\raw\msrs_repo\train\vi\00003N.png
+  - id: msrs_train_00038N
+    ir: data\raw\msrs_repo\train\ir\00038N.png
+    vi: data\raw\msrs_repo\train\vi\00038N.png
+  - id: msrs_train_00048N
+    ir: data\raw\msrs_repo\train\ir\00048N.png
+    vi: data\raw\msrs_repo\train\vi\00048N.png
+  - id: msrs_train_00117D
+    ir: data\raw\msrs_repo\train\ir\00117D.png
+    vi: data\raw\msrs_repo\train\vi\00117D.png
+  - id: msrs_train_00133D
+    ir: data\raw\msrs_repo\train\ir\00133D.png
+    vi: data\raw\msrs_repo\train\vi\00133D.png
+  - id: msrs_train_00137D
+    ir: data\raw\msrs_repo\train\ir\00137D.png
+    vi: data\raw\msrs_repo\train\vi\00137D.png
+  - id: msrs_train_00206D
+    ir: data\raw\msrs_repo\train\ir\00206D.png
+    vi: data\raw\msrs_repo\train\vi\00206D.png
+  - id: msrs_train_00207D
+    ir: data\raw\msrs_repo\train\ir\00207D.png
+    vi: data\raw\msrs_repo\train\vi\00207D.png
+  - id: msrs_train_00230D
+    ir: data\raw\msrs_repo\train\ir\00230D.png
+    vi: data\raw\msrs_repo\train\vi\00230D.png
+  - id: msrs_train_00243D
+    ir: data\raw\msrs_repo\train\ir\00243D.png
+    vi: data\raw\msrs_repo\train\vi\00243D.png
+  - id: msrs_train_00269D
+    ir: data\raw\msrs_repo\train\ir\00269D.png
+    vi: data\raw\msrs_repo\train\vi\00269D.png
+  - id: msrs_train_00276D
+    ir: data\raw\msrs_repo\train\ir\00276D.png
+    vi: data\raw\msrs_repo\train\vi\00276D.png
+  - id: msrs_train_00299D
+    ir: data\raw\msrs_repo\train\ir\00299D.png
+    vi: data\raw\msrs_repo\train\vi\00299D.png
+  - id: msrs_train_00304D
+    ir: data\raw\msrs_repo\train\ir\00304D.png
+    vi: data\raw\msrs_repo\train\vi\00304D.png
+  - id: msrs_train_00305D
+    ir: data\raw\msrs_repo\train\ir\00305D.png
+    vi: data\raw\msrs_repo\train\vi\00305D.png
+  - id: msrs_train_00310D
+    ir: data\raw\msrs_repo\train\ir\00310D.png
+    vi: data\raw\msrs_repo\train\vi\00310D.png
+  - id: msrs_train_00314D
+    ir: data\raw\msrs_repo\train\ir\00314D.png
+    vi: data\raw\msrs_repo\train\vi\00314D.png
+  - id: msrs_train_00325D
+    ir: data\raw\msrs_repo\train\ir\00325D.png
+    vi: data\raw\msrs_repo\train\vi\00325D.png
+  - id: msrs_train_00330D
+    ir: data\raw\msrs_repo\train\ir\00330D.png
+    vi: data\raw\msrs_repo\train\vi\00330D.png
+  - id: msrs_train_00355D
+    ir: data\raw\msrs_repo\train\ir\00355D.png
+    vi: data\raw\msrs_repo\train\vi\00355D.png
+  - id: msrs_train_00374D
+    ir: data\raw\msrs_repo\train\ir\00374D.png
+    vi: data\raw\msrs_repo\train\vi\00374D.png
+  - id: msrs_train_00378D
+    ir: data\raw\msrs_repo\train\ir\00378D.png
+    vi: data\raw\msrs_repo\train\vi\00378D.png
+  - id: msrs_train_00401D
+    ir: data\raw\msrs_repo\train\ir\00401D.png
+    vi: data\raw\msrs_repo\train\vi\00401D.png
+  - id: msrs_train_00415D
+    ir: data\raw\msrs_repo\train\ir\00415D.png
+    vi: data\raw\msrs_repo\train\vi\00415D.png
+  - id: msrs_train_00445D
+    ir: data\raw\msrs_repo\train\ir\00445D.png
+    vi: data\raw\msrs_repo\train\vi\00445D.png
+  - id: msrs_train_00446D
+    ir: data\raw\msrs_repo\train\ir\00446D.png
+    vi: data\raw\msrs_repo\train\vi\00446D.png
+  - id: msrs_train_00454D
+    ir: data\raw\msrs_repo\train\ir\00454D.png
+    vi: data\raw\msrs_repo\train\vi\00454D.png
+  - id: msrs_train_00465D
+    ir: data\raw\msrs_repo\train\ir\00465D.png
+    vi: data\raw\msrs_repo\train\vi\00465D.png
+  - id: msrs_train_00478D
+    ir: data\raw\msrs_repo\train\ir\00478D.png
+    vi: data\raw\msrs_repo\train\vi\00478D.png
+  - id: msrs_train_00487D
+    ir: data\raw\msrs_repo\train\ir\00487D.png
+    vi: data\raw\msrs_repo\train\vi\00487D.png
+  - id: msrs_train_00557D
+    ir: data\raw\msrs_repo\train\ir\00557D.png
+    vi: data\raw\msrs_repo\train\vi\00557D.png
+  - id: msrs_train_00602D
+    ir: data\raw\msrs_repo\train\ir\00602D.png
+    vi: data\raw\msrs_repo\train\vi\00602D.png
+  - id: msrs_train_00616D
+    ir: data\raw\msrs_repo\train\ir\00616D.png
+    vi: data\raw\msrs_repo\train\vi\00616D.png
+  - id: msrs_train_00627D
+    ir: data\raw\msrs_repo\train\ir\00627D.png
+    vi: data\raw\msrs_repo\train\vi\00627D.png
+  - id: msrs_train_00629D
+    ir: data\raw\msrs_repo\train\ir\00629D.png
+    vi: data\raw\msrs_repo\train\vi\00629D.png
+  - id: msrs_train_00632D
+    ir: data\raw\msrs_repo\train\ir\00632D.png
+    vi: data\raw\msrs_repo\train\vi\00632D.png
+  - id: msrs_train_00675D
+    ir: data\raw\msrs_repo\train\ir\00675D.png
+    vi: data\raw\msrs_repo\train\vi\00675D.png
+  - id: msrs_train_00679N
+    ir: data\raw\msrs_repo\train\ir\00679N.png
+    vi: data\raw\msrs_repo\train\vi\00679N.png
+  - id: msrs_train_00713N
+    ir: data\raw\msrs_repo\train\ir\00713N.png
+    vi: data\raw\msrs_repo\train\vi\00713N.png
+  - id: msrs_train_00723N
+    ir: data\raw\msrs_repo\train\ir\00723N.png
+    vi: data\raw\msrs_repo\train\vi\00723N.png
+  - id: msrs_train_00728N
+    ir: data\raw\msrs_repo\train\ir\00728N.png
+    vi: data\raw\msrs_repo\train\vi\00728N.png
+  - id: msrs_train_00732N
+    ir: data\raw\msrs_repo\train\ir\00732N.png
+    vi: data\raw\msrs_repo\train\vi\00732N.png
+  - id: msrs_train_00769N
+    ir: data\raw\msrs_repo\train\ir\00769N.png
+    vi: data\raw\msrs_repo\train\vi\00769N.png
+  - id: msrs_train_00777N
+    ir: data\raw\msrs_repo\train\ir\00777N.png
+    vi: data\raw\msrs_repo\train\vi\00777N.png
+  - id: msrs_train_00787N
+    ir: data\raw\msrs_repo\train\ir\00787N.png
+    vi: data\raw\msrs_repo\train\vi\00787N.png
+  - id: msrs_train_00789N
+    ir: data\raw\msrs_repo\train\ir\00789N.png
+    vi: data\raw\msrs_repo\train\vi\00789N.png
+  - id: msrs_train_00792N
+    ir: data\raw\msrs_repo\train\ir\00792N.png
+    vi: data\raw\msrs_repo\train\vi\00792N.png
+  - id: msrs_train_00812N
+    ir: data\raw\msrs_repo\train\ir\00812N.png
+    vi: data\raw\msrs_repo\train\vi\00812N.png
+  - id: msrs_train_00836N
+    ir: data\raw\msrs_repo\train\ir\00836N.png
+    vi: data\raw\msrs_repo\train\vi\00836N.png
+  - id: msrs_train_00840N
+    ir: data\raw\msrs_repo\train\ir\00840N.png
+    vi: data\raw\msrs_repo\train\vi\00840N.png
+  - id: msrs_train_00841N
+    ir: data\raw\msrs_repo\train\ir\00841N.png
+    vi: data\raw\msrs_repo\train\vi\00841N.png
+  - id: msrs_train_00871N
+    ir: data\raw\msrs_repo\train\ir\00871N.png
+    vi: data\raw\msrs_repo\train\vi\00871N.png
+  - id: msrs_train_00881N
+    ir: data\raw\msrs_repo\train\ir\00881N.png
+    vi: data\raw\msrs_repo\train\vi\00881N.png
+  - id: msrs_train_00883N
+    ir: data\raw\msrs_repo\train\ir\00883N.png
+    vi: data\raw\msrs_repo\train\vi\00883N.png
+  - id: msrs_train_00900N
+    ir: data\raw\msrs_repo\train\ir\00900N.png
+    vi: data\raw\msrs_repo\train\vi\00900N.png
+  - id: msrs_train_00916N
+    ir: data\raw\msrs_repo\train\ir\00916N.png
+    vi: data\raw\msrs_repo\train\vi\00916N.png
+  - id: msrs_train_00923N
+    ir: data\raw\msrs_repo\train\ir\00923N.png
+    vi: data\raw\msrs_repo\train\vi\00923N.png
+  - id: msrs_train_00925N
+    ir: data\raw\msrs_repo\train\ir\00925N.png
+    vi: data\raw\msrs_repo\train\vi\00925N.png
+  - id: msrs_train_00954N
+    ir: data\raw\msrs_repo\train\ir\00954N.png
+    vi: data\raw\msrs_repo\train\vi\00954N.png
+  - id: msrs_train_00960N
+    ir: data\raw\msrs_repo\train\ir\00960N.png
+    vi: data\raw\msrs_repo\train\vi\00960N.png
+  - id: msrs_train_00979N
+    ir: data\raw\msrs_repo\train\ir\00979N.png
+    vi: data\raw\msrs_repo\train\vi\00979N.png
+  - id: msrs_train_00995N
+    ir: data\raw\msrs_repo\train\ir\00995N.png
+    vi: data\raw\msrs_repo\train\vi\00995N.png
+  - id: msrs_train_00998N
+    ir: data\raw\msrs_repo\train\ir\00998N.png
+    vi: data\raw\msrs_repo\train\vi\00998N.png
+  - id: msrs_train_01006N
+    ir: data\raw\msrs_repo\train\ir\01006N.png
+    vi: data\raw\msrs_repo\train\vi\01006N.png
+  - id: msrs_train_01018N
+    ir: data\raw\msrs_repo\train\ir\01018N.png
+    vi: data\raw\msrs_repo\train\vi\01018N.png
+  - id: msrs_train_01021N
+    ir: data\raw\msrs_repo\train\ir\01021N.png
+    vi: data\raw\msrs_repo\train\vi\01021N.png
+  - id: msrs_train_01035N
+    ir: data\raw\msrs_repo\train\ir\01035N.png
+    vi: data\raw\msrs_repo\train\vi\01035N.png
+  - id: msrs_train_01042N
+    ir: data\raw\msrs_repo\train\ir\01042N.png
+    vi: data\raw\msrs_repo\train\vi\01042N.png
+  - id: msrs_train_01043N
+    ir: data\raw\msrs_repo\train\ir\01043N.png
+    vi: data\raw\msrs_repo\train\vi\01043N.png
+  - id: msrs_train_01048N
+    ir: data\raw\msrs_repo\train\ir\01048N.png
+    vi: data\raw\msrs_repo\train\vi\01048N.png
+  - id: msrs_train_01100N
+    ir: data\raw\msrs_repo\train\ir\01100N.png
+    vi: data\raw\msrs_repo\train\vi\01100N.png
+  - id: msrs_train_01109N
+    ir: data\raw\msrs_repo\train\ir\01109N.png
+    vi: data\raw\msrs_repo\train\vi\01109N.png
+  - id: msrs_train_01112N
+    ir: data\raw\msrs_repo\train\ir\01112N.png
+    vi: data\raw\msrs_repo\train\vi\01112N.png
+  - id: msrs_train_01151N
+    ir: data\raw\msrs_repo\train\ir\01151N.png
+    vi: data\raw\msrs_repo\train\vi\01151N.png
+  - id: msrs_train_01189N
+    ir: data\raw\msrs_repo\train\ir\01189N.png
+    vi: data\raw\msrs_repo\train\vi\01189N.png
+  - id: msrs_train_01207N
+    ir: data\raw\msrs_repo\train\ir\01207N.png
+    vi: data\raw\msrs_repo\train\vi\01207N.png
+  - id: msrs_train_01227N
+    ir: data\raw\msrs_repo\train\ir\01227N.png
+    vi: data\raw\msrs_repo\train\vi\01227N.png
+  - id: msrs_train_01244N
+    ir: data\raw\msrs_repo\train\ir\01244N.png
+    vi: data\raw\msrs_repo\train\vi\01244N.png
+  - id: msrs_train_01283N
+    ir: data\raw\msrs_repo\train\ir\01283N.png
+    vi: data\raw\msrs_repo\train\vi\01283N.png
+  - id: msrs_train_01287N
+    ir: data\raw\msrs_repo\train\ir\01287N.png
+    vi: data\raw\msrs_repo\train\vi\01287N.png
+  - id: msrs_train_01301N
+    ir: data\raw\msrs_repo\train\ir\01301N.png
+    vi: data\raw\msrs_repo\train\vi\01301N.png
+  - id: msrs_train_01325N
+    ir: data\raw\msrs_repo\train\ir\01325N.png
+    vi: data\raw\msrs_repo\train\vi\01325N.png
+  - id: msrs_train_01349N
+    ir: data\raw\msrs_repo\train\ir\01349N.png
+    vi: data\raw\msrs_repo\train\vi\01349N.png
+  - id: msrs_train_01355N
+    ir: data\raw\msrs_repo\train\ir\01355N.png
+    vi: data\raw\msrs_repo\train\vi\01355N.png
+  - id: msrs_train_01363N
+    ir: data\raw\msrs_repo\train\ir\01363N.png
+    vi: data\raw\msrs_repo\train\vi\01363N.png
+  - id: msrs_train_01370N
+    ir: data\raw\msrs_repo\train\ir\01370N.png
+    vi: data\raw\msrs_repo\train\vi\01370N.png
+  - id: msrs_train_01432D
+    ir: data\raw\msrs_repo\train\ir\01432D.png
+    vi: data\raw\msrs_repo\train\vi\01432D.png
+  - id: msrs_train_01446D
+    ir: data\raw\msrs_repo\train\ir\01446D.png
+    vi: data\raw\msrs_repo\train\vi\01446D.png
+  - id: msrs_train_01447D
+    ir: data\raw\msrs_repo\train\ir\01447D.png
+    vi: data\raw\msrs_repo\train\vi\01447D.png
+  - id: msrs_train_01473D
+    ir: data\raw\msrs_repo\train\ir\01473D.png
+    vi: data\raw\msrs_repo\train\vi\01473D.png
+  - id: msrs_train_01475D
+    ir: data\raw\msrs_repo\train\ir\01475D.png
+    vi: data\raw\msrs_repo\train\vi\01475D.png
+  - id: msrs_train_01483D
+    ir: data\raw\msrs_repo\train\ir\01483D.png
+    vi: data\raw\msrs_repo\train\vi\01483D.png
+  - id: msrs_train_01494D
+    ir: data\raw\msrs_repo\train\ir\01494D.png
+    vi: data\raw\msrs_repo\train\vi\01494D.png
+  - id: msrs_train_01497D
+    ir: data\raw\msrs_repo\train\ir\01497D.png
+    vi: data\raw\msrs_repo\train\vi\01497D.png
+  - id: msrs_train_01533D
+    ir: data\raw\msrs_repo\train\ir\01533D.png
+    vi: data\raw\msrs_repo\train\vi\01533D.png
+  - id: msrs_train_01542D
+    ir: data\raw\msrs_repo\train\ir\01542D.png
+    vi: data\raw\msrs_repo\train\vi\01542D.png
+  - id: msrs_train_01552D
+    ir: data\raw\msrs_repo\train\ir\01552D.png
+    vi: data\raw\msrs_repo\train\vi\01552D.png
+  - id: msrs_train_01582D
+    ir: data\raw\msrs_repo\train\ir\01582D.png
+    vi: data\raw\msrs_repo\train\vi\01582D.png
+  - id: msrs_train_01584D
+    ir: data\raw\msrs_repo\train\ir\01584D.png
+    vi: data\raw\msrs_repo\train\vi\01584D.png
+  - id: msrs_train_01592D
+    ir: data\raw\msrs_repo\train\ir\01592D.png
+    vi: data\raw\msrs_repo\train\vi\01592D.png
+  harvard_ct_mri:
+  - id: CT-MRI_16003
+    src1: data\raw\harvard\CT-MRI\CT\16003.png
+    src2: data\raw\harvard\CT-MRI\MRI\16003.png
+  - id: CT-MRI_16004
+    src1: data\raw\harvard\CT-MRI\CT\16004.png
+    src2: data\raw\harvard\CT-MRI\MRI\16004.png
+  - id: CT-MRI_16005
+    src1: data\raw\harvard\CT-MRI\CT\16005.png
+    src2: data\raw\harvard\CT-MRI\MRI\16005.png
+  - id: CT-MRI_16006
+    src1: data\raw\harvard\CT-MRI\CT\16006.png
+    src2: data\raw\harvard\CT-MRI\MRI\16006.png
+  - id: CT-MRI_16007
+    src1: data\raw\harvard\CT-MRI\CT\16007.png
+    src2: data\raw\harvard\CT-MRI\MRI\16007.png
+  harvard_pet_mri:
+  - id: PET-MRI_25015
+    src1: data\raw\harvard\PET-MRI\PET\25015.png
+    src2: data\raw\harvard\PET-MRI\MRI\25015.png
+  - id: PET-MRI_25016
+    src1: data\raw\harvard\PET-MRI\PET\25016.png
+    src2: data\raw\harvard\PET-MRI\MRI\25016.png
+  - id: PET-MRI_25017
+    src1: data\raw\harvard\PET-MRI\PET\25017.png
+    src2: data\raw\harvard\PET-MRI\MRI\25017.png
+  - id: PET-MRI_25018
+    src1: data\raw\harvard\PET-MRI\PET\25018.png
+    src2: data\raw\harvard\PET-MRI\MRI\25018.png
+  - id: PET-MRI_25019
+    src1: data\raw\harvard\PET-MRI\PET\25019.png
+    src2: data\raw\harvard\PET-MRI\MRI\25019.png
+  harvard_spect_mri:
+  - id: SPECT-MRI_10007
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10007.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10007.png
+  - id: SPECT-MRI_10008
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10008.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10008.png
+  - id: SPECT-MRI_10009
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10009.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10009.png
+  - id: SPECT-MRI_10010
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10010.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10010.png
+  - id: SPECT-MRI_10011
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10011.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10011.png
+  lytro:
+  - id: lytro_01
+    src1: data\raw\lytro\lytro_01_A.jpg
+    src2: data\raw\lytro\lytro_01_B.jpg
+  - id: lytro_02
+    src1: data\raw\lytro\lytro_02_A.jpg
+    src2: data\raw\lytro\lytro_02_B.jpg
+  - id: lytro_03
+    src1: data\raw\lytro\lytro_03_A.jpg
+    src2: data\raw\lytro\lytro_03_B.jpg
+  - id: lytro_04
+    src1: data\raw\lytro\lytro_04_A.jpg
+    src2: data\raw\lytro\lytro_04_B.jpg
+  - id: lytro_05
+    src1: data\raw\lytro\lytro_05_A.jpg
+    src2: data\raw\lytro\lytro_05_B.jpg
+test:
+  harvard_ct_mri:
+  - id: CT-MRI_16008
+    src1: data\raw\harvard\CT-MRI\CT\16008.png
+    src2: data\raw\harvard\CT-MRI\MRI\16008.png
+  - id: CT-MRI_16009
+    src1: data\raw\harvard\CT-MRI\CT\16009.png
+    src2: data\raw\harvard\CT-MRI\MRI\16009.png
+  - id: CT-MRI_16010
+    src1: data\raw\harvard\CT-MRI\CT\16010.png
+    src2: data\raw\harvard\CT-MRI\MRI\16010.png
+  - id: CT-MRI_16011
+    src1: data\raw\harvard\CT-MRI\CT\16011.png
+    src2: data\raw\harvard\CT-MRI\MRI\16011.png
+  - id: CT-MRI_16012
+    src1: data\raw\harvard\CT-MRI\CT\16012.png
+    src2: data\raw\harvard\CT-MRI\MRI\16012.png
+  - id: CT-MRI_16013
+    src1: data\raw\harvard\CT-MRI\CT\16013.png
+    src2: data\raw\harvard\CT-MRI\MRI\16013.png
+  - id: CT-MRI_16014
+    src1: data\raw\harvard\CT-MRI\CT\16014.png
+    src2: data\raw\harvard\CT-MRI\MRI\16014.png
+  - id: CT-MRI_16015
+    src1: data\raw\harvard\CT-MRI\CT\16015.png
+    src2: data\raw\harvard\CT-MRI\MRI\16015.png
+  - id: CT-MRI_16016
+    src1: data\raw\harvard\CT-MRI\CT\16016.png
+    src2: data\raw\harvard\CT-MRI\MRI\16016.png
+  - id: CT-MRI_16017
+    src1: data\raw\harvard\CT-MRI\CT\16017.png
+    src2: data\raw\harvard\CT-MRI\MRI\16017.png
+  - id: CT-MRI_16018
+    src1: data\raw\harvard\CT-MRI\CT\16018.png
+    src2: data\raw\harvard\CT-MRI\MRI\16018.png
+  - id: CT-MRI_16019
+    src1: data\raw\harvard\CT-MRI\CT\16019.png
+    src2: data\raw\harvard\CT-MRI\MRI\16019.png
+  - id: CT-MRI_16020
+    src1: data\raw\harvard\CT-MRI\CT\16020.png
+    src2: data\raw\harvard\CT-MRI\MRI\16020.png
+  - id: CT-MRI_20005
+    src1: data\raw\harvard\CT-MRI\CT\20005.png
+    src2: data\raw\harvard\CT-MRI\MRI\20005.png
+  - id: CT-MRI_20006
+    src1: data\raw\harvard\CT-MRI\CT\20006.png
+    src2: data\raw\harvard\CT-MRI\MRI\20006.png
+  harvard_pet_mri:
+  - id: PET-MRI_25020
+    src1: data\raw\harvard\PET-MRI\PET\25020.png
+    src2: data\raw\harvard\PET-MRI\MRI\25020.png
+  - id: PET-MRI_25021
+    src1: data\raw\harvard\PET-MRI\PET\25021.png
+    src2: data\raw\harvard\PET-MRI\MRI\25021.png
+  - id: PET-MRI_25022
+    src1: data\raw\harvard\PET-MRI\PET\25022.png
+    src2: data\raw\harvard\PET-MRI\MRI\25022.png
+  - id: PET-MRI_25023
+    src1: data\raw\harvard\PET-MRI\PET\25023.png
+    src2: data\raw\harvard\PET-MRI\MRI\25023.png
+  - id: PET-MRI_25024
+    src1: data\raw\harvard\PET-MRI\PET\25024.png
+    src2: data\raw\harvard\PET-MRI\MRI\25024.png
+  - id: PET-MRI_25025
+    src1: data\raw\harvard\PET-MRI\PET\25025.png
+    src2: data\raw\harvard\PET-MRI\MRI\25025.png
+  - id: PET-MRI_25026
+    src1: data\raw\harvard\PET-MRI\PET\25026.png
+    src2: data\raw\harvard\PET-MRI\MRI\25026.png
+  - id: PET-MRI_25027
+    src1: data\raw\harvard\PET-MRI\PET\25027.png
+    src2: data\raw\harvard\PET-MRI\MRI\25027.png
+  - id: PET-MRI_25028
+    src1: data\raw\harvard\PET-MRI\PET\25028.png
+    src2: data\raw\harvard\PET-MRI\MRI\25028.png
+  - id: PET-MRI_25029
+    src1: data\raw\harvard\PET-MRI\PET\25029.png
+    src2: data\raw\harvard\PET-MRI\MRI\25029.png
+  - id: PET-MRI_25030
+    src1: data\raw\harvard\PET-MRI\PET\25030.png
+    src2: data\raw\harvard\PET-MRI\MRI\25030.png
+  - id: PET-MRI_25031
+    src1: data\raw\harvard\PET-MRI\PET\25031.png
+    src2: data\raw\harvard\PET-MRI\MRI\25031.png
+  - id: PET-MRI_25032
+    src1: data\raw\harvard\PET-MRI\PET\25032.png
+    src2: data\raw\harvard\PET-MRI\MRI\25032.png
+  - id: PET-MRI_25033
+    src1: data\raw\harvard\PET-MRI\PET\25033.png
+    src2: data\raw\harvard\PET-MRI\MRI\25033.png
+  - id: PET-MRI_25034
+    src1: data\raw\harvard\PET-MRI\PET\25034.png
+    src2: data\raw\harvard\PET-MRI\MRI\25034.png
+  harvard_spect_mri:
+  - id: SPECT-MRI_10012
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10012.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10012.png
+  - id: SPECT-MRI_10013
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10013.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10013.png
+  - id: SPECT-MRI_10014
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10014.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10014.png
+  - id: SPECT-MRI_10015
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10015.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10015.png
+  - id: SPECT-MRI_10016
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10016.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10016.png
+  - id: SPECT-MRI_10017
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10017.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10017.png
+  - id: SPECT-MRI_10018
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10018.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10018.png
+  - id: SPECT-MRI_10019
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10019.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10019.png
+  - id: SPECT-MRI_10020
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10020.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10020.png
+  - id: SPECT-MRI_10021
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10021.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10021.png
+  - id: SPECT-MRI_10022
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10022.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10022.png
+  - id: SPECT-MRI_10023
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10023.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10023.png
+  - id: SPECT-MRI_10024
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10024.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10024.png
+  - id: SPECT-MRI_10025
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10025.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10025.png
+  - id: SPECT-MRI_10026
+    src1: data\raw\harvard\SPECT-MRI\SPECT\10026.png
+    src2: data\raw\harvard\SPECT-MRI\MRI\10026.png
+  lytro:
+  - id: lytro_06
+    src1: data\raw\lytro\lytro_06_A.jpg
+    src2: data\raw\lytro\lytro_06_B.jpg
+  - id: lytro_07
+    src1: data\raw\lytro\lytro_07_A.jpg
+    src2: data\raw\lytro\lytro_07_B.jpg
+  - id: lytro_08
+    src1: data\raw\lytro\lytro_08_A.jpg
+    src2: data\raw\lytro\lytro_08_B.jpg
+  - id: lytro_09
+    src1: data\raw\lytro\lytro_09_A.jpg
+    src2: data\raw\lytro\lytro_09_B.jpg
+  - id: lytro_10
+    src1: data\raw\lytro\lytro_10_A.jpg
+    src2: data\raw\lytro\lytro_10_B.jpg
+  - id: lytro_11
+    src1: data\raw\lytro\lytro_11_A.jpg
+    src2: data\raw\lytro\lytro_11_B.jpg
+  - id: lytro_12
+    src1: data\raw\lytro\lytro_12_A.jpg
+    src2: data\raw\lytro\lytro_12_B.jpg
+  - id: lytro_13
+    src1: data\raw\lytro\lytro_13_A.jpg
+    src2: data\raw\lytro\lytro_13_B.jpg
+  - id: lytro_14
+    src1: data\raw\lytro\lytro_14_A.jpg
+    src2: data\raw\lytro\lytro_14_B.jpg
+  - id: lytro_15
+    src1: data\raw\lytro\lytro_15_A.jpg
+    src2: data\raw\lytro\lytro_15_B.jpg
+  - id: lytro_16
+    src1: data\raw\lytro\lytro_16_A.jpg
+    src2: data\raw\lytro\lytro_16_B.jpg
+  - id: lytro_17
+    src1: data\raw\lytro\lytro_17_A.jpg
+    src2: data\raw\lytro\lytro_17_B.jpg
+  - id: lytro_18
+    src1: data\raw\lytro\lytro_18_A.jpg
+    src2: data\raw\lytro\lytro_18_B.jpg
+  - id: lytro_19
+    src1: data\raw\lytro\lytro_19_A.jpg
+    src2: data\raw\lytro\lytro_19_B.jpg
+  - id: lytro_20
+    src1: data\raw\lytro\lytro_20_A.jpg
+    src2: data\raw\lytro\lytro_20_B.jpg

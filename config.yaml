@@ -1,0 +1,73 @@
+# Master Configuration for Clustered Anisotropic Diffusion Model and
+# Multi-structured Weighted Networks for Multimodal Image Fusion (CADM-MSWN)
+#
+# PROTOCOL NOTE & CALIBRATION CORRECTION:
+# The preliminary claim that 'zero test images were used for calibration' was inaccurate.
+# Prototype tuning specifically inspected pair1_mri_ct and pair4_multifocus (which belong
+# to the test distributions). Therefore, all 5 sanity pairs (pair1-pair5) are strictly
+# designated as development/sanity pairs and are EXCLUDED from final benchmark test statistics.
+#
+# Hyperparameter Provenance & Selection Documentation:
+# - T = 20: Diffusion iterations. Chosen to achieve scale separation between gross and fine texture.
+#           Preliminary prototype checks on pair1_mri_ct indicated T < 10 under-diffused gross structures,
+#           while T > 30 began eroding thin bone boundaries.
+# - kappa = 0.1176 (30/255): Conduction threshold on [0, 1] normalized gradients. Set at the inflection
+#           point between intra-region texture gradients (< 0.08) and prominent object edges (> 0.12).
+# - lambda = 0.20: Time step size. Derived purely from von Neumann / CFL numerical stability analysis:
+#           explicit 2D discretization requires lambda <= 0.25; 0.20 provides a 20% stability safety margin.
+# - K = 3: Cluster count. Pre-registered to partition images into 3 canonical physical regimes:
+#          background/noise, ambient context/parenchyma, and high-contrast salient boundaries.
+# - w = 7: Local statistics window (7x7 = 49 pixels). Provides adequate sample count for non-degenerate
+#          local variance and spatial frequency estimation without crossing object boundaries.
+# - guided_filter.radius (r = 5): Spatial radius (11x11 window) matching local feature scale.
+# - guided_filter.eps (eps_g = 1e-4): Regularizer preventing division-by-zero in flat background areas.
+# - alpha = 1.0: Gross texture fusion coefficient (balanced unity reconstruction).
+# - beta = 1.0: Fine texture fusion coefficient (balanced detail preservation).
+# - gamma = 0.5: Edge compensation coefficient. Inspected on pair1_mri_ct and pair4_multifocus.
+#           NOTE: Dev-set diagnosis in Directive 5 shows gamma > 0 injects severe gradient overshoot,
+#           penalizing Q^AB/F, N^AB/F, MI, SSIM, and VIFP.
+
+project:
+  name: "CADM-MSWN"
+  version: "1.0.0"
+  random_seed: 42
+
+color:
+  color_space: "YCbCr"  # Options: "YCbCr", "HSV"
+
+clustering:
+  method: "kmeans"      # Options: "kmeans", "fcm"
+  mode: "per_source"    # Options: "per_source", "joint"
+  n_clusters: 3         # Default K=3 (ablation tests K=1..6)
+  window_size: 7        # Local feature window (w x w)
+  random_state: 42
+
+diffusion:
+  iterations: 20        # T iterations
+  kappa: 0.1176         # Conduction threshold (30/255)
+  step_size: 0.20       # Integration step lambda (<= 0.25 for stability)
+  conduction: "exponential"  # Options: "exponential" (g1), "rational" (g2)
+
+weighting:
+  window_size: 7        # Local statistics window (w x w)
+  normalization: "linear"  # Options: "linear", "softmax"
+  temperature: 0.1      # Softmax temperature if normalization == "softmax"
+  guided_filter:
+    enabled: true
+    radius: 5
+    eps: 0.0001
+  reconstruction:
+    alpha: 1.0          # Gross texture coefficient
+    beta: 1.0           # Fine texture coefficient
+    gamma: 0.5          # Edge compensation coefficient
+    signed_fine_edge: false  # Whether FE retains signed values or is clipped at 0
+    adaptive_coefficients: false  # Cluster-statistics dependent coefficients
+
+paths:
+  data_dir: "data"
+  raw_data_dir: "data/raw"
+  sample_pairs_dir: "data/sample_pairs"
+  results_dir: "results"
+  fused_dir: "results/fused"
+  figures_dir: "results/figures"
+  paper_tables_dir: "paper/tables"
