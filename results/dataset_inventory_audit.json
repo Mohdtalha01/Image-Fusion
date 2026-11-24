@@ -1,0 +1,214 @@
+{
+  "lytro": {
+    "count": 20,
+    "pairs": [
+      {
+        "pair_id": "lytro_01",
+        "source1": "data\\raw\\lytro\\lytro_01_A.jpg",
+        "source2": "data\\raw\\lytro\\lytro_01_B.jpg",
+        "source1_sha256": "e2a1acece08828c5a50c96b396af2c20e354ae19b0ce7caac187d6d5ffc77018",
+        "source2_sha256": "311d21d4a857b50813ccf86fee2bb08bcb72cb3710c8120967ff21d2932292e6"
+      },
+      {
+        "pair_id": "lytro_02",
+        "source1": "data\\raw\\lytro\\lytro_02_A.jpg",
+        "source2": "data\\raw\\lytro\\lytro_02_B.jpg",
+        "source1_sha256": "babca8a6eb4a8f374160c43a734a2552ab1754aeb71a442e40d6c5fde7f85910",
+        "source2_sha256": "588251b87680579491e7c7c56182bc55e373eefea3b4ed1d05cda0fb423a7308"
+      },
+      {
+        "pair_id": "lytro_03",
+        "source1": "data\\raw\\lytro\\lytro_03_A.jpg",
+        "source2": "data\\raw\\lytro\\lytro_03_B.jpg",
+        "source1_sha256": "0220d2c5b55267dda03840321d3693da8f4e22a772d7dffc7a5fecc5b76b61bc",
+        "source2_sha256": "dab6aeb745b397ba59a3fcd653839823b68ca33245e66ed6deb7bfdd44d99a68"
+      }
+    ]
+  },
+  "harvard_ct_mri": {
+    "count": 20,
+    "pairs": [
+      {
+        "pair_id": "CT-MRI_16003",
+        "source1": "data\\raw\\harvard\\CT-MRI\\CT\\16003.png",
+        "source2": "data\\raw\\harvard\\CT-MRI\\MRI\\16003.png",
+        "source1_sha256": "5dab3b79b9b36b5e8161205c2e5933170c78dc2f26f469e019ac40e7bdd3f184",
+        "source2_sha256": "954a4fd34df5dc71a35d8ef20c5d7d2babc23ee687ed61d552b6a2ce7ca4d0f9"
+      },
+      {
+        "pair_id": "CT-MRI_16004",
+        "source1": "data\\raw\\harvard\\CT-MRI\\CT\\16004.png",
+        "source2": "data\\raw\\harvard\\CT-MRI\\MRI\\16004.png",
+        "source1_sha256": "d038ff86e467e458724f5b374c4e5e16d480f00ee1935afe7737fd57b1342f9d",
+        "source2_sha256": "c6e09a48aae3ae50ea8c956fcafc2b3bd1caf9dd875b4bffec2cce337befc8d7"
+      },
+      {
+        "pair_id": "CT-MRI_16005",
+        "source1": "data\\raw\\harvard\\CT-MRI\\CT\\16005.png",
+        "source2": "data\\raw\\harvard\\CT-MRI\\MRI\\16005.png",
+        "source1_sha256": "7cc767a6d512ca88b456982cb2316d33548572e2c177595d047399735c148acf",
+        "source2_sha256": "3d6dead602bdf5b3e64e71d5e55e648689f2d5dc2f7bd6e1514b37c333caa8bb"
+      }
+    ]
+  },
+  "harvard_pet_mri": {
+    "count": 20,
+    "pairs": [
+      {
+        "pair_id": "PET-MRI_25015",
+        "source1": "data\\raw\\harvard\\PET-MRI\\PET\\25015.png",
+        "source2": "data\\raw\\harvard\\PET-MRI\\MRI\\25015.png",
+        "source1_sha256": "46a7c612e41291b0863e0935c378c56515f7fb4d7e92964d520919f7e9729653",
+        "source2_sha256": "8f4bb5c1b949bc61eb69b08f67dde908f08699e7b9dc9dd78a7b13f57e5a31cd"
+      },
+      {
+        "pair_id": "PET-MRI_25016",
+        "source1": "data\\raw\\harvard\\PET-MRI\\PET\\25016.png",
+        "source2": "data\\raw\\harvard\\PET-MRI\\MRI\\25016.png",
+        "source1_sha256": "5adafa3a051abcabbf239d7e534d2e243094a060687c22ba3b03f9e910bb18ee",
+        "source2_sha256": "66cd360e44b70edba2e9f04653bda16aba8a266daaa6b4eb1b3789a4a58fd6ce"
+      },
+      {
+        "pair_id": "PET-MRI_25017",
+        "source1": "data\\raw\\harvard\\PET-MRI\\PET\\25017.png",
+        "source2": "data\\raw\\harvard\\PET-MRI\\MRI\\25017.png",
+        "source1_sha256": "4ba1de22dfb06a11f08b493b445819d8fca7f7da17c1ff11fe7bd51978526c66",
+        "source2_sha256": "714ccd3850f7d5b28d91c97372264d2bfb04dafa243fe9895ed11835500b874c"
+      }
+    ]
+  },
+  "harvard_spect_mri": {
+    "count": 20,
+    "pairs": [
+      {
+        "pair_id": "SPECT-MRI_10007",
+        "source1": "data\\raw\\harvard\\SPECT-MRI\\SPECT\\10007.png",
+        "source2": "data\\raw\\harvard\\SPECT-MRI\\MRI\\10007.png",
+        "source1_sha256": "ddd7c59b0aa8d6ec2f5891b54a440929555cf0e729f395200ee9084b9bfd9736",
+        "source2_sha256": "1ac74e347ffd9d71ae766eddc19d7b3929c0ac1b71568083ffdf721af5c588bb"
+      },
+      {
+        "pair_id": "SPECT-MRI_10008",
+        "source1": "data\\raw\\harvard\\SPECT-MRI\\SPECT\\10008.png",
+        "source2": "data\\raw\\harvard\\SPECT-MRI\\MRI\\10008.png",
+        "source1_sha256": "e7fae17c84c8c0a0e52d6c583a538b951acfbc01834b0ddd40142bc5cbaf77da",
+        "source2_sha256": "f7df816ab358e49487f1467c1ae0d779f9237104bcde4c10a3ff97e4ce7a57fa"
+      },
+      {
+        "pair_id": "SPECT-MRI_10009",
+        "source1": "data\\raw\\harvard\\SPECT-MRI\\SPECT\\10009.png",
+        "source2": "data\\raw\\harvard\\SPECT-MRI\\MRI\\10009.png",
+        "source1_sha256": "146d958e0c1f83f75b694e5594ff792767c531267478ac9435dd82836955e365",
+        "source2_sha256": "e9325d8b337dec2d7fbea800d005b1c13f3a1be18e6c114cc522d6c242edc276"
+      }
+    ]
+  },
+  "roadscene": {
+    "count": 221,
+    "pairs": [
+      {
+        "pair_id": "roadscene_FLIR_00006",
+        "source1": "data\\raw\\roadscene\\infrared\\FLIR_00006.jpg",
+        "source2": "data\\raw\\roadscene\\visible\\FLIR_00006.jpg",
+        "source1_sha256": "c197a119efb05eafdf617cafe0ed3441dce8b29c488346fd221edf1969055618",
+        "source2_sha256": "21e0854743626beac8cf7c8ad54f2918191fce1b90a395e74e7d89be50cd475d"
+      },
+      {
+        "pair_id": "roadscene_FLIR_00018",
+        "source1": "data\\raw\\roadscene\\infrared\\FLIR_00018.jpg",
+        "source2": "data\\raw\\roadscene\\visible\\FLIR_00018.jpg",
+        "source1_sha256": "58667363566e2f97cca47c17bfe805a876508312e2589895c24b7741eaeda2ee",
+        "source2_sha256": "ae1a8c926d0fa3adc44592c8bca70c32ddf2b7f5f09a6d40bdf262f0cdfce895"
+      },
+      {
+        "pair_id": "roadscene_FLIR_00060",
+        "source1": "data\\raw\\roadscene\\infrared\\FLIR_00060.jpg",
+        "source2": "data\\raw\\roadscene\\visible\\FLIR_00060.jpg",
+        "source1_sha256": "6a3bd39009d739c1ccbd6218864bb0f7bed4ee87bdc621a7ea86df525310284d",
+        "source2_sha256": "1563889d3598895dbe6cc05b81dad55387b3461ecdc1c4da48d909e5d3c0339d"
+      }
+    ]
+  },
+  "tno": {
+    "count": 42,
+    "pairs": [
+      {
+        "pair_id": "tno_athena_2_men_in_front_of_house",
+        "source1": "data\\raw\\tno\\athena_2_men_in_front_of_house\\ir.bmp",
+        "source2": "data\\raw\\tno\\athena_2_men_in_front_of_house\\vis.bmp",
+        "source1_sha256": "d0afebd61208256f98ffbd755d3a56b31d9a41dc2565c60dd724773753098c68",
+        "source2_sha256": "0eaf2baebbcc1b2f1de3014e9e825661e462075e20bc57732f5ddb9c3f64beb8"
+      },
+      {
+        "pair_id": "tno_athena_airplane_in_trees",
+        "source1": "data\\raw\\tno\\athena_airplane_in_trees\\ir.bmp",
+        "source2": "data\\raw\\tno\\athena_airplane_in_trees\\vis.bmp",
+        "source1_sha256": "1e79820cc251a679f4aca31cd02d13e95032e57a88e7d841dca3b30b4263e0c9",
+        "source2_sha256": "2615e7756729853be480e8d96e17521e4f670b531fe77f13d28ede3239470898"
+      },
+      {
+        "pair_id": "tno_athena_APC_4",
+        "source1": "data\\raw\\tno\\athena_APC_4\\ir.bmp",
+        "source2": "data\\raw\\tno\\athena_APC_4\\vis.bmp",
+        "source1_sha256": "4139ae974fd4fd3603db27ea8a671c70b2ac5b6f4b6c978e1318da826645ae3d",
+        "source2_sha256": "6db0e684fad146c16cf17c5e53056f4b4a0abed778780c24891896782d090535"
+      },
+      {
+        "pair_id": "tno_athena_bunker",
+        "source1": "data\\raw\\tno\\athena_bunker\\ir.bmp",
+        "source2": "data\\raw\\tno\\athena_bunker\\vis.bmp",
+        "source1_sha256": "8dd29c47b4bc2db0fb05c61162861950eaea6e95d5f01a0efa098f3ce2c502be",
+        "source2_sha256": "2c7d73aac9d6382ffc92f06c5e3344a1f673b0d03d6cf1b38e33bfb64e336402"
+      },
+      {
+        "pair_id": "tno_athena_heather",
+        "source1": "data\\raw\\tno\\athena_heather\\ir.bmp",
+        "source2": "data\\raw\\tno\\athena_heather\\vis.bmp",
+        "source1_sha256": "3b43d12d1f2861cc3e55746e29feacdb04f1b5a6a4384e2b7eb038897771cf42",
+        "source2_sha256": "41d8645640c6c1fc32bb92562c628075ef8cf33cbc7cddb605a9f30b555c417f"
+      }
+    ]
+  },
+  "msrs": {
+    "count": 361,
+    "pairs": [
+      {
+        "pair_id": "msrs_test_00004N",
+        "source1": "data\\raw\\msrs\\test\\ir\\00004N.png",
+        "source2": "data\\raw\\msrs\\test\\vi\\00004N.png",
+        "source1_sha256": "3fd52464e22ea4603499a6f180dec541c05f307429bf6ed49e08924de0e6e92f",
+        "source2_sha256": "9bc9a99133615116486af34fc3f6f1eebea1019da652e04ed2f4c8863412ccb7"
+      },
+      {
+        "pair_id": "msrs_test_00008N",
+        "source1": "data\\raw\\msrs\\test\\ir\\00008N.png",
+        "source2": "data\\raw\\msrs\\test\\vi\\00008N.png",
+        "source1_sha256": "bd515087705a8eb27a43d379cb937495faa68741336bdb79e5ae74f1c57c4d9f",
+        "source2_sha256": "5cafc1840aded6cf506356bc5def4b21d0480b04c160f1e4285193cefba4e551"
+      },
+      {
+        "pair_id": "msrs_test_00012N",
+        "source1": "data\\raw\\msrs\\test\\ir\\00012N.png",
+        "source2": "data\\raw\\msrs\\test\\vi\\00012N.png",
+        "source1_sha256": "b75147ddedc97ba67458dccc957f9d95c2029d7c3dc6016e1c5eb0bb125dc9b9",
+        "source2_sha256": "255346180b20323bbdb5b10252ddc9d3c4e6a85eb0d85fcf4ebff6fe731cf812"
+      },
+      {
+        "pair_id": "msrs_test_00016N",
+        "source1": "data\\raw\\msrs\\test\\ir\\00016N.png",
+        "source2": "data\\raw\\msrs\\test\\vi\\00016N.png",
+        "source1_sha256": "ce5999aa3795f05e11d3fa1cfcbeb5d7877dab028ca080b85c94d052f5a7920e",
+        "source2_sha256": "b55965e5bc43a699d64d16c6711a32a91ff8e6a0505ae11938bc1c6613d54ab0"
+      },
+      {
+        "pair_id": "msrs_test_00020N",
+        "source1": "data\\raw\\msrs\\test\\ir\\00020N.png",
+        "source2": "data\\raw\\msrs\\test\\vi\\00020N.png",
+        "source1_sha256": "5cca81249f15e895f288eb2e9075eb01f37d2b9df3fd866029b6016b9326f97b",
+        "source2_sha256": "c94973e3a16622103600caaa28516110efbe8a57d454a6c1d2fba53abe03f693"
+      }
+    ]
+  },
+  "tno_full_count": 42,
+  "msrs_full_count": 361
+}

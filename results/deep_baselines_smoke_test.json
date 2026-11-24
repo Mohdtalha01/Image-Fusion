@@ -1,0 +1,26 @@
+{
+  "DenseFuse": {
+    "status": "PASS",
+    "latency_s": 0.769,
+    "shape": "(480, 640, 3)"
+  },
+  "U2Fusion": {
+    "status": "PASS",
+    "latency_s": 2.865,
+    "shape": "(480, 640, 3)"
+  },
+  "SwinFusion": {
+    "status": "PASS",
+    "latency_s": 44.203,
+    "shape": "(480, 640, 3)"
+  },
+  "CDDFuse": {
+    "status": "PASS",
+    "latency_s": 35.609,
+    "shape": "(480, 640, 3)"
+  },
+  "PIAFusion": {
+    "status": "FAIL",
+    "error": "PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):\n  File \"C:\\Users\\mtalh\\anaconda3\\Lib\\site-packages\\tensorflow\\python\\pywrap_tensorflow.py\", line 73, in <module>\n    from tensorflow.python._pywrap_tensorflow_internal import *\nImportError: DLL load failed while importing _pywrap_tensorflow_internal: A dynamic link library (DLL) initialization routine failed.\n\n\nFailed to load the native TensorFlow runtime.\nSee https://www.tensorflow.org/install/errors for some common causes and solutions.\nIf you need help, create an issue at https://github.com/tensorflow/tensorflow/issues and include the entire stack trace above this error message.. Official PIAFusion requires TensorFlow 1.x, which cannot load native DLLs on Windows Python 3.12."
+  }
+}

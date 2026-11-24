@@ -29,7 +29,8 @@
 
 project:
   name: "CADM-MSWN"
-  version: "1.0.0"
+  version: "2.0.0"  # Frozen selected variant from pre-registered dev ablation
+  selected_variant: "K_1_gamma_0.0"  # Winning configuration: Rank 1 on 120 dev pairs
   random_seed: 42
 
 color:
@@ -38,7 +39,7 @@ color:
 clustering:
   method: "kmeans"      # Options: "kmeans", "fcm"
   mode: "per_source"    # Options: "per_source", "joint"
-  n_clusters: 3         # Default K=3 (ablation tests K=1..6)
+  n_clusters: 1         # Frozen to K=1 (global unclustered weighting, Rank 1 on dev split)
   window_size: 7        # Local feature window (w x w)
   random_state: 42
 
@@ -59,7 +60,7 @@ weighting:
   reconstruction:
     alpha: 1.0          # Gross texture coefficient
     beta: 1.0           # Fine texture coefficient
-    gamma: 0.5          # Edge compensation coefficient
+    gamma: 0.0          # Frozen to gamma=0.0 (zero edge-compensation, eliminates gradient overshoot artifacts)
     signed_fine_edge: false  # Whether FE retains signed values or is clipped at 0
     adaptive_coefficients: false  # Cluster-statistics dependent coefficients
 

@@ -1,0 +1,21 @@
+Task,Method,Status,Latency_s,Shape,Details
+Harvard Grayscale (MRI-CT),DenseFuse,PASS,1.475,"(256, 256)","Range [0.000, 1.000]"
+Harvard Grayscale (MRI-CT),U2Fusion,PASS,3.464,"(256, 256)","Range [0.446, 0.974]"
+Harvard Grayscale (MRI-CT),SwinFusion,PASS,49.186,"(256, 256)","Range [0.000, 1.000]"
+Harvard Grayscale (MRI-CT),CDDFuse,PASS,29.065,"(256, 256)","Range [0.000, 1.000]"
+Harvard Grayscale (MRI-CT),PIAFusion,FAIL,,,PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):
+Harvard Color (MRI-PET),DenseFuse,PASS,1.599,"(256, 256, 3)","Range [0.014, 1.000]"
+Harvard Color (MRI-PET),U2Fusion,PASS,3.568,"(256, 256, 3)","Range [0.002, 1.000]"
+Harvard Color (MRI-PET),SwinFusion,PASS,59.062,"(256, 256, 3)","Range [0.000, 1.000]"
+Harvard Color (MRI-PET),CDDFuse,PASS,33.698,"(256, 256, 3)","Range [0.000, 1.000]"
+Harvard Color (MRI-PET),PIAFusion,FAIL,,,PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):
+Multi-focus (Lytro),DenseFuse,PASS,3.22,"(520, 520, 3)","Range [0.039, 1.000]"
+Multi-focus (Lytro),U2Fusion,PASS,12.248,"(520, 520, 3)","Range [0.371, 1.000]"
+Multi-focus (Lytro),SwinFusion,PASS,147.349,"(520, 520, 3)","Range [0.000, 1.000]"
+Multi-focus (Lytro),CDDFuse,PASS,84.616,"(520, 520, 3)","Range [0.000, 1.000]"
+Multi-focus (Lytro),PIAFusion,FAIL,,,PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):
+Infrared-Visible (RoadScene IR-VIS),DenseFuse,PASS,13.452,"(329, 500, 3)","Range [0.570, 1.000]"
+Infrared-Visible (RoadScene IR-VIS),U2Fusion,PASS,25.489,"(329, 500, 3)","Range [0.260, 1.000]"
+Infrared-Visible (RoadScene IR-VIS),SwinFusion,PASS,72.239,"(329, 500, 3)","Range [0.391, 1.000]"
+Infrared-Visible (RoadScene IR-VIS),CDDFuse,PASS,32.242,"(329, 500, 3)","Range [0.000, 1.000]"
+Infrared-Visible (RoadScene IR-VIS),PIAFusion,FAIL,,,PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):

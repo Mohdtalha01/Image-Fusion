@@ -1,0 +1,209 @@
+[
+  {
+    "cite_key": "perona1990scale",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/34.56205",
+    "title": "Scale-space and edge detection using anisotropic diffusion",
+    "author": "Pietro Perona and Jitendra Malik",
+    "year": "1990",
+    "details": "Verified: Title: 'Scale-space and edge detection using ani...', Container: 'IEEE Transactions on Pattern Analysis and Machine Intelligence', Year: 1990"
+  },
+  {
+    "cite_key": "he2013guided",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TPAMI.2012.213",
+    "title": "Guided Image Filtering",
+    "author": "Kaiming He and Jian Sun and Xiaoou Tang",
+    "year": "2013",
+    "details": "Verified: Title: 'Guided Image Filtering...', Container: 'IEEE Transactions on Pattern Analysis and Machine Intelligence', Year: 2013"
+  },
+  {
+    "cite_key": "mallat1989theory",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/34.192463",
+    "title": "A theory for multiresolution signal decomposition: the wavelet representation",
+    "author": "St{\\'e}phane G. Mallat",
+    "year": "1989",
+    "details": "Verified: Title: 'A theory for multiresolution signal deco...', Container: 'IEEE Transactions on Pattern Analysis and Machine Intelligence', Year: 1989"
+  },
+  {
+    "cite_key": "li2013image",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TIP.2013.2244222",
+    "title": "Image fusion with guided filtering",
+    "author": "Shutao Li and Xudong Kang and Jianwen Hu",
+    "year": "2013",
+    "details": "Verified: Title: 'Image Fusion With Guided Filtering...', Container: 'IEEE Transactions on Image Processing', Year: 2013"
+  },
+  {
+    "cite_key": "bavirisetti2016two",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/JSEN.2015.2478655",
+    "title": "Fusion of Infrared and Visible Sensor Images Based on Anisotropic Diffusion and Karhunen-Loeve Transform",
+    "author": "Durga Prasad Bavirisetti and Ravindra Dhuli",
+    "year": "2016",
+    "details": "Verified: Title: 'Fusion of Infrared and Visible Sensor Im...', Container: 'IEEE Sensors Journal', Year: 2016"
+  },
+  {
+    "cite_key": "kumar2015image",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1007/s11760-013-0556-9",
+    "title": "Image fusion based on pixel significance using cross bilateral filter",
+    "author": "B. K. Shreyamsha Kumar",
+    "year": "2015",
+    "details": "Verified: Title: 'Image fusion based on pixel significance...', Container: 'Signal, Image and Video Processing', Year: 2015"
+  },
+  {
+    "cite_key": "dacunha2006nonsubsampled",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TIP.2006.877507",
+    "title": "The nonsubsampled contourlet transform: theory, design, and applications",
+    "author": "Arthur L. da Cunha and Jianping Zhou and Minh N. Do",
+    "year": "2006",
+    "details": "Verified: Title: 'The Nonsubsampled Contourlet Transform: ...', Container: 'IEEE Transactions on Image Processing', Year: 2006"
+  },
+  {
+    "cite_key": "nason1995stationary",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1007/978-1-4612-2544-7_17",
+    "title": "The stationary wavelet transform and some of its applications",
+    "author": "Guy P. Nason and Bernard W. Silverman",
+    "year": "1995",
+    "details": "Verified: Title: 'The Stationary Wavelet Transform and som...', Container: 'Lecture Notes in Statistics', Year: 1995"
+  },
+  {
+    "cite_key": "li2019densefuse",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TIP.2018.2887342",
+    "title": "DenseFuse: A fusion approach to infrared and visible images",
+    "author": "Hui Li and Xiao-Jun Wu",
+    "year": "2019",
+    "details": "Verified: Title: 'DenseFuse: A Fusion Approach to Infrared...', Container: 'IEEE Transactions on Image Processing', Year: 2019"
+  },
+  {
+    "cite_key": "xu2022u2fusion",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TPAMI.2020.3012548",
+    "title": "U2Fusion: A unified unsupervised image fusion network",
+    "author": "Han Xu and Jiayi Ma and Junjun Jiang and Xiaojie Guo and Haibin Ling",
+    "year": "2022",
+    "details": "Verified: Title: 'U2Fusion: A Unified Unsupervised Image F...', Container: 'IEEE Transactions on Pattern Analysis and Machine Intelligence', Year: 2022"
+  },
+  {
+    "cite_key": "ma2022swinfusion",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/JAS.2022.105686",
+    "title": "SwinFusion: Cross-domain long-range learning for general image fusion via swin transformer",
+    "author": "Jiayi Ma and Linfeng Tang and Fan Fan and Jun Huang and Xiaoguang Mei and Yong Ma",
+    "year": "2022",
+    "details": "Verified: Title: 'SwinFusion: Cross-domain Long-range Lear...', Container: 'IEEE/CAA Journal of Automatica Sinica', Year: 2022"
+  },
+  {
+    "cite_key": "ma2019fusiongan",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1016/j.inffus.2018.09.004",
+    "title": "FusionGAN: A generative adversarial network for infrared and visible image fusion",
+    "author": "Jiayi Ma and Wei Yu and Pengwei Liang and Chang Li and Junjun Jiang",
+    "year": "2019",
+    "details": "Verified: Title: 'FusionGAN: A generative adversarial netw...', Container: 'Information Fusion', Year: 2019"
+  },
+  {
+    "cite_key": "zhao2023ddfm",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/iccv51070.2023.00742",
+    "title": "DDFM: Denoising diffusion model for multi-modality image fusion",
+    "author": "Zixiang Zhao and Haowen Bai and Yuanzhi Zhu and Jiangshe Zhang and Shuang Xu and Yulun Zhang and Kai Zhang and Deyu Meng and Radu Timofte and Luc Van Gool",
+    "year": "2023",
+    "details": "Verified: Title: 'DDFM: Denoising Diffusion Model for Mult...', Container: '2023 IEEE/CVF International Conference on Computer Vision (ICCV)', Year: 2023"
+  },
+  {
+    "cite_key": "xydeas2000objective",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1049/el:20000267",
+    "title": "Objective image fusion performance measure",
+    "author": "Costas S. Xydeas and Vladimir S. Petrovic",
+    "year": "2000",
+    "details": "Verified: Title: 'Objective image fusion performance measu...', Container: 'Electronics Letters', Year: 2000"
+  },
+  {
+    "cite_key": "petrovic2005",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1117/1.2009764",
+    "title": "Objective evaluation of signal-level image fusion performance",
+    "author": "Vladimir S. Petrovic and Costas S. Xydeas",
+    "year": "2005",
+    "details": "Verified: Title: 'Objective evaluation of signal-level ima...', Container: 'Optical Engineering', Year: 2005"
+  },
+  {
+    "cite_key": "wang2004image",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TIP.2003.819861",
+    "title": "Image quality assessment: from error visibility to structural similarity",
+    "author": "Zhou Wang and Alan C. Bovik and Hamid R. Sheikh and Eero P. Simoncelli",
+    "year": "2004",
+    "details": "Verified: Title: 'Image quality assessment: from error vis...', Container: 'IEEE Transactions on Image Processing', Year: 2004"
+  },
+  {
+    "cite_key": "sheikh2006image",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/TIP.2005.859378",
+    "title": "Image information and visual quality",
+    "author": "Hamid R. Sheikh and Alan C. Bovik",
+    "year": "2006",
+    "details": "Verified: Title: 'Image information and visual quality...', Container: 'IEEE Transactions on Image Processing', Year: 2006"
+  },
+  {
+    "cite_key": "toet2017tno",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1016/j.dib.2017.09.038",
+    "title": "The TNO Multiband Image Data Collection",
+    "author": "Alexander Toet",
+    "year": "2017",
+    "details": "Verified: Title: 'The TNO Multiband Image Data Collection...', Container: 'Data in Brief', Year: 2017"
+  },
+  {
+    "cite_key": "nejati2015lytro",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1016/j.inffus.2014.10.004",
+    "title": "Multi-focus image fusion using dictionary-based sparse representation",
+    "author": "Mansour Nejati and Shadrokh Samavi and Shahram Shirani",
+    "year": "2015",
+    "details": "Verified: Title: 'Multi-focus image fusion using dictionar...', Container: 'Information Fusion', Year: 2015"
+  },
+  {
+    "cite_key": "tang2022piafusion",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1016/j.inffus.2022.03.007",
+    "title": "PIAFusion: A progressive infrared and visible image fusion network based on illumination aware",
+    "author": "Linfeng Tang and Jiteng Yuan and Hao Zhang and Xingyu Jiang and Jiayi Ma",
+    "year": "2022",
+    "details": "Verified: Title: 'PIAFusion: A progressive infrared and vi...', Container: 'Information Fusion', Year: 2022"
+  },
+  {
+    "cite_key": "zhao2023cddfuse",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1109/cvpr52729.2023.00572",
+    "title": "CDDFuse: Correlation-Driven Dual-Branch Feature Decomposition for Multi-Modality Image Fusion",
+    "author": "Zixiang Zhao and Haowen Bai and Jiangshe Zhang and Yulun Zhang and Shuang Xu and Zudi Lin and Radu Timofte and Luc Van Gool",
+    "year": "2023",
+    "details": "Verified: Title: 'CDDFuse: Correlation-Driven Dual-Branch ...', Container: '2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)', Year: 2023"
+  },
+  {
+    "cite_key": "han2013viff",
+    "status": "VERIFIED (Crossref DOI)",
+    "doi": "10.1016/j.inffus.2011.08.002",
+    "title": "A new image fusion performance metric based on visual information fidelity",
+    "author": "Yu Han and Yunze Cai and Yin Cao and Xiaoming Xu",
+    "year": "2013",
+    "details": "Verified: Title: 'A new image fusion performance metric ba...', Container: 'Information Fusion', Year: 2013"
+  },
+  {
+    "cite_key": "harvard_atlas",
+    "status": "VERIFIED (Institutional URL / Harvard Medical School)",
+    "doi": "N/A",
+    "title": "The Whole Brain Atlas",
+    "author": "Keith A. Johnson and J. Alex Becker",
+    "year": "1999",
+    "details": "Verified via official Harvard Medical School URL: https://www.med.harvard.edu/aanlib/"
+  }
+]

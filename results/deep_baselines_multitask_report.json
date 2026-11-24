@@ -1,0 +1,162 @@
+[
+  {
+    "Task": "Harvard Grayscale (MRI-CT)",
+    "Method": "DenseFuse",
+    "Status": "PASS",
+    "Latency_s": 1.475,
+    "Shape": "(256, 256)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Harvard Grayscale (MRI-CT)",
+    "Method": "U2Fusion",
+    "Status": "PASS",
+    "Latency_s": 3.464,
+    "Shape": "(256, 256)",
+    "Details": "Range [0.446, 0.974]"
+  },
+  {
+    "Task": "Harvard Grayscale (MRI-CT)",
+    "Method": "SwinFusion",
+    "Status": "PASS",
+    "Latency_s": 49.186,
+    "Shape": "(256, 256)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Harvard Grayscale (MRI-CT)",
+    "Method": "CDDFuse",
+    "Status": "PASS",
+    "Latency_s": 29.065,
+    "Shape": "(256, 256)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Harvard Grayscale (MRI-CT)",
+    "Method": "PIAFusion",
+    "Status": "FAIL",
+    "Latency_s": null,
+    "Shape": null,
+    "Details": "PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):"
+  },
+  {
+    "Task": "Harvard Color (MRI-PET)",
+    "Method": "DenseFuse",
+    "Status": "PASS",
+    "Latency_s": 1.599,
+    "Shape": "(256, 256, 3)",
+    "Details": "Range [0.014, 1.000]"
+  },
+  {
+    "Task": "Harvard Color (MRI-PET)",
+    "Method": "U2Fusion",
+    "Status": "PASS",
+    "Latency_s": 3.568,
+    "Shape": "(256, 256, 3)",
+    "Details": "Range [0.002, 1.000]"
+  },
+  {
+    "Task": "Harvard Color (MRI-PET)",
+    "Method": "SwinFusion",
+    "Status": "PASS",
+    "Latency_s": 59.062,
+    "Shape": "(256, 256, 3)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Harvard Color (MRI-PET)",
+    "Method": "CDDFuse",
+    "Status": "PASS",
+    "Latency_s": 33.698,
+    "Shape": "(256, 256, 3)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Harvard Color (MRI-PET)",
+    "Method": "PIAFusion",
+    "Status": "FAIL",
+    "Latency_s": null,
+    "Shape": null,
+    "Details": "PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):"
+  },
+  {
+    "Task": "Multi-focus (Lytro)",
+    "Method": "DenseFuse",
+    "Status": "PASS",
+    "Latency_s": 3.22,
+    "Shape": "(520, 520, 3)",
+    "Details": "Range [0.039, 1.000]"
+  },
+  {
+    "Task": "Multi-focus (Lytro)",
+    "Method": "U2Fusion",
+    "Status": "PASS",
+    "Latency_s": 12.248,
+    "Shape": "(520, 520, 3)",
+    "Details": "Range [0.371, 1.000]"
+  },
+  {
+    "Task": "Multi-focus (Lytro)",
+    "Method": "SwinFusion",
+    "Status": "PASS",
+    "Latency_s": 147.349,
+    "Shape": "(520, 520, 3)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Multi-focus (Lytro)",
+    "Method": "CDDFuse",
+    "Status": "PASS",
+    "Latency_s": 84.616,
+    "Shape": "(520, 520, 3)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Multi-focus (Lytro)",
+    "Method": "PIAFusion",
+    "Status": "FAIL",
+    "Latency_s": null,
+    "Shape": null,
+    "Details": "PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):"
+  },
+  {
+    "Task": "Infrared-Visible (RoadScene IR-VIS)",
+    "Method": "DenseFuse",
+    "Status": "PASS",
+    "Latency_s": 13.452,
+    "Shape": "(329, 500, 3)",
+    "Details": "Range [0.570, 1.000]"
+  },
+  {
+    "Task": "Infrared-Visible (RoadScene IR-VIS)",
+    "Method": "U2Fusion",
+    "Status": "PASS",
+    "Latency_s": 25.489,
+    "Shape": "(329, 500, 3)",
+    "Details": "Range [0.260, 1.000]"
+  },
+  {
+    "Task": "Infrared-Visible (RoadScene IR-VIS)",
+    "Method": "SwinFusion",
+    "Status": "PASS",
+    "Latency_s": 72.239,
+    "Shape": "(329, 500, 3)",
+    "Details": "Range [0.391, 1.000]"
+  },
+  {
+    "Task": "Infrared-Visible (RoadScene IR-VIS)",
+    "Method": "CDDFuse",
+    "Status": "PASS",
+    "Latency_s": 32.242,
+    "Shape": "(329, 500, 3)",
+    "Details": "Range [0.000, 1.000]"
+  },
+  {
+    "Task": "Infrared-Visible (RoadScene IR-VIS)",
+    "Method": "PIAFusion",
+    "Status": "FAIL",
+    "Latency_s": null,
+    "Shape": null,
+    "Details": "PIAFusion execution failed: TensorFlow 1.x unavailable or DLL load failed: Traceback (most recent call last):"
+  }
+]

@@ -1,0 +1,6 @@
+Pair,SSIM_Ours_Wrapper,SSIM_skimage_ReflectPad,SSIM_Delta_skimage,SSIM_sewar_ValidNoPad,SSIM_Delta_sewar,VIFP_Ours_Wrapper,VIFP_sewar_External,VIFP_Delta,MI_Ours,MI_sklearn_Normalized,MI_Delta,QABF_Ours,QABF_Canonical_Ref,QABF_Delta,NABF_Ours,NABF_Canonical_Ref,NABF_Delta
+pair1_mri_ct,0.6443,0.6443,0.0,0.5914,0.0529,0.168,0.168,0.0,1.9128,1.9128,0.0,0.5712,0.5712,0.0,0.1469,0.1469,0.0
+pair2_mri_pet,0.7407,0.7407,0.0,0.5732,0.1675,0.2247,0.2247,0.0,2.129,2.129,0.0,0.6885,0.6885,0.0,0.1252,0.1252,0.0
+pair3_ir_vis,0.462,0.462,0.0,0.2101,0.2519,0.1275,0.1275,0.0,1.8916,1.8916,0.0,0.4098,0.4098,0.0,0.2353,0.2353,0.0
+pair4_multifocus,0.6128,0.6128,0.0,0.2689,0.3439,0.1769,0.1769,0.0,2.8691,2.8691,0.0,0.2783,0.2783,0.0,0.1428,0.1428,0.0
+pair5_mri_spect,0.5782,0.5782,0.0,0.4077,0.1705,0.282,0.282,0.0,2.1026,2.1026,0.0,0.5537,0.5537,0.0,0.3241,0.3241,0.0

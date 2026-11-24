@@ -1,0 +1,21 @@
+Pair,Modality,Method,EN,SD,SF,AG
+pair1_mri_ct,MRI-CT (Grayscale),Averaging,4.1392,0.1871,0.0736,0.0158
+pair1_mri_ct,MRI-CT (Grayscale),DWT,4.44,0.2016,0.1234,0.0259
+pair1_mri_ct,MRI-CT (Grayscale),GFF,4.336,0.2685,0.1345,0.0267
+pair1_mri_ct,MRI-CT (Grayscale),Proposed_CADM_MSWN,4.119,0.3324,0.1888,0.0369
+pair2_mri_pet,MRI-PET (Color),Averaging,3.6256,0.2167,0.0627,0.0158
+pair2_mri_pet,MRI-PET (Color),DWT,3.83,0.2253,0.1024,0.0233
+pair2_mri_pet,MRI-PET (Color),GFF,3.8592,0.3228,0.1177,0.0286
+pair2_mri_pet,MRI-PET (Color),Proposed_CADM_MSWN,3.7008,0.3373,0.1985,0.0359
+pair3_ir_vis,IR-VIS (RoadScene),Averaging,6.4389,0.0866,0.0322,0.01
+pair3_ir_vis,IR-VIS (RoadScene),DWT,6.5901,0.0948,0.0595,0.0167
+pair3_ir_vis,IR-VIS (RoadScene),GFF,7.6901,0.214,0.0599,0.0187
+pair3_ir_vis,IR-VIS (RoadScene),Proposed_CADM_MSWN,6.0135,0.2126,0.1304,0.0275
+pair4_multifocus,Multi-focus (Lytro),Averaging,6.9092,0.1419,0.0361,0.0129
+pair4_multifocus,Multi-focus (Lytro),DWT,6.957,0.1471,0.0528,0.0172
+pair4_multifocus,Multi-focus (Lytro),GFF,7.0094,0.1552,0.0585,0.0193
+pair4_multifocus,Multi-focus (Lytro),Proposed_CADM_MSWN,5.3571,0.2234,0.1275,0.0173
+pair5_mri_spect,MRI-SPECT (Color),Averaging,4.4599,0.129,0.0308,0.0091
+pair5_mri_spect,MRI-SPECT (Color),DWT,4.4298,0.1323,0.0524,0.0141
+pair5_mri_spect,MRI-SPECT (Color),GFF,4.5883,0.1517,0.0579,0.0167
+pair5_mri_spect,MRI-SPECT (Color),Proposed_CADM_MSWN,4.5068,0.2387,0.1433,0.0297

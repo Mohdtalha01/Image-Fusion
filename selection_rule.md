@@ -21,12 +21,12 @@ Evaluation is governed strictly by the 5 primary decision metrics pre-registered
 2. **$N^{AB/F}$**: Fusion artifacts and excess noise ($\in [0, 1]$, **Lower is Better**).
 3. **$MI$**: Mutual Information transferred from both source images (bits, **Higher is Better**).
 4. **$SSIM$**: Mean Structural Similarity Index ($\in [0, 1]$, **Higher is Better**).
-5. **$VIFF / VIFP$**: Visual Information Fidelity (**Higher is Better**; both pixel-domain VIFP and multiscale fusion VIFF evaluated).
+5. **$\text{VIFP}$**: Visual Information Fidelity in Pixel Domain (Sheikh & Bovik 2006, **Higher is Better**).
 
 ### 1.2 Mathematical Formulation of Ranking Rule
 Let $\mathcal{C} = \{c_1, c_2, \dots, c_M\}$ denote the set of candidate configurations (including the baseline prototype $c_{\text{base}}$).  
-For each metric $m \in \{Q^{AB/F}, -N^{AB/F}, MI, SSIM, VIFF\}$, each configuration $c \in \mathcal{C}$ receives a rank $\text{Rank}_m(c) \in \{1, \dots, M\}$ based on its 120-pair mean metric value:
-- For $Q^{AB/F}, MI, SSIM, VIFF, VIFP$: Highest mean value receives Rank 1 (best).
+For each metric $m \in \{Q^{AB/F}, -N^{AB/F}, MI, SSIM, \text{VIFP}\}$, each configuration $c \in \mathcal{C}$ receives a rank $\text{Rank}_m(c) \in \{1, \dots, M\}$ based on its 120-pair mean metric value:
+- For $Q^{AB/F}, MI, SSIM, \text{VIFP}$: Highest mean value receives Rank 1 (best).
 - For $N^{AB/F}$: **Lowest mean value receives Rank 1 (best)** (higher-is-worse correctly handled via ascending rank).
 
 The **Mean Rank** of candidate $c$ across the primary metric set $\mathcal{M}_{\text{primary}}$ is defined as:
@@ -87,7 +87,7 @@ Instead, the design follows an **informative One-at-a-Time (OAT) sweep centered 
 
 1. **Reporting Standards**:
    - For all 12 candidate configurations, both **Mean** and **Standard Deviation** across the 120 dev pairs are reported for all 9 metrics:
-     - Primary: $Q^{AB/F}, N^{AB/F}, MI, SSIM, VIFP, VIFF$
+     - Primary: $Q^{AB/F}, N^{AB/F}, MI, SSIM, \text{VIFP}$
      - Secondary: $EN, SD, SF, AG$
      - Efficiency: Latency (ms)
    - Zero suppression: Failed or suboptimal configurations are reported with equal fidelity.

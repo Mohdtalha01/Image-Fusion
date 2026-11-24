@@ -1,0 +1,61 @@
+{
+  "datasets": {
+    "harvard_ct_mri": {
+      "name": "Harvard Whole Brain Atlas (CT-MRI)",
+      "folder": "data\\raw\\harvard\\CT-MRI",
+      "pair_count": 20,
+      "expected_count": 20,
+      "status": "READY",
+      "sample_sha256": "5dab3b79b9b36b5e8161205c2e5933170c78dc2f26f469e019ac40e7bdd3f184"
+    },
+    "harvard_pet_mri": {
+      "name": "Harvard Whole Brain Atlas (PET-MRI)",
+      "folder": "data\\raw\\harvard\\PET-MRI",
+      "pair_count": 20,
+      "expected_count": 20,
+      "status": "READY",
+      "sample_sha256": "46a7c612e41291b0863e0935c378c56515f7fb4d7e92964d520919f7e9729653"
+    },
+    "harvard_spect_mri": {
+      "name": "Harvard Whole Brain Atlas (SPECT-MRI)",
+      "folder": "data\\raw\\harvard\\SPECT-MRI",
+      "pair_count": 20,
+      "expected_count": 20,
+      "status": "READY",
+      "sample_sha256": "ddd7c59b0aa8d6ec2f5891b54a440929555cf0e729f395200ee9084b9bfd9736"
+    },
+    "roadscene": {
+      "name": "RoadScene Dataset",
+      "folder": "data\\raw\\roadscene",
+      "pair_count": 221,
+      "expected_count": 221,
+      "status": "READY",
+      "sample_sha256": "c197a119efb05eafdf617cafe0ed3441dce8b29c488346fd221edf1969055618"
+    },
+    "msrs": {
+      "name": "MSRS Multi-Spectral Road Scenarios (Test Split)",
+      "folder": "data\\raw\\msrs\\test",
+      "pair_count": 361,
+      "expected_count": 361,
+      "status": "READY",
+      "sample_sha256": "3fd52464e22ea4603499a6f180dec541c05f307429bf6ed49e08924de0e6e92f"
+    },
+    "tno": {
+      "name": "TNO Night-Vision Dataset",
+      "folder": "data\\raw\\tno",
+      "pair_count": 42,
+      "expected_count": 42,
+      "status": "READY",
+      "sample_sha256": "d0afebd61208256f98ffbd755d3a56b31d9a41dc2565c60dd724773753098c68"
+    },
+    "lytro": {
+      "name": "Lytro Multi-Focus Dataset",
+      "folder": "data\\raw\\lytro",
+      "pair_count": 20,
+      "expected_count": 20,
+      "status": "READY",
+      "sample_sha256": "e2a1acece08828c5a50c96b396af2c20e354ae19b0ce7caac187d6d5ffc77018"
+    }
+  },
+  "total_pairs": 704
+}

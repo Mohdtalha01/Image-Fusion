@@ -10,12 +10,13 @@ protocol:
     total_dev_pairs: 120
   test_set_summary:
     msrs_test_pairs: 361
-    roadscene_test_pairs: 221
+    roadscene_test_pairs: 220
     tno_test_pairs: 42
     harvard_ct_mri_test_pairs: 15
     harvard_pet_mri_test_pairs: 15
     harvard_spect_mri_test_pairs: 15
     lytro_test_pairs: 15
+    total_test_pairs: 683
 dev:
   msrs:
   - id: msrs_train_00003N
@@ -567,3 +568,1875 @@ test:
   - id: lytro_20
     src1: data\raw\lytro\lytro_20_A.jpg
     src2: data\raw\lytro\lytro_20_B.jpg
+  tno:
+  - id: tno_athena_2_men_in_front_of_house
+    ir: data\raw\tno\athena_2_men_in_front_of_house\ir.bmp
+    vi: data\raw\tno\athena_2_men_in_front_of_house\vis.bmp
+  - id: tno_athena_airplane_in_trees
+    ir: data\raw\tno\athena_airplane_in_trees\ir.bmp
+    vi: data\raw\tno\athena_airplane_in_trees\vis.bmp
+  - id: tno_athena_APC_4
+    ir: data\raw\tno\athena_APC_4\ir.bmp
+    vi: data\raw\tno\athena_APC_4\vis.bmp
+  - id: tno_athena_bunker
+    ir: data\raw\tno\athena_bunker\ir.bmp
+    vi: data\raw\tno\athena_bunker\vis.bmp
+  - id: tno_athena_heather
+    ir: data\raw\tno\athena_heather\ir.bmp
+    vi: data\raw\tno\athena_heather\vis.bmp
+  - id: tno_athena_helicopter
+    ir: data\raw\tno\athena_helicopter\ir.bmp
+    vi: data\raw\tno\athena_helicopter\vis.bmp
+  - id: tno_athena_lake
+    ir: data\raw\tno\athena_lake\ir.bmp
+    vi: data\raw\tno\athena_lake\vis.bmp
+  - id: tno_athena_man_in_doorway
+    ir: data\raw\tno\athena_man_in_doorway\ir.bmp
+    vi: data\raw\tno\athena_man_in_doorway\vis.bmp
+  - id: tno_athena_soldier_behind_smoke_1
+    ir: data\raw\tno\athena_soldier_behind_smoke_1\ir.bmp
+    vi: data\raw\tno\athena_soldier_behind_smoke_1\vis.bmp
+  - id: tno_athena_soldier_behind_smoke_2
+    ir: data\raw\tno\athena_soldier_behind_smoke_2\ir.bmp
+    vi: data\raw\tno\athena_soldier_behind_smoke_2\vis.bmp
+  - id: tno_athena_soldier_behind_smoke_3
+    ir: data\raw\tno\athena_soldier_behind_smoke_3\ir.bmp
+    vi: data\raw\tno\athena_soldier_behind_smoke_3\vis.bmp
+  - id: tno_athena_soldier_in_trench_1
+    ir: data\raw\tno\athena_soldier_in_trench_1\ir.bmp
+    vi: data\raw\tno\athena_soldier_in_trench_1\vis.bmp
+  - id: tno_athena_soldier_in_trench_2
+    ir: data\raw\tno\athena_soldier_in_trench_2\ir.bmp
+    vi: data\raw\tno\athena_soldier_in_trench_2\vis.bmp
+  - id: tno_Balls
+    ir: data\raw\tno\Balls\ir.bmp
+    vi: data\raw\tno\Balls\vis.bmp
+  - id: tno_barbed_wire_1
+    ir: data\raw\tno\barbed_wire_1\ir.tif
+    vi: data\raw\tno\barbed_wire_1\vis.tif
+  - id: tno_barbed_wire_2
+    ir: data\raw\tno\barbed_wire_2\ir.tif
+    vi: data\raw\tno\barbed_wire_2\vis.tif
+  - id: tno_bench
+    ir: data\raw\tno\bench\ir.bmp
+    vi: data\raw\tno\bench\vis.bmp
+  - id: tno_Bosnia
+    ir: data\raw\tno\Bosnia\ir.bmp
+    vi: data\raw\tno\Bosnia\daylight_image.bmp
+  - id: tno_Farm
+    ir: data\raw\tno\Farm\Farm_IR.bmp
+    vi: data\raw\tno\Farm\vis.bmp
+  - id: tno_House
+    ir: data\raw\tno\House\ir.bmp
+    vi: data\raw\tno\House\vis.bmp
+  - id: tno_houses_with_3_men
+    ir: data\raw\tno\houses_with_3_men\ir.bmp
+    vi: data\raw\tno\houses_with_3_men\vis.bmp
+  - id: tno_jeep_in_smoke
+    ir: data\raw\tno\jeep_in_smoke\ir.bmp
+    vi: data\raw\tno\jeep_in_smoke\vis.bmp
+  - id: tno_Kaptein_01
+    ir: data\raw\tno\Kaptein_01\ir.bmp
+    vi: data\raw\tno\Kaptein_01\vis.bmp
+  - id: tno_Kaptein_1123
+    ir: data\raw\tno\Kaptein_1123\ir.bmp
+    vi: data\raw\tno\Kaptein_1123\vis.bmp
+  - id: tno_Kaptein_1654
+    ir: data\raw\tno\Kaptein_1654\ir.bmp
+    vi: data\raw\tno\Kaptein_1654\vis.bmp
+  - id: tno_Kaptein_19
+    ir: data\raw\tno\Kaptein_19\ir.bmp
+    vi: data\raw\tno\Kaptein_19\vis.bmp
+  - id: tno_Marne_01
+    ir: data\raw\tno\Marne_01\ir.bmp
+    vi: data\raw\tno\Marne_01\vis.bmp
+  - id: tno_Marne_02
+    ir: data\raw\tno\Marne_02\ir.bmp
+    vi: data\raw\tno\Marne_02\vis.bmp
+  - id: tno_Marne_03
+    ir: data\raw\tno\Marne_03\ir.bmp
+    vi: data\raw\tno\Marne_03\vis.bmp
+  - id: tno_Marne_04
+    ir: data\raw\tno\Marne_04\ir.bmp
+    vi: data\raw\tno\Marne_04\vis.bmp
+  - id: tno_Marne_06
+    ir: data\raw\tno\Marne_06\ir.bmp
+    vi: data\raw\tno\Marne_06\vis.bmp
+  - id: tno_Marne_07
+    ir: data\raw\tno\Marne_07\ir.bmp
+    vi: data\raw\tno\Marne_07\vis.bmp
+  - id: tno_Marne_09
+    ir: data\raw\tno\Marne_09\ir.bmp
+    vi: data\raw\tno\Marne_09\vis.bmp
+  - id: tno_Marne_11
+    ir: data\raw\tno\Marne_11\ir.bmp
+    vi: data\raw\tno\Marne_11\vis.bmp
+  - id: tno_Marne_15
+    ir: data\raw\tno\Marne_15\ir.bmp
+    vi: data\raw\tno\Marne_15\vis.bmp
+  - id: tno_Marne_24
+    ir: data\raw\tno\Marne_24\ir.bmp
+    vi: data\raw\tno\Marne_24\vis.bmp
+  - id: tno_Movie_01
+    ir: data\raw\tno\Movie_01\ir.bmp
+    vi: data\raw\tno\Movie_01\vis.bmp
+  - id: tno_Movie_12
+    ir: data\raw\tno\Movie_12\ir.bmp
+    vi: data\raw\tno\Movie_12\vis.bmp
+  - id: tno_pancake_house
+    ir: data\raw\tno\pancake_house\ir.tif
+    vi: data\raw\tno\pancake_house\vis.tif
+  - id: tno_Reek
+    ir: data\raw\tno\Reek\ir.bmp
+    vi: data\raw\tno\Reek\vis.bmp
+  - id: tno_sandpath
+    ir: data\raw\tno\sandpath\ir.bmp
+    vi: data\raw\tno\sandpath\vis.bmp
+  - id: tno_soldiers_with_jeep
+    ir: data\raw\tno\soldiers_with_jeep\ir.bmp
+    vi: data\raw\tno\soldiers_with_jeep\vis.bmp
+  roadscene:
+  - id: roadscene_FLIR_00018
+    ir: data\raw\roadscene\infrared\FLIR_00018.jpg
+    vi: data\raw\roadscene\visible\FLIR_00018.jpg
+  - id: roadscene_FLIR_00060
+    ir: data\raw\roadscene\infrared\FLIR_00060.jpg
+    vi: data\raw\roadscene\visible\FLIR_00060.jpg
+  - id: roadscene_FLIR_00122
+    ir: data\raw\roadscene\infrared\FLIR_00122.jpg
+    vi: data\raw\roadscene\visible\FLIR_00122.jpg
+  - id: roadscene_FLIR_00211
+    ir: data\raw\roadscene\infrared\FLIR_00211.jpg
+    vi: data\raw\roadscene\visible\FLIR_00211.jpg
+  - id: roadscene_FLIR_00233
+    ir: data\raw\roadscene\infrared\FLIR_00233.jpg
+    vi: data\raw\roadscene\visible\FLIR_00233.jpg
+  - id: roadscene_FLIR_00288
+    ir: data\raw\roadscene\infrared\FLIR_00288.jpg
+    vi: data\raw\roadscene\visible\FLIR_00288.jpg
+  - id: roadscene_FLIR_00306
+    ir: data\raw\roadscene\infrared\FLIR_00306.jpg
+    vi: data\raw\roadscene\visible\FLIR_00306.jpg
+  - id: roadscene_FLIR_00311
+    ir: data\raw\roadscene\infrared\FLIR_00311.jpg
+    vi: data\raw\roadscene\visible\FLIR_00311.jpg
+  - id: roadscene_FLIR_00452
+    ir: data\raw\roadscene\infrared\FLIR_00452.jpg
+    vi: data\raw\roadscene\visible\FLIR_00452.jpg
+  - id: roadscene_FLIR_00455
+    ir: data\raw\roadscene\infrared\FLIR_00455.jpg
+    vi: data\raw\roadscene\visible\FLIR_00455.jpg
+  - id: roadscene_FLIR_00497
+    ir: data\raw\roadscene\infrared\FLIR_00497.jpg
+    vi: data\raw\roadscene\visible\FLIR_00497.jpg
+  - id: roadscene_FLIR_00548
+    ir: data\raw\roadscene\infrared\FLIR_00548.jpg
+    vi: data\raw\roadscene\visible\FLIR_00548.jpg
+  - id: roadscene_FLIR_00550
+    ir: data\raw\roadscene\infrared\FLIR_00550.jpg
+    vi: data\raw\roadscene\visible\FLIR_00550.jpg
+  - id: roadscene_FLIR_00578
+    ir: data\raw\roadscene\infrared\FLIR_00578.jpg
+    vi: data\raw\roadscene\visible\FLIR_00578.jpg
+  - id: roadscene_FLIR_00594
+    ir: data\raw\roadscene\infrared\FLIR_00594.jpg
+    vi: data\raw\roadscene\visible\FLIR_00594.jpg
+  - id: roadscene_FLIR_00603
+    ir: data\raw\roadscene\infrared\FLIR_00603.jpg
+    vi: data\raw\roadscene\visible\FLIR_00603.jpg
+  - id: roadscene_FLIR_00691
+    ir: data\raw\roadscene\infrared\FLIR_00691.jpg
+    vi: data\raw\roadscene\visible\FLIR_00691.jpg
+  - id: roadscene_FLIR_00977
+    ir: data\raw\roadscene\infrared\FLIR_00977.jpg
+    vi: data\raw\roadscene\visible\FLIR_00977.jpg
+  - id: roadscene_FLIR_00993
+    ir: data\raw\roadscene\infrared\FLIR_00993.jpg
+    vi: data\raw\roadscene\visible\FLIR_00993.jpg
+  - id: roadscene_FLIR_01022
+    ir: data\raw\roadscene\infrared\FLIR_01022.jpg
+    vi: data\raw\roadscene\visible\FLIR_01022.jpg
+  - id: roadscene_FLIR_01130
+    ir: data\raw\roadscene\infrared\FLIR_01130.jpg
+    vi: data\raw\roadscene\visible\FLIR_01130.jpg
+  - id: roadscene_FLIR_01274
+    ir: data\raw\roadscene\infrared\FLIR_01274.jpg
+    vi: data\raw\roadscene\visible\FLIR_01274.jpg
+  - id: roadscene_FLIR_01415
+    ir: data\raw\roadscene\infrared\FLIR_01415.jpg
+    vi: data\raw\roadscene\visible\FLIR_01415.jpg
+  - id: roadscene_FLIR_01463
+    ir: data\raw\roadscene\infrared\FLIR_01463.jpg
+    vi: data\raw\roadscene\visible\FLIR_01463.jpg
+  - id: roadscene_FLIR_01871
+    ir: data\raw\roadscene\infrared\FLIR_01871.jpg
+    vi: data\raw\roadscene\visible\FLIR_01871.jpg
+  - id: roadscene_FLIR_01932
+    ir: data\raw\roadscene\infrared\FLIR_01932.jpg
+    vi: data\raw\roadscene\visible\FLIR_01932.jpg
+  - id: roadscene_FLIR_01945
+    ir: data\raw\roadscene\infrared\FLIR_01945.jpg
+    vi: data\raw\roadscene\visible\FLIR_01945.jpg
+  - id: roadscene_FLIR_03801
+    ir: data\raw\roadscene\infrared\FLIR_03801.jpg
+    vi: data\raw\roadscene\visible\FLIR_03801.jpg
+  - id: roadscene_FLIR_03813
+    ir: data\raw\roadscene\infrared\FLIR_03813.jpg
+    vi: data\raw\roadscene\visible\FLIR_03813.jpg
+  - id: roadscene_FLIR_03909
+    ir: data\raw\roadscene\infrared\FLIR_03909.jpg
+    vi: data\raw\roadscene\visible\FLIR_03909.jpg
+  - id: roadscene_FLIR_03952
+    ir: data\raw\roadscene\infrared\FLIR_03952.jpg
+    vi: data\raw\roadscene\visible\FLIR_03952.jpg
+  - id: roadscene_FLIR_04071
+    ir: data\raw\roadscene\infrared\FLIR_04071.jpg
+    vi: data\raw\roadscene\visible\FLIR_04071.jpg
+  - id: roadscene_FLIR_04208
+    ir: data\raw\roadscene\infrared\FLIR_04208.jpg
+    vi: data\raw\roadscene\visible\FLIR_04208.jpg
+  - id: roadscene_FLIR_04215
+    ir: data\raw\roadscene\infrared\FLIR_04215.jpg
+    vi: data\raw\roadscene\visible\FLIR_04215.jpg
+  - id: roadscene_FLIR_04229
+    ir: data\raw\roadscene\infrared\FLIR_04229.jpg
+    vi: data\raw\roadscene\visible\FLIR_04229.jpg
+  - id: roadscene_FLIR_04269
+    ir: data\raw\roadscene\infrared\FLIR_04269.jpg
+    vi: data\raw\roadscene\visible\FLIR_04269.jpg
+  - id: roadscene_FLIR_04285
+    ir: data\raw\roadscene\infrared\FLIR_04285.jpg
+    vi: data\raw\roadscene\visible\FLIR_04285.jpg
+  - id: roadscene_FLIR_04302
+    ir: data\raw\roadscene\infrared\FLIR_04302.jpg
+    vi: data\raw\roadscene\visible\FLIR_04302.jpg
+  - id: roadscene_FLIR_04319
+    ir: data\raw\roadscene\infrared\FLIR_04319.jpg
+    vi: data\raw\roadscene\visible\FLIR_04319.jpg
+  - id: roadscene_FLIR_04354
+    ir: data\raw\roadscene\infrared\FLIR_04354.jpg
+    vi: data\raw\roadscene\visible\FLIR_04354.jpg
+  - id: roadscene_FLIR_04370
+    ir: data\raw\roadscene\infrared\FLIR_04370.jpg
+    vi: data\raw\roadscene\visible\FLIR_04370.jpg
+  - id: roadscene_FLIR_04412
+    ir: data\raw\roadscene\infrared\FLIR_04412.jpg
+    vi: data\raw\roadscene\visible\FLIR_04412.jpg
+  - id: roadscene_FLIR_04424
+    ir: data\raw\roadscene\infrared\FLIR_04424.jpg
+    vi: data\raw\roadscene\visible\FLIR_04424.jpg
+  - id: roadscene_FLIR_04484
+    ir: data\raw\roadscene\infrared\FLIR_04484.jpg
+    vi: data\raw\roadscene\visible\FLIR_04484.jpg
+  - id: roadscene_FLIR_04512
+    ir: data\raw\roadscene\infrared\FLIR_04512.jpg
+    vi: data\raw\roadscene\visible\FLIR_04512.jpg
+  - id: roadscene_FLIR_04514
+    ir: data\raw\roadscene\infrared\FLIR_04514.jpg
+    vi: data\raw\roadscene\visible\FLIR_04514.jpg
+  - id: roadscene_FLIR_04593
+    ir: data\raw\roadscene\infrared\FLIR_04593.jpg
+    vi: data\raw\roadscene\visible\FLIR_04593.jpg
+  - id: roadscene_FLIR_04598
+    ir: data\raw\roadscene\infrared\FLIR_04598.jpg
+    vi: data\raw\roadscene\visible\FLIR_04598.jpg
+  - id: roadscene_FLIR_04602
+    ir: data\raw\roadscene\infrared\FLIR_04602.jpg
+    vi: data\raw\roadscene\visible\FLIR_04602.jpg
+  - id: roadscene_FLIR_04607
+    ir: data\raw\roadscene\infrared\FLIR_04607.jpg
+    vi: data\raw\roadscene\visible\FLIR_04607.jpg
+  - id: roadscene_FLIR_04625
+    ir: data\raw\roadscene\infrared\FLIR_04625.jpg
+    vi: data\raw\roadscene\visible\FLIR_04625.jpg
+  - id: roadscene_FLIR_04688
+    ir: data\raw\roadscene\infrared\FLIR_04688.jpg
+    vi: data\raw\roadscene\visible\FLIR_04688.jpg
+  - id: roadscene_FLIR_04701
+    ir: data\raw\roadscene\infrared\FLIR_04701.jpg
+    vi: data\raw\roadscene\visible\FLIR_04701.jpg
+  - id: roadscene_FLIR_04722
+    ir: data\raw\roadscene\infrared\FLIR_04722.jpg
+    vi: data\raw\roadscene\visible\FLIR_04722.jpg
+  - id: roadscene_FLIR_04726
+    ir: data\raw\roadscene\infrared\FLIR_04726.jpg
+    vi: data\raw\roadscene\visible\FLIR_04726.jpg
+  - id: roadscene_FLIR_04735
+    ir: data\raw\roadscene\infrared\FLIR_04735.jpg
+    vi: data\raw\roadscene\visible\FLIR_04735.jpg
+  - id: roadscene_FLIR_04929
+    ir: data\raw\roadscene\infrared\FLIR_04929.jpg
+    vi: data\raw\roadscene\visible\FLIR_04929.jpg
+  - id: roadscene_FLIR_04932
+    ir: data\raw\roadscene\infrared\FLIR_04932.jpg
+    vi: data\raw\roadscene\visible\FLIR_04932.jpg
+  - id: roadscene_FLIR_04943
+    ir: data\raw\roadscene\infrared\FLIR_04943.jpg
+    vi: data\raw\roadscene\visible\FLIR_04943.jpg
+  - id: roadscene_FLIR_04968
+    ir: data\raw\roadscene\infrared\FLIR_04968.jpg
+    vi: data\raw\roadscene\visible\FLIR_04968.jpg
+  - id: roadscene_FLIR_04975
+    ir: data\raw\roadscene\infrared\FLIR_04975.jpg
+    vi: data\raw\roadscene\visible\FLIR_04975.jpg
+  - id: roadscene_FLIR_04997
+    ir: data\raw\roadscene\infrared\FLIR_04997.jpg
+    vi: data\raw\roadscene\visible\FLIR_04997.jpg
+  - id: roadscene_FLIR_05005
+    ir: data\raw\roadscene\infrared\FLIR_05005.jpg
+    vi: data\raw\roadscene\visible\FLIR_05005.jpg
+  - id: roadscene_FLIR_05016
+    ir: data\raw\roadscene\infrared\FLIR_05016.jpg
+    vi: data\raw\roadscene\visible\FLIR_05016.jpg
+  - id: roadscene_FLIR_05027
+    ir: data\raw\roadscene\infrared\FLIR_05027.jpg
+    vi: data\raw\roadscene\visible\FLIR_05027.jpg
+  - id: roadscene_FLIR_05044
+    ir: data\raw\roadscene\infrared\FLIR_05044.jpg
+    vi: data\raw\roadscene\visible\FLIR_05044.jpg
+  - id: roadscene_FLIR_05053
+    ir: data\raw\roadscene\infrared\FLIR_05053.jpg
+    vi: data\raw\roadscene\visible\FLIR_05053.jpg
+  - id: roadscene_FLIR_05064
+    ir: data\raw\roadscene\infrared\FLIR_05064.jpg
+    vi: data\raw\roadscene\visible\FLIR_05064.jpg
+  - id: roadscene_FLIR_05072
+    ir: data\raw\roadscene\infrared\FLIR_05072.jpg
+    vi: data\raw\roadscene\visible\FLIR_05072.jpg
+  - id: roadscene_FLIR_05095
+    ir: data\raw\roadscene\infrared\FLIR_05095.jpg
+    vi: data\raw\roadscene\visible\FLIR_05095.jpg
+  - id: roadscene_FLIR_05102
+    ir: data\raw\roadscene\infrared\FLIR_05102.jpg
+    vi: data\raw\roadscene\visible\FLIR_05102.jpg
+  - id: roadscene_FLIR_05105
+    ir: data\raw\roadscene\infrared\FLIR_05105.jpg
+    vi: data\raw\roadscene\visible\FLIR_05105.jpg
+  - id: roadscene_FLIR_05108
+    ir: data\raw\roadscene\infrared\FLIR_05108.jpg
+    vi: data\raw\roadscene\visible\FLIR_05108.jpg
+  - id: roadscene_FLIR_05164
+    ir: data\raw\roadscene\infrared\FLIR_05164.jpg
+    vi: data\raw\roadscene\visible\FLIR_05164.jpg
+  - id: roadscene_FLIR_05201
+    ir: data\raw\roadscene\infrared\FLIR_05201.jpg
+    vi: data\raw\roadscene\visible\FLIR_05201.jpg
+  - id: roadscene_FLIR_05230
+    ir: data\raw\roadscene\infrared\FLIR_05230.jpg
+    vi: data\raw\roadscene\visible\FLIR_05230.jpg
+  - id: roadscene_FLIR_05245
+    ir: data\raw\roadscene\infrared\FLIR_05245.jpg
+    vi: data\raw\roadscene\visible\FLIR_05245.jpg
+  - id: roadscene_FLIR_05252
+    ir: data\raw\roadscene\infrared\FLIR_05252.jpg
+    vi: data\raw\roadscene\visible\FLIR_05252.jpg
+  - id: roadscene_FLIR_05514
+    ir: data\raw\roadscene\infrared\FLIR_05514.jpg
+    vi: data\raw\roadscene\visible\FLIR_05514.jpg
+  - id: roadscene_FLIR_05573
+    ir: data\raw\roadscene\infrared\FLIR_05573.jpg
+    vi: data\raw\roadscene\visible\FLIR_05573.jpg
+  - id: roadscene_FLIR_05697
+    ir: data\raw\roadscene\infrared\FLIR_05697.jpg
+    vi: data\raw\roadscene\visible\FLIR_05697.jpg
+  - id: roadscene_FLIR_05759
+    ir: data\raw\roadscene\infrared\FLIR_05759.jpg
+    vi: data\raw\roadscene\visible\FLIR_05759.jpg
+  - id: roadscene_FLIR_05767
+    ir: data\raw\roadscene\infrared\FLIR_05767.jpg
+    vi: data\raw\roadscene\visible\FLIR_05767.jpg
+  - id: roadscene_FLIR_05857
+    ir: data\raw\roadscene\infrared\FLIR_05857.jpg
+    vi: data\raw\roadscene\visible\FLIR_05857.jpg
+  - id: roadscene_FLIR_05872
+    ir: data\raw\roadscene\infrared\FLIR_05872.jpg
+    vi: data\raw\roadscene\visible\FLIR_05872.jpg
+  - id: roadscene_FLIR_05879
+    ir: data\raw\roadscene\infrared\FLIR_05879.jpg
+    vi: data\raw\roadscene\visible\FLIR_05879.jpg
+  - id: roadscene_FLIR_05893
+    ir: data\raw\roadscene\infrared\FLIR_05893.jpg
+    vi: data\raw\roadscene\visible\FLIR_05893.jpg
+  - id: roadscene_FLIR_05914
+    ir: data\raw\roadscene\infrared\FLIR_05914.jpg
+    vi: data\raw\roadscene\visible\FLIR_05914.jpg
+  - id: roadscene_FLIR_05924
+    ir: data\raw\roadscene\infrared\FLIR_05924.jpg
+    vi: data\raw\roadscene\visible\FLIR_05924.jpg
+  - id: roadscene_FLIR_05955
+    ir: data\raw\roadscene\infrared\FLIR_05955.jpg
+    vi: data\raw\roadscene\visible\FLIR_05955.jpg
+  - id: roadscene_FLIR_05987
+    ir: data\raw\roadscene\infrared\FLIR_05987.jpg
+    vi: data\raw\roadscene\visible\FLIR_05987.jpg
+  - id: roadscene_FLIR_06065
+    ir: data\raw\roadscene\infrared\FLIR_06065.jpg
+    vi: data\raw\roadscene\visible\FLIR_06065.jpg
+  - id: roadscene_FLIR_06099
+    ir: data\raw\roadscene\infrared\FLIR_06099.jpg
+    vi: data\raw\roadscene\visible\FLIR_06099.jpg
+  - id: roadscene_FLIR_06128
+    ir: data\raw\roadscene\infrared\FLIR_06128.jpg
+    vi: data\raw\roadscene\visible\FLIR_06128.jpg
+  - id: roadscene_FLIR_06184
+    ir: data\raw\roadscene\infrared\FLIR_06184.jpg
+    vi: data\raw\roadscene\visible\FLIR_06184.jpg
+  - id: roadscene_FLIR_06219
+    ir: data\raw\roadscene\infrared\FLIR_06219.jpg
+    vi: data\raw\roadscene\visible\FLIR_06219.jpg
+  - id: roadscene_FLIR_06236
+    ir: data\raw\roadscene\infrared\FLIR_06236.jpg
+    vi: data\raw\roadscene\visible\FLIR_06236.jpg
+  - id: roadscene_FLIR_06282
+    ir: data\raw\roadscene\infrared\FLIR_06282.jpg
+    vi: data\raw\roadscene\visible\FLIR_06282.jpg
+  - id: roadscene_FLIR_06307
+    ir: data\raw\roadscene\infrared\FLIR_06307.jpg
+    vi: data\raw\roadscene\visible\FLIR_06307.jpg
+  - id: roadscene_FLIR_06325
+    ir: data\raw\roadscene\infrared\FLIR_06325.jpg
+    vi: data\raw\roadscene\visible\FLIR_06325.jpg
+  - id: roadscene_FLIR_06392
+    ir: data\raw\roadscene\infrared\FLIR_06392.jpg
+    vi: data\raw\roadscene\visible\FLIR_06392.jpg
+  - id: roadscene_FLIR_06407
+    ir: data\raw\roadscene\infrared\FLIR_06407.jpg
+    vi: data\raw\roadscene\visible\FLIR_06407.jpg
+  - id: roadscene_FLIR_06422
+    ir: data\raw\roadscene\infrared\FLIR_06422.jpg
+    vi: data\raw\roadscene\visible\FLIR_06422.jpg
+  - id: roadscene_FLIR_06430
+    ir: data\raw\roadscene\infrared\FLIR_06430.jpg
+    vi: data\raw\roadscene\visible\FLIR_06430.jpg
+  - id: roadscene_FLIR_06506
+    ir: data\raw\roadscene\infrared\FLIR_06506.jpg
+    vi: data\raw\roadscene\visible\FLIR_06506.jpg
+  - id: roadscene_FLIR_06535
+    ir: data\raw\roadscene\infrared\FLIR_06535.jpg
+    vi: data\raw\roadscene\visible\FLIR_06535.jpg
+  - id: roadscene_FLIR_06570
+    ir: data\raw\roadscene\infrared\FLIR_06570.jpg
+    vi: data\raw\roadscene\visible\FLIR_06570.jpg
+  - id: roadscene_FLIR_06621
+    ir: data\raw\roadscene\infrared\FLIR_06621.jpg
+    vi: data\raw\roadscene\visible\FLIR_06621.jpg
+  - id: roadscene_FLIR_06643
+    ir: data\raw\roadscene\infrared\FLIR_06643.jpg
+    vi: data\raw\roadscene\visible\FLIR_06643.jpg
+  - id: roadscene_FLIR_06660
+    ir: data\raw\roadscene\infrared\FLIR_06660.jpg
+    vi: data\raw\roadscene\visible\FLIR_06660.jpg
+  - id: roadscene_FLIR_06763
+    ir: data\raw\roadscene\infrared\FLIR_06763.jpg
+    vi: data\raw\roadscene\visible\FLIR_06763.jpg
+  - id: roadscene_FLIR_06775
+    ir: data\raw\roadscene\infrared\FLIR_06775.jpg
+    vi: data\raw\roadscene\visible\FLIR_06775.jpg
+  - id: roadscene_FLIR_06795
+    ir: data\raw\roadscene\infrared\FLIR_06795.jpg
+    vi: data\raw\roadscene\visible\FLIR_06795.jpg
+  - id: roadscene_FLIR_06832
+    ir: data\raw\roadscene\infrared\FLIR_06832.jpg
+    vi: data\raw\roadscene\visible\FLIR_06832.jpg
+  - id: roadscene_FLIR_06862
+    ir: data\raw\roadscene\infrared\FLIR_06862.jpg
+    vi: data\raw\roadscene\visible\FLIR_06862.jpg
+  - id: roadscene_FLIR_06874
+    ir: data\raw\roadscene\infrared\FLIR_06874.jpg
+    vi: data\raw\roadscene\visible\FLIR_06874.jpg
+  - id: roadscene_FLIR_06876
+    ir: data\raw\roadscene\infrared\FLIR_06876.jpg
+    vi: data\raw\roadscene\visible\FLIR_06876.jpg
+  - id: roadscene_FLIR_06892
+    ir: data\raw\roadscene\infrared\FLIR_06892.jpg
+    vi: data\raw\roadscene\visible\FLIR_06892.jpg
+  - id: roadscene_FLIR_06916
+    ir: data\raw\roadscene\infrared\FLIR_06916.jpg
+    vi: data\raw\roadscene\visible\FLIR_06916.jpg
+  - id: roadscene_FLIR_06920
+    ir: data\raw\roadscene\infrared\FLIR_06920.jpg
+    vi: data\raw\roadscene\visible\FLIR_06920.jpg
+  - id: roadscene_FLIR_06953
+    ir: data\raw\roadscene\infrared\FLIR_06953.jpg
+    vi: data\raw\roadscene\visible\FLIR_06953.jpg
+  - id: roadscene_FLIR_06962
+    ir: data\raw\roadscene\infrared\FLIR_06962.jpg
+    vi: data\raw\roadscene\visible\FLIR_06962.jpg
+  - id: roadscene_FLIR_06974
+    ir: data\raw\roadscene\infrared\FLIR_06974.jpg
+    vi: data\raw\roadscene\visible\FLIR_06974.jpg
+  - id: roadscene_FLIR_06983
+    ir: data\raw\roadscene\infrared\FLIR_06983.jpg
+    vi: data\raw\roadscene\visible\FLIR_06983.jpg
+  - id: roadscene_FLIR_06992
+    ir: data\raw\roadscene\infrared\FLIR_06992.jpg
+    vi: data\raw\roadscene\visible\FLIR_06992.jpg
+  - id: roadscene_FLIR_06993
+    ir: data\raw\roadscene\infrared\FLIR_06993.jpg
+    vi: data\raw\roadscene\visible\FLIR_06993.jpg
+  - id: roadscene_FLIR_06995
+    ir: data\raw\roadscene\infrared\FLIR_06995.jpg
+    vi: data\raw\roadscene\visible\FLIR_06995.jpg
+  - id: roadscene_FLIR_06997
+    ir: data\raw\roadscene\infrared\FLIR_06997.jpg
+    vi: data\raw\roadscene\visible\FLIR_06997.jpg
+  - id: roadscene_FLIR_07012
+    ir: data\raw\roadscene\infrared\FLIR_07012.jpg
+    vi: data\raw\roadscene\visible\FLIR_07012.jpg
+  - id: roadscene_FLIR_07028
+    ir: data\raw\roadscene\infrared\FLIR_07028.jpg
+    vi: data\raw\roadscene\visible\FLIR_07028.jpg
+  - id: roadscene_FLIR_07060
+    ir: data\raw\roadscene\infrared\FLIR_07060.jpg
+    vi: data\raw\roadscene\visible\FLIR_07060.jpg
+  - id: roadscene_FLIR_07081
+    ir: data\raw\roadscene\infrared\FLIR_07081.jpg
+    vi: data\raw\roadscene\visible\FLIR_07081.jpg
+  - id: roadscene_FLIR_07119
+    ir: data\raw\roadscene\infrared\FLIR_07119.jpg
+    vi: data\raw\roadscene\visible\FLIR_07119.jpg
+  - id: roadscene_FLIR_07125
+    ir: data\raw\roadscene\infrared\FLIR_07125.jpg
+    vi: data\raw\roadscene\visible\FLIR_07125.jpg
+  - id: roadscene_FLIR_07166
+    ir: data\raw\roadscene\infrared\FLIR_07166.jpg
+    vi: data\raw\roadscene\visible\FLIR_07166.jpg
+  - id: roadscene_FLIR_07176
+    ir: data\raw\roadscene\infrared\FLIR_07176.jpg
+    vi: data\raw\roadscene\visible\FLIR_07176.jpg
+  - id: roadscene_FLIR_07190
+    ir: data\raw\roadscene\infrared\FLIR_07190.jpg
+    vi: data\raw\roadscene\visible\FLIR_07190.jpg
+  - id: roadscene_FLIR_07202
+    ir: data\raw\roadscene\infrared\FLIR_07202.jpg
+    vi: data\raw\roadscene\visible\FLIR_07202.jpg
+  - id: roadscene_FLIR_07206
+    ir: data\raw\roadscene\infrared\FLIR_07206.jpg
+    vi: data\raw\roadscene\visible\FLIR_07206.jpg
+  - id: roadscene_FLIR_07209
+    ir: data\raw\roadscene\infrared\FLIR_07209.jpg
+    vi: data\raw\roadscene\visible\FLIR_07209.jpg
+  - id: roadscene_FLIR_07210
+    ir: data\raw\roadscene\infrared\FLIR_07210.jpg
+    vi: data\raw\roadscene\visible\FLIR_07210.jpg
+  - id: roadscene_FLIR_07225
+    ir: data\raw\roadscene\infrared\FLIR_07225.jpg
+    vi: data\raw\roadscene\visible\FLIR_07225.jpg
+  - id: roadscene_FLIR_07360
+    ir: data\raw\roadscene\infrared\FLIR_07360.jpg
+    vi: data\raw\roadscene\visible\FLIR_07360.jpg
+  - id: roadscene_FLIR_07365
+    ir: data\raw\roadscene\infrared\FLIR_07365.jpg
+    vi: data\raw\roadscene\visible\FLIR_07365.jpg
+  - id: roadscene_FLIR_07371
+    ir: data\raw\roadscene\infrared\FLIR_07371.jpg
+    vi: data\raw\roadscene\visible\FLIR_07371.jpg
+  - id: roadscene_FLIR_07399
+    ir: data\raw\roadscene\infrared\FLIR_07399.jpg
+    vi: data\raw\roadscene\visible\FLIR_07399.jpg
+  - id: roadscene_FLIR_07427
+    ir: data\raw\roadscene\infrared\FLIR_07427.jpg
+    vi: data\raw\roadscene\visible\FLIR_07427.jpg
+  - id: roadscene_FLIR_07428
+    ir: data\raw\roadscene\infrared\FLIR_07428.jpg
+    vi: data\raw\roadscene\visible\FLIR_07428.jpg
+  - id: roadscene_FLIR_07433
+    ir: data\raw\roadscene\infrared\FLIR_07433.jpg
+    vi: data\raw\roadscene\visible\FLIR_07433.jpg
+  - id: roadscene_FLIR_07504
+    ir: data\raw\roadscene\infrared\FLIR_07504.jpg
+    vi: data\raw\roadscene\visible\FLIR_07504.jpg
+  - id: roadscene_FLIR_07555
+    ir: data\raw\roadscene\infrared\FLIR_07555.jpg
+    vi: data\raw\roadscene\visible\FLIR_07555.jpg
+  - id: roadscene_FLIR_07583
+    ir: data\raw\roadscene\infrared\FLIR_07583.jpg
+    vi: data\raw\roadscene\visible\FLIR_07583.jpg
+  - id: roadscene_FLIR_07620
+    ir: data\raw\roadscene\infrared\FLIR_07620.jpg
+    vi: data\raw\roadscene\visible\FLIR_07620.jpg
+  - id: roadscene_FLIR_07732
+    ir: data\raw\roadscene\infrared\FLIR_07732.jpg
+    vi: data\raw\roadscene\visible\FLIR_07732.jpg
+  - id: roadscene_FLIR_07747
+    ir: data\raw\roadscene\infrared\FLIR_07747.jpg
+    vi: data\raw\roadscene\visible\FLIR_07747.jpg
+  - id: roadscene_FLIR_07786
+    ir: data\raw\roadscene\infrared\FLIR_07786.jpg
+    vi: data\raw\roadscene\visible\FLIR_07786.jpg
+  - id: roadscene_FLIR_07809
+    ir: data\raw\roadscene\infrared\FLIR_07809.jpg
+    vi: data\raw\roadscene\visible\FLIR_07809.jpg
+  - id: roadscene_FLIR_07968
+    ir: data\raw\roadscene\infrared\FLIR_07968.jpg
+    vi: data\raw\roadscene\visible\FLIR_07968.jpg
+  - id: roadscene_FLIR_07970
+    ir: data\raw\roadscene\infrared\FLIR_07970.jpg
+    vi: data\raw\roadscene\visible\FLIR_07970.jpg
+  - id: roadscene_FLIR_08021
+    ir: data\raw\roadscene\infrared\FLIR_08021.jpg
+    vi: data\raw\roadscene\visible\FLIR_08021.jpg
+  - id: roadscene_FLIR_08058
+    ir: data\raw\roadscene\infrared\FLIR_08058.jpg
+    vi: data\raw\roadscene\visible\FLIR_08058.jpg
+  - id: roadscene_FLIR_08094
+    ir: data\raw\roadscene\infrared\FLIR_08094.jpg
+    vi: data\raw\roadscene\visible\FLIR_08094.jpg
+  - id: roadscene_FLIR_08191
+    ir: data\raw\roadscene\infrared\FLIR_08191.jpg
+    vi: data\raw\roadscene\visible\FLIR_08191.jpg
+  - id: roadscene_FLIR_08202
+    ir: data\raw\roadscene\infrared\FLIR_08202.jpg
+    vi: data\raw\roadscene\visible\FLIR_08202.jpg
+  - id: roadscene_FLIR_08220
+    ir: data\raw\roadscene\infrared\FLIR_08220.jpg
+    vi: data\raw\roadscene\visible\FLIR_08220.jpg
+  - id: roadscene_FLIR_08248
+    ir: data\raw\roadscene\infrared\FLIR_08248.jpg
+    vi: data\raw\roadscene\visible\FLIR_08248.jpg
+  - id: roadscene_FLIR_08284
+    ir: data\raw\roadscene\infrared\FLIR_08284.jpg
+    vi: data\raw\roadscene\visible\FLIR_08284.jpg
+  - id: roadscene_FLIR_08526
+    ir: data\raw\roadscene\infrared\FLIR_08526.jpg
+    vi: data\raw\roadscene\visible\FLIR_08526.jpg
+  - id: roadscene_FLIR_08592
+    ir: data\raw\roadscene\infrared\FLIR_08592.jpg
+    vi: data\raw\roadscene\visible\FLIR_08592.jpg
+  - id: roadscene_FLIR_08721
+    ir: data\raw\roadscene\infrared\FLIR_08721.jpg
+    vi: data\raw\roadscene\visible\FLIR_08721.jpg
+  - id: roadscene_FLIR_08749
+    ir: data\raw\roadscene\infrared\FLIR_08749.jpg
+    vi: data\raw\roadscene\visible\FLIR_08749.jpg
+  - id: roadscene_FLIR_08756
+    ir: data\raw\roadscene\infrared\FLIR_08756.jpg
+    vi: data\raw\roadscene\visible\FLIR_08756.jpg
+  - id: roadscene_FLIR_08768
+    ir: data\raw\roadscene\infrared\FLIR_08768.jpg
+    vi: data\raw\roadscene\visible\FLIR_08768.jpg
+  - id: roadscene_FLIR_08835
+    ir: data\raw\roadscene\infrared\FLIR_08835.jpg
+    vi: data\raw\roadscene\visible\FLIR_08835.jpg
+  - id: roadscene_FLIR_08858
+    ir: data\raw\roadscene\infrared\FLIR_08858.jpg
+    vi: data\raw\roadscene\visible\FLIR_08858.jpg
+  - id: roadscene_FLIR_08865
+    ir: data\raw\roadscene\infrared\FLIR_08865.jpg
+    vi: data\raw\roadscene\visible\FLIR_08865.jpg
+  - id: roadscene_FLIR_08874
+    ir: data\raw\roadscene\infrared\FLIR_08874.jpg
+    vi: data\raw\roadscene\visible\FLIR_08874.jpg
+  - id: roadscene_FLIR_08914
+    ir: data\raw\roadscene\infrared\FLIR_08914.jpg
+    vi: data\raw\roadscene\visible\FLIR_08914.jpg
+  - id: roadscene_FLIR_08919
+    ir: data\raw\roadscene\infrared\FLIR_08919.jpg
+    vi: data\raw\roadscene\visible\FLIR_08919.jpg
+  - id: roadscene_FLIR_08932
+    ir: data\raw\roadscene\infrared\FLIR_08932.jpg
+    vi: data\raw\roadscene\visible\FLIR_08932.jpg
+  - id: roadscene_FLIR_08954
+    ir: data\raw\roadscene\infrared\FLIR_08954.jpg
+    vi: data\raw\roadscene\visible\FLIR_08954.jpg
+  - id: roadscene_FLIR_08970
+    ir: data\raw\roadscene\infrared\FLIR_08970.jpg
+    vi: data\raw\roadscene\visible\FLIR_08970.jpg
+  - id: roadscene_FLIR_08992
+    ir: data\raw\roadscene\infrared\FLIR_08992.jpg
+    vi: data\raw\roadscene\visible\FLIR_08992.jpg
+  - id: roadscene_FLIR_08999
+    ir: data\raw\roadscene\infrared\FLIR_08999.jpg
+    vi: data\raw\roadscene\visible\FLIR_08999.jpg
+  - id: roadscene_FLIR_09016
+    ir: data\raw\roadscene\infrared\FLIR_09016.jpg
+    vi: data\raw\roadscene\visible\FLIR_09016.jpg
+  - id: roadscene_FLIR_09336
+    ir: data\raw\roadscene\infrared\FLIR_09336.jpg
+    vi: data\raw\roadscene\visible\FLIR_09336.jpg
+  - id: roadscene_FLIR_09350
+    ir: data\raw\roadscene\infrared\FLIR_09350.jpg
+    vi: data\raw\roadscene\visible\FLIR_09350.jpg
+  - id: roadscene_FLIR_09367
+    ir: data\raw\roadscene\infrared\FLIR_09367.jpg
+    vi: data\raw\roadscene\visible\FLIR_09367.jpg
+  - id: roadscene_FLIR_09376
+    ir: data\raw\roadscene\infrared\FLIR_09376.jpg
+    vi: data\raw\roadscene\visible\FLIR_09376.jpg
+  - id: roadscene_FLIR_09378
+    ir: data\raw\roadscene\infrared\FLIR_09378.jpg
+    vi: data\raw\roadscene\visible\FLIR_09378.jpg
+  - id: roadscene_FLIR_09416
+    ir: data\raw\roadscene\infrared\FLIR_09416.jpg
+    vi: data\raw\roadscene\visible\FLIR_09416.jpg
+  - id: roadscene_FLIR_09437
+    ir: data\raw\roadscene\infrared\FLIR_09437.jpg
+    vi: data\raw\roadscene\visible\FLIR_09437.jpg
+  - id: roadscene_FLIR_09465
+    ir: data\raw\roadscene\infrared\FLIR_09465.jpg
+    vi: data\raw\roadscene\visible\FLIR_09465.jpg
+  - id: roadscene_FLIR_09488
+    ir: data\raw\roadscene\infrared\FLIR_09488.jpg
+    vi: data\raw\roadscene\visible\FLIR_09488.jpg
+  - id: roadscene_FLIR_09512
+    ir: data\raw\roadscene\infrared\FLIR_09512.jpg
+    vi: data\raw\roadscene\visible\FLIR_09512.jpg
+  - id: roadscene_FLIR_09519
+    ir: data\raw\roadscene\infrared\FLIR_09519.jpg
+    vi: data\raw\roadscene\visible\FLIR_09519.jpg
+  - id: roadscene_FLIR_09525
+    ir: data\raw\roadscene\infrared\FLIR_09525.jpg
+    vi: data\raw\roadscene\visible\FLIR_09525.jpg
+  - id: roadscene_FLIR_09545
+    ir: data\raw\roadscene\infrared\FLIR_09545.jpg
+    vi: data\raw\roadscene\visible\FLIR_09545.jpg
+  - id: roadscene_FLIR_09573
+    ir: data\raw\roadscene\infrared\FLIR_09573.jpg
+    vi: data\raw\roadscene\visible\FLIR_09573.jpg
+  - id: roadscene_FLIR_09616
+    ir: data\raw\roadscene\infrared\FLIR_09616.jpg
+    vi: data\raw\roadscene\visible\FLIR_09616.jpg
+  - id: roadscene_FLIR_09624
+    ir: data\raw\roadscene\infrared\FLIR_09624.jpg
+    vi: data\raw\roadscene\visible\FLIR_09624.jpg
+  - id: roadscene_FLIR_09636
+    ir: data\raw\roadscene\infrared\FLIR_09636.jpg
+    vi: data\raw\roadscene\visible\FLIR_09636.jpg
+  - id: roadscene_FLIR_09652
+    ir: data\raw\roadscene\infrared\FLIR_09652.jpg
+    vi: data\raw\roadscene\visible\FLIR_09652.jpg
+  - id: roadscene_FLIR_video_00069
+    ir: data\raw\roadscene\infrared\FLIR_video_00069.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00069.jpg
+  - id: roadscene_FLIR_video_00248
+    ir: data\raw\roadscene\infrared\FLIR_video_00248.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00248.jpg
+  - id: roadscene_FLIR_video_00595
+    ir: data\raw\roadscene\infrared\FLIR_video_00595.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00595.jpg
+  - id: roadscene_FLIR_video_00727
+    ir: data\raw\roadscene\infrared\FLIR_video_00727.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00727.jpg
+  - id: roadscene_FLIR_video_00843
+    ir: data\raw\roadscene\infrared\FLIR_video_00843.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00843.jpg
+  - id: roadscene_FLIR_video_00939
+    ir: data\raw\roadscene\infrared\FLIR_video_00939.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_00939.jpg
+  - id: roadscene_FLIR_video_01053
+    ir: data\raw\roadscene\infrared\FLIR_video_01053.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_01053.jpg
+  - id: roadscene_FLIR_video_01425
+    ir: data\raw\roadscene\infrared\FLIR_video_01425.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_01425.jpg
+  - id: roadscene_FLIR_video_01876
+    ir: data\raw\roadscene\infrared\FLIR_video_01876.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_01876.jpg
+  - id: roadscene_FLIR_video_02223
+    ir: data\raw\roadscene\infrared\FLIR_video_02223.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_02223.jpg
+  - id: roadscene_FLIR_video_02829
+    ir: data\raw\roadscene\infrared\FLIR_video_02829.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_02829.jpg
+  - id: roadscene_FLIR_video_03237
+    ir: data\raw\roadscene\infrared\FLIR_video_03237.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_03237.jpg
+  - id: roadscene_FLIR_video_03374
+    ir: data\raw\roadscene\infrared\FLIR_video_03374.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_03374.jpg
+  - id: roadscene_FLIR_video_03425
+    ir: data\raw\roadscene\infrared\FLIR_video_03425.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_03425.jpg
+  - id: roadscene_FLIR_video_03894
+    ir: data\raw\roadscene\infrared\FLIR_video_03894.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_03894.jpg
+  - id: roadscene_FLIR_video_04111
+    ir: data\raw\roadscene\infrared\FLIR_video_04111.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_04111.jpg
+  - id: roadscene_FLIR_video_04215
+    ir: data\raw\roadscene\infrared\FLIR_video_04215.jpg
+    vi: data\raw\roadscene\visible\FLIR_video_04215.jpg
+  msrs:
+  - id: msrs_test_00004N
+    ir: data\raw\msrs\test\ir\00004N.png
+    vi: data\raw\msrs\test\vi\00004N.png
+  - id: msrs_test_00008N
+    ir: data\raw\msrs\test\ir\00008N.png
+    vi: data\raw\msrs\test\vi\00008N.png
+  - id: msrs_test_00012N
+    ir: data\raw\msrs\test\ir\00012N.png
+    vi: data\raw\msrs\test\vi\00012N.png
+  - id: msrs_test_00016N
+    ir: data\raw\msrs\test\ir\00016N.png
+    vi: data\raw\msrs\test\vi\00016N.png
+  - id: msrs_test_00020N
+    ir: data\raw\msrs\test\ir\00020N.png
+    vi: data\raw\msrs\test\vi\00020N.png
+  - id: msrs_test_00024N
+    ir: data\raw\msrs\test\ir\00024N.png
+    vi: data\raw\msrs\test\vi\00024N.png
+  - id: msrs_test_00028N
+    ir: data\raw\msrs\test\ir\00028N.png
+    vi: data\raw\msrs\test\vi\00028N.png
+  - id: msrs_test_00032N
+    ir: data\raw\msrs\test\ir\00032N.png
+    vi: data\raw\msrs\test\vi\00032N.png
+  - id: msrs_test_00036N
+    ir: data\raw\msrs\test\ir\00036N.png
+    vi: data\raw\msrs\test\vi\00036N.png
+  - id: msrs_test_00040N
+    ir: data\raw\msrs\test\ir\00040N.png
+    vi: data\raw\msrs\test\vi\00040N.png
+  - id: msrs_test_00047N
+    ir: data\raw\msrs\test\ir\00047N.png
+    vi: data\raw\msrs\test\vi\00047N.png
+  - id: msrs_test_00051N
+    ir: data\raw\msrs\test\ir\00051N.png
+    vi: data\raw\msrs\test\vi\00051N.png
+  - id: msrs_test_00055D
+    ir: data\raw\msrs\test\ir\00055D.png
+    vi: data\raw\msrs\test\vi\00055D.png
+  - id: msrs_test_00081D
+    ir: data\raw\msrs\test\ir\00081D.png
+    vi: data\raw\msrs\test\vi\00081D.png
+  - id: msrs_test_00085D
+    ir: data\raw\msrs\test\ir\00085D.png
+    vi: data\raw\msrs\test\vi\00085D.png
+  - id: msrs_test_00091D
+    ir: data\raw\msrs\test\ir\00091D.png
+    vi: data\raw\msrs\test\vi\00091D.png
+  - id: msrs_test_00095D
+    ir: data\raw\msrs\test\ir\00095D.png
+    vi: data\raw\msrs\test\vi\00095D.png
+  - id: msrs_test_00099D
+    ir: data\raw\msrs\test\ir\00099D.png
+    vi: data\raw\msrs\test\vi\00099D.png
+  - id: msrs_test_00103D
+    ir: data\raw\msrs\test\ir\00103D.png
+    vi: data\raw\msrs\test\vi\00103D.png
+  - id: msrs_test_00107D
+    ir: data\raw\msrs\test\ir\00107D.png
+    vi: data\raw\msrs\test\vi\00107D.png
+  - id: msrs_test_00111D
+    ir: data\raw\msrs\test\ir\00111D.png
+    vi: data\raw\msrs\test\vi\00111D.png
+  - id: msrs_test_00115D
+    ir: data\raw\msrs\test\ir\00115D.png
+    vi: data\raw\msrs\test\vi\00115D.png
+  - id: msrs_test_00119D
+    ir: data\raw\msrs\test\ir\00119D.png
+    vi: data\raw\msrs\test\vi\00119D.png
+  - id: msrs_test_00123D
+    ir: data\raw\msrs\test\ir\00123D.png
+    vi: data\raw\msrs\test\vi\00123D.png
+  - id: msrs_test_00127D
+    ir: data\raw\msrs\test\ir\00127D.png
+    vi: data\raw\msrs\test\vi\00127D.png
+  - id: msrs_test_00131D
+    ir: data\raw\msrs\test\ir\00131D.png
+    vi: data\raw\msrs\test\vi\00131D.png
+  - id: msrs_test_00135D
+    ir: data\raw\msrs\test\ir\00135D.png
+    vi: data\raw\msrs\test\vi\00135D.png
+  - id: msrs_test_00139D
+    ir: data\raw\msrs\test\ir\00139D.png
+    vi: data\raw\msrs\test\vi\00139D.png
+  - id: msrs_test_00143D
+    ir: data\raw\msrs\test\ir\00143D.png
+    vi: data\raw\msrs\test\vi\00143D.png
+  - id: msrs_test_00147D
+    ir: data\raw\msrs\test\ir\00147D.png
+    vi: data\raw\msrs\test\vi\00147D.png
+  - id: msrs_test_00151D
+    ir: data\raw\msrs\test\ir\00151D.png
+    vi: data\raw\msrs\test\vi\00151D.png
+  - id: msrs_test_00158D
+    ir: data\raw\msrs\test\ir\00158D.png
+    vi: data\raw\msrs\test\vi\00158D.png
+  - id: msrs_test_00162D
+    ir: data\raw\msrs\test\ir\00162D.png
+    vi: data\raw\msrs\test\vi\00162D.png
+  - id: msrs_test_00169D
+    ir: data\raw\msrs\test\ir\00169D.png
+    vi: data\raw\msrs\test\vi\00169D.png
+  - id: msrs_test_00174D
+    ir: data\raw\msrs\test\ir\00174D.png
+    vi: data\raw\msrs\test\vi\00174D.png
+  - id: msrs_test_00178D
+    ir: data\raw\msrs\test\ir\00178D.png
+    vi: data\raw\msrs\test\vi\00178D.png
+  - id: msrs_test_00182D
+    ir: data\raw\msrs\test\ir\00182D.png
+    vi: data\raw\msrs\test\vi\00182D.png
+  - id: msrs_test_00186D
+    ir: data\raw\msrs\test\ir\00186D.png
+    vi: data\raw\msrs\test\vi\00186D.png
+  - id: msrs_test_00191D
+    ir: data\raw\msrs\test\ir\00191D.png
+    vi: data\raw\msrs\test\vi\00191D.png
+  - id: msrs_test_00196D
+    ir: data\raw\msrs\test\ir\00196D.png
+    vi: data\raw\msrs\test\vi\00196D.png
+  - id: msrs_test_00200D
+    ir: data\raw\msrs\test\ir\00200D.png
+    vi: data\raw\msrs\test\vi\00200D.png
+  - id: msrs_test_00204D
+    ir: data\raw\msrs\test\ir\00204D.png
+    vi: data\raw\msrs\test\vi\00204D.png
+  - id: msrs_test_00209D
+    ir: data\raw\msrs\test\ir\00209D.png
+    vi: data\raw\msrs\test\vi\00209D.png
+  - id: msrs_test_00213D
+    ir: data\raw\msrs\test\ir\00213D.png
+    vi: data\raw\msrs\test\vi\00213D.png
+  - id: msrs_test_00218D
+    ir: data\raw\msrs\test\ir\00218D.png
+    vi: data\raw\msrs\test\vi\00218D.png
+  - id: msrs_test_00225D
+    ir: data\raw\msrs\test\ir\00225D.png
+    vi: data\raw\msrs\test\vi\00225D.png
+  - id: msrs_test_00229D
+    ir: data\raw\msrs\test\ir\00229D.png
+    vi: data\raw\msrs\test\vi\00229D.png
+  - id: msrs_test_00233D
+    ir: data\raw\msrs\test\ir\00233D.png
+    vi: data\raw\msrs\test\vi\00233D.png
+  - id: msrs_test_00237D
+    ir: data\raw\msrs\test\ir\00237D.png
+    vi: data\raw\msrs\test\vi\00237D.png
+  - id: msrs_test_00241D
+    ir: data\raw\msrs\test\ir\00241D.png
+    vi: data\raw\msrs\test\vi\00241D.png
+  - id: msrs_test_00245D
+    ir: data\raw\msrs\test\ir\00245D.png
+    vi: data\raw\msrs\test\vi\00245D.png
+  - id: msrs_test_00258D
+    ir: data\raw\msrs\test\ir\00258D.png
+    vi: data\raw\msrs\test\vi\00258D.png
+  - id: msrs_test_00262D
+    ir: data\raw\msrs\test\ir\00262D.png
+    vi: data\raw\msrs\test\vi\00262D.png
+  - id: msrs_test_00266D
+    ir: data\raw\msrs\test\ir\00266D.png
+    vi: data\raw\msrs\test\vi\00266D.png
+  - id: msrs_test_00270D
+    ir: data\raw\msrs\test\ir\00270D.png
+    vi: data\raw\msrs\test\vi\00270D.png
+  - id: msrs_test_00275D
+    ir: data\raw\msrs\test\ir\00275D.png
+    vi: data\raw\msrs\test\vi\00275D.png
+  - id: msrs_test_00279D
+    ir: data\raw\msrs\test\ir\00279D.png
+    vi: data\raw\msrs\test\vi\00279D.png
+  - id: msrs_test_00283D
+    ir: data\raw\msrs\test\ir\00283D.png
+    vi: data\raw\msrs\test\vi\00283D.png
+  - id: msrs_test_00287D
+    ir: data\raw\msrs\test\ir\00287D.png
+    vi: data\raw\msrs\test\vi\00287D.png
+  - id: msrs_test_00291D
+    ir: data\raw\msrs\test\ir\00291D.png
+    vi: data\raw\msrs\test\vi\00291D.png
+  - id: msrs_test_00298D
+    ir: data\raw\msrs\test\ir\00298D.png
+    vi: data\raw\msrs\test\vi\00298D.png
+  - id: msrs_test_00303D
+    ir: data\raw\msrs\test\ir\00303D.png
+    vi: data\raw\msrs\test\vi\00303D.png
+  - id: msrs_test_00307D
+    ir: data\raw\msrs\test\ir\00307D.png
+    vi: data\raw\msrs\test\vi\00307D.png
+  - id: msrs_test_00311D
+    ir: data\raw\msrs\test\ir\00311D.png
+    vi: data\raw\msrs\test\vi\00311D.png
+  - id: msrs_test_00315D
+    ir: data\raw\msrs\test\ir\00315D.png
+    vi: data\raw\msrs\test\vi\00315D.png
+  - id: msrs_test_00319D
+    ir: data\raw\msrs\test\ir\00319D.png
+    vi: data\raw\msrs\test\vi\00319D.png
+  - id: msrs_test_00323D
+    ir: data\raw\msrs\test\ir\00323D.png
+    vi: data\raw\msrs\test\vi\00323D.png
+  - id: msrs_test_00327D
+    ir: data\raw\msrs\test\ir\00327D.png
+    vi: data\raw\msrs\test\vi\00327D.png
+  - id: msrs_test_00332D
+    ir: data\raw\msrs\test\ir\00332D.png
+    vi: data\raw\msrs\test\vi\00332D.png
+  - id: msrs_test_00337D
+    ir: data\raw\msrs\test\ir\00337D.png
+    vi: data\raw\msrs\test\vi\00337D.png
+  - id: msrs_test_00341D
+    ir: data\raw\msrs\test\ir\00341D.png
+    vi: data\raw\msrs\test\vi\00341D.png
+  - id: msrs_test_00345D
+    ir: data\raw\msrs\test\ir\00345D.png
+    vi: data\raw\msrs\test\vi\00345D.png
+  - id: msrs_test_00349D
+    ir: data\raw\msrs\test\ir\00349D.png
+    vi: data\raw\msrs\test\vi\00349D.png
+  - id: msrs_test_00353D
+    ir: data\raw\msrs\test\ir\00353D.png
+    vi: data\raw\msrs\test\vi\00353D.png
+  - id: msrs_test_00357D
+    ir: data\raw\msrs\test\ir\00357D.png
+    vi: data\raw\msrs\test\vi\00357D.png
+  - id: msrs_test_00361D
+    ir: data\raw\msrs\test\ir\00361D.png
+    vi: data\raw\msrs\test\vi\00361D.png
+  - id: msrs_test_00367D
+    ir: data\raw\msrs\test\ir\00367D.png
+    vi: data\raw\msrs\test\vi\00367D.png
+  - id: msrs_test_00371D
+    ir: data\raw\msrs\test\ir\00371D.png
+    vi: data\raw\msrs\test\vi\00371D.png
+  - id: msrs_test_00375D
+    ir: data\raw\msrs\test\ir\00375D.png
+    vi: data\raw\msrs\test\vi\00375D.png
+  - id: msrs_test_00379D
+    ir: data\raw\msrs\test\ir\00379D.png
+    vi: data\raw\msrs\test\vi\00379D.png
+  - id: msrs_test_00383D
+    ir: data\raw\msrs\test\ir\00383D.png
+    vi: data\raw\msrs\test\vi\00383D.png
+  - id: msrs_test_00388D
+    ir: data\raw\msrs\test\ir\00388D.png
+    vi: data\raw\msrs\test\vi\00388D.png
+  - id: msrs_test_00392D
+    ir: data\raw\msrs\test\ir\00392D.png
+    vi: data\raw\msrs\test\vi\00392D.png
+  - id: msrs_test_00396D
+    ir: data\raw\msrs\test\ir\00396D.png
+    vi: data\raw\msrs\test\vi\00396D.png
+  - id: msrs_test_00400D
+    ir: data\raw\msrs\test\ir\00400D.png
+    vi: data\raw\msrs\test\vi\00400D.png
+  - id: msrs_test_00404D
+    ir: data\raw\msrs\test\ir\00404D.png
+    vi: data\raw\msrs\test\vi\00404D.png
+  - id: msrs_test_00408D
+    ir: data\raw\msrs\test\ir\00408D.png
+    vi: data\raw\msrs\test\vi\00408D.png
+  - id: msrs_test_00412D
+    ir: data\raw\msrs\test\ir\00412D.png
+    vi: data\raw\msrs\test\vi\00412D.png
+  - id: msrs_test_00416D
+    ir: data\raw\msrs\test\ir\00416D.png
+    vi: data\raw\msrs\test\vi\00416D.png
+  - id: msrs_test_00420D
+    ir: data\raw\msrs\test\ir\00420D.png
+    vi: data\raw\msrs\test\vi\00420D.png
+  - id: msrs_test_00427D
+    ir: data\raw\msrs\test\ir\00427D.png
+    vi: data\raw\msrs\test\vi\00427D.png
+  - id: msrs_test_00431D
+    ir: data\raw\msrs\test\ir\00431D.png
+    vi: data\raw\msrs\test\vi\00431D.png
+  - id: msrs_test_00435D
+    ir: data\raw\msrs\test\ir\00435D.png
+    vi: data\raw\msrs\test\vi\00435D.png
+  - id: msrs_test_00440D
+    ir: data\raw\msrs\test\ir\00440D.png
+    vi: data\raw\msrs\test\vi\00440D.png
+  - id: msrs_test_00444D
+    ir: data\raw\msrs\test\ir\00444D.png
+    vi: data\raw\msrs\test\vi\00444D.png
+  - id: msrs_test_00448D
+    ir: data\raw\msrs\test\ir\00448D.png
+    vi: data\raw\msrs\test\vi\00448D.png
+  - id: msrs_test_00453D
+    ir: data\raw\msrs\test\ir\00453D.png
+    vi: data\raw\msrs\test\vi\00453D.png
+  - id: msrs_test_00457D
+    ir: data\raw\msrs\test\ir\00457D.png
+    vi: data\raw\msrs\test\vi\00457D.png
+  - id: msrs_test_00462D
+    ir: data\raw\msrs\test\ir\00462D.png
+    vi: data\raw\msrs\test\vi\00462D.png
+  - id: msrs_test_00466D
+    ir: data\raw\msrs\test\ir\00466D.png
+    vi: data\raw\msrs\test\vi\00466D.png
+  - id: msrs_test_00481D
+    ir: data\raw\msrs\test\ir\00481D.png
+    vi: data\raw\msrs\test\vi\00481D.png
+  - id: msrs_test_00486D
+    ir: data\raw\msrs\test\ir\00486D.png
+    vi: data\raw\msrs\test\vi\00486D.png
+  - id: msrs_test_00491D
+    ir: data\raw\msrs\test\ir\00491D.png
+    vi: data\raw\msrs\test\vi\00491D.png
+  - id: msrs_test_00496D
+    ir: data\raw\msrs\test\ir\00496D.png
+    vi: data\raw\msrs\test\vi\00496D.png
+  - id: msrs_test_00500D
+    ir: data\raw\msrs\test\ir\00500D.png
+    vi: data\raw\msrs\test\vi\00500D.png
+  - id: msrs_test_00504D
+    ir: data\raw\msrs\test\ir\00504D.png
+    vi: data\raw\msrs\test\vi\00504D.png
+  - id: msrs_test_00508D
+    ir: data\raw\msrs\test\ir\00508D.png
+    vi: data\raw\msrs\test\vi\00508D.png
+  - id: msrs_test_00512D
+    ir: data\raw\msrs\test\ir\00512D.png
+    vi: data\raw\msrs\test\vi\00512D.png
+  - id: msrs_test_00516D
+    ir: data\raw\msrs\test\ir\00516D.png
+    vi: data\raw\msrs\test\vi\00516D.png
+  - id: msrs_test_00521D
+    ir: data\raw\msrs\test\ir\00521D.png
+    vi: data\raw\msrs\test\vi\00521D.png
+  - id: msrs_test_00526D
+    ir: data\raw\msrs\test\ir\00526D.png
+    vi: data\raw\msrs\test\vi\00526D.png
+  - id: msrs_test_00533D
+    ir: data\raw\msrs\test\ir\00533D.png
+    vi: data\raw\msrs\test\vi\00533D.png
+  - id: msrs_test_00537D
+    ir: data\raw\msrs\test\ir\00537D.png
+    vi: data\raw\msrs\test\vi\00537D.png
+  - id: msrs_test_00546D
+    ir: data\raw\msrs\test\ir\00546D.png
+    vi: data\raw\msrs\test\vi\00546D.png
+  - id: msrs_test_00551D
+    ir: data\raw\msrs\test\ir\00551D.png
+    vi: data\raw\msrs\test\vi\00551D.png
+  - id: msrs_test_00555D
+    ir: data\raw\msrs\test\ir\00555D.png
+    vi: data\raw\msrs\test\vi\00555D.png
+  - id: msrs_test_00559D
+    ir: data\raw\msrs\test\ir\00559D.png
+    vi: data\raw\msrs\test\vi\00559D.png
+  - id: msrs_test_00563D
+    ir: data\raw\msrs\test\ir\00563D.png
+    vi: data\raw\msrs\test\vi\00563D.png
+  - id: msrs_test_00567D
+    ir: data\raw\msrs\test\ir\00567D.png
+    vi: data\raw\msrs\test\vi\00567D.png
+  - id: msrs_test_00571D
+    ir: data\raw\msrs\test\ir\00571D.png
+    vi: data\raw\msrs\test\vi\00571D.png
+  - id: msrs_test_00581D
+    ir: data\raw\msrs\test\ir\00581D.png
+    vi: data\raw\msrs\test\vi\00581D.png
+  - id: msrs_test_00587D
+    ir: data\raw\msrs\test\ir\00587D.png
+    vi: data\raw\msrs\test\vi\00587D.png
+  - id: msrs_test_00591D
+    ir: data\raw\msrs\test\ir\00591D.png
+    vi: data\raw\msrs\test\vi\00591D.png
+  - id: msrs_test_00596D
+    ir: data\raw\msrs\test\ir\00596D.png
+    vi: data\raw\msrs\test\vi\00596D.png
+  - id: msrs_test_00600D
+    ir: data\raw\msrs\test\ir\00600D.png
+    vi: data\raw\msrs\test\vi\00600D.png
+  - id: msrs_test_00606D
+    ir: data\raw\msrs\test\ir\00606D.png
+    vi: data\raw\msrs\test\vi\00606D.png
+  - id: msrs_test_00613D
+    ir: data\raw\msrs\test\ir\00613D.png
+    vi: data\raw\msrs\test\vi\00613D.png
+  - id: msrs_test_00621D
+    ir: data\raw\msrs\test\ir\00621D.png
+    vi: data\raw\msrs\test\vi\00621D.png
+  - id: msrs_test_00626D
+    ir: data\raw\msrs\test\ir\00626D.png
+    vi: data\raw\msrs\test\vi\00626D.png
+  - id: msrs_test_00630D
+    ir: data\raw\msrs\test\ir\00630D.png
+    vi: data\raw\msrs\test\vi\00630D.png
+  - id: msrs_test_00634D
+    ir: data\raw\msrs\test\ir\00634D.png
+    vi: data\raw\msrs\test\vi\00634D.png
+  - id: msrs_test_00638D
+    ir: data\raw\msrs\test\ir\00638D.png
+    vi: data\raw\msrs\test\vi\00638D.png
+  - id: msrs_test_00642D
+    ir: data\raw\msrs\test\ir\00642D.png
+    vi: data\raw\msrs\test\vi\00642D.png
+  - id: msrs_test_00646D
+    ir: data\raw\msrs\test\ir\00646D.png
+    vi: data\raw\msrs\test\vi\00646D.png
+  - id: msrs_test_00650D
+    ir: data\raw\msrs\test\ir\00650D.png
+    vi: data\raw\msrs\test\vi\00650D.png
+  - id: msrs_test_00655D
+    ir: data\raw\msrs\test\ir\00655D.png
+    vi: data\raw\msrs\test\vi\00655D.png
+  - id: msrs_test_00659D
+    ir: data\raw\msrs\test\ir\00659D.png
+    vi: data\raw\msrs\test\vi\00659D.png
+  - id: msrs_test_00671D
+    ir: data\raw\msrs\test\ir\00671D.png
+    vi: data\raw\msrs\test\vi\00671D.png
+  - id: msrs_test_00676D
+    ir: data\raw\msrs\test\ir\00676D.png
+    vi: data\raw\msrs\test\vi\00676D.png
+  - id: msrs_test_00681N
+    ir: data\raw\msrs\test\ir\00681N.png
+    vi: data\raw\msrs\test\vi\00681N.png
+  - id: msrs_test_00686N
+    ir: data\raw\msrs\test\ir\00686N.png
+    vi: data\raw\msrs\test\vi\00686N.png
+  - id: msrs_test_00690N
+    ir: data\raw\msrs\test\ir\00690N.png
+    vi: data\raw\msrs\test\vi\00690N.png
+  - id: msrs_test_00695N
+    ir: data\raw\msrs\test\ir\00695N.png
+    vi: data\raw\msrs\test\vi\00695N.png
+  - id: msrs_test_00702N
+    ir: data\raw\msrs\test\ir\00702N.png
+    vi: data\raw\msrs\test\vi\00702N.png
+  - id: msrs_test_00706N
+    ir: data\raw\msrs\test\ir\00706N.png
+    vi: data\raw\msrs\test\vi\00706N.png
+  - id: msrs_test_00710N
+    ir: data\raw\msrs\test\ir\00710N.png
+    vi: data\raw\msrs\test\vi\00710N.png
+  - id: msrs_test_00714N
+    ir: data\raw\msrs\test\ir\00714N.png
+    vi: data\raw\msrs\test\vi\00714N.png
+  - id: msrs_test_00718N
+    ir: data\raw\msrs\test\ir\00718N.png
+    vi: data\raw\msrs\test\vi\00718N.png
+  - id: msrs_test_00722N
+    ir: data\raw\msrs\test\ir\00722N.png
+    vi: data\raw\msrs\test\vi\00722N.png
+  - id: msrs_test_00726N
+    ir: data\raw\msrs\test\ir\00726N.png
+    vi: data\raw\msrs\test\vi\00726N.png
+  - id: msrs_test_00730N
+    ir: data\raw\msrs\test\ir\00730N.png
+    vi: data\raw\msrs\test\vi\00730N.png
+  - id: msrs_test_00734N
+    ir: data\raw\msrs\test\ir\00734N.png
+    vi: data\raw\msrs\test\vi\00734N.png
+  - id: msrs_test_00738N
+    ir: data\raw\msrs\test\ir\00738N.png
+    vi: data\raw\msrs\test\vi\00738N.png
+  - id: msrs_test_00742N
+    ir: data\raw\msrs\test\ir\00742N.png
+    vi: data\raw\msrs\test\vi\00742N.png
+  - id: msrs_test_00746N
+    ir: data\raw\msrs\test\ir\00746N.png
+    vi: data\raw\msrs\test\vi\00746N.png
+  - id: msrs_test_00750N
+    ir: data\raw\msrs\test\ir\00750N.png
+    vi: data\raw\msrs\test\vi\00750N.png
+  - id: msrs_test_00754N
+    ir: data\raw\msrs\test\ir\00754N.png
+    vi: data\raw\msrs\test\vi\00754N.png
+  - id: msrs_test_00758N
+    ir: data\raw\msrs\test\ir\00758N.png
+    vi: data\raw\msrs\test\vi\00758N.png
+  - id: msrs_test_00762N
+    ir: data\raw\msrs\test\ir\00762N.png
+    vi: data\raw\msrs\test\vi\00762N.png
+  - id: msrs_test_00766N
+    ir: data\raw\msrs\test\ir\00766N.png
+    vi: data\raw\msrs\test\vi\00766N.png
+  - id: msrs_test_00770N
+    ir: data\raw\msrs\test\ir\00770N.png
+    vi: data\raw\msrs\test\vi\00770N.png
+  - id: msrs_test_00774N
+    ir: data\raw\msrs\test\ir\00774N.png
+    vi: data\raw\msrs\test\vi\00774N.png
+  - id: msrs_test_00778N
+    ir: data\raw\msrs\test\ir\00778N.png
+    vi: data\raw\msrs\test\vi\00778N.png
+  - id: msrs_test_00782N
+    ir: data\raw\msrs\test\ir\00782N.png
+    vi: data\raw\msrs\test\vi\00782N.png
+  - id: msrs_test_00786N
+    ir: data\raw\msrs\test\ir\00786N.png
+    vi: data\raw\msrs\test\vi\00786N.png
+  - id: msrs_test_00790N
+    ir: data\raw\msrs\test\ir\00790N.png
+    vi: data\raw\msrs\test\vi\00790N.png
+  - id: msrs_test_00794N
+    ir: data\raw\msrs\test\ir\00794N.png
+    vi: data\raw\msrs\test\vi\00794N.png
+  - id: msrs_test_00798N
+    ir: data\raw\msrs\test\ir\00798N.png
+    vi: data\raw\msrs\test\vi\00798N.png
+  - id: msrs_test_00802N
+    ir: data\raw\msrs\test\ir\00802N.png
+    vi: data\raw\msrs\test\vi\00802N.png
+  - id: msrs_test_00806N
+    ir: data\raw\msrs\test\ir\00806N.png
+    vi: data\raw\msrs\test\vi\00806N.png
+  - id: msrs_test_00810N
+    ir: data\raw\msrs\test\ir\00810N.png
+    vi: data\raw\msrs\test\vi\00810N.png
+  - id: msrs_test_00815N
+    ir: data\raw\msrs\test\ir\00815N.png
+    vi: data\raw\msrs\test\vi\00815N.png
+  - id: msrs_test_00819N
+    ir: data\raw\msrs\test\ir\00819N.png
+    vi: data\raw\msrs\test\vi\00819N.png
+  - id: msrs_test_00823N
+    ir: data\raw\msrs\test\ir\00823N.png
+    vi: data\raw\msrs\test\vi\00823N.png
+  - id: msrs_test_00828N
+    ir: data\raw\msrs\test\ir\00828N.png
+    vi: data\raw\msrs\test\vi\00828N.png
+  - id: msrs_test_00832N
+    ir: data\raw\msrs\test\ir\00832N.png
+    vi: data\raw\msrs\test\vi\00832N.png
+  - id: msrs_test_00838N
+    ir: data\raw\msrs\test\ir\00838N.png
+    vi: data\raw\msrs\test\vi\00838N.png
+  - id: msrs_test_00842N
+    ir: data\raw\msrs\test\ir\00842N.png
+    vi: data\raw\msrs\test\vi\00842N.png
+  - id: msrs_test_00846N
+    ir: data\raw\msrs\test\ir\00846N.png
+    vi: data\raw\msrs\test\vi\00846N.png
+  - id: msrs_test_00850N
+    ir: data\raw\msrs\test\ir\00850N.png
+    vi: data\raw\msrs\test\vi\00850N.png
+  - id: msrs_test_00854N
+    ir: data\raw\msrs\test\ir\00854N.png
+    vi: data\raw\msrs\test\vi\00854N.png
+  - id: msrs_test_00858N
+    ir: data\raw\msrs\test\ir\00858N.png
+    vi: data\raw\msrs\test\vi\00858N.png
+  - id: msrs_test_00862N
+    ir: data\raw\msrs\test\ir\00862N.png
+    vi: data\raw\msrs\test\vi\00862N.png
+  - id: msrs_test_00866N
+    ir: data\raw\msrs\test\ir\00866N.png
+    vi: data\raw\msrs\test\vi\00866N.png
+  - id: msrs_test_00870N
+    ir: data\raw\msrs\test\ir\00870N.png
+    vi: data\raw\msrs\test\vi\00870N.png
+  - id: msrs_test_00874N
+    ir: data\raw\msrs\test\ir\00874N.png
+    vi: data\raw\msrs\test\vi\00874N.png
+  - id: msrs_test_00878N
+    ir: data\raw\msrs\test\ir\00878N.png
+    vi: data\raw\msrs\test\vi\00878N.png
+  - id: msrs_test_00882N
+    ir: data\raw\msrs\test\ir\00882N.png
+    vi: data\raw\msrs\test\vi\00882N.png
+  - id: msrs_test_00886N
+    ir: data\raw\msrs\test\ir\00886N.png
+    vi: data\raw\msrs\test\vi\00886N.png
+  - id: msrs_test_00890N
+    ir: data\raw\msrs\test\ir\00890N.png
+    vi: data\raw\msrs\test\vi\00890N.png
+  - id: msrs_test_00894N
+    ir: data\raw\msrs\test\ir\00894N.png
+    vi: data\raw\msrs\test\vi\00894N.png
+  - id: msrs_test_00898N
+    ir: data\raw\msrs\test\ir\00898N.png
+    vi: data\raw\msrs\test\vi\00898N.png
+  - id: msrs_test_00902N
+    ir: data\raw\msrs\test\ir\00902N.png
+    vi: data\raw\msrs\test\vi\00902N.png
+  - id: msrs_test_00906N
+    ir: data\raw\msrs\test\ir\00906N.png
+    vi: data\raw\msrs\test\vi\00906N.png
+  - id: msrs_test_00910N
+    ir: data\raw\msrs\test\ir\00910N.png
+    vi: data\raw\msrs\test\vi\00910N.png
+  - id: msrs_test_00914N
+    ir: data\raw\msrs\test\ir\00914N.png
+    vi: data\raw\msrs\test\vi\00914N.png
+  - id: msrs_test_00918N
+    ir: data\raw\msrs\test\ir\00918N.png
+    vi: data\raw\msrs\test\vi\00918N.png
+  - id: msrs_test_00922N
+    ir: data\raw\msrs\test\ir\00922N.png
+    vi: data\raw\msrs\test\vi\00922N.png
+  - id: msrs_test_00927N
+    ir: data\raw\msrs\test\ir\00927N.png
+    vi: data\raw\msrs\test\vi\00927N.png
+  - id: msrs_test_00931N
+    ir: data\raw\msrs\test\ir\00931N.png
+    vi: data\raw\msrs\test\vi\00931N.png
+  - id: msrs_test_00935N
+    ir: data\raw\msrs\test\ir\00935N.png
+    vi: data\raw\msrs\test\vi\00935N.png
+  - id: msrs_test_00939N
+    ir: data\raw\msrs\test\ir\00939N.png
+    vi: data\raw\msrs\test\vi\00939N.png
+  - id: msrs_test_00943N
+    ir: data\raw\msrs\test\ir\00943N.png
+    vi: data\raw\msrs\test\vi\00943N.png
+  - id: msrs_test_00947N
+    ir: data\raw\msrs\test\ir\00947N.png
+    vi: data\raw\msrs\test\vi\00947N.png
+  - id: msrs_test_00951N
+    ir: data\raw\msrs\test\ir\00951N.png
+    vi: data\raw\msrs\test\vi\00951N.png
+  - id: msrs_test_00955N
+    ir: data\raw\msrs\test\ir\00955N.png
+    vi: data\raw\msrs\test\vi\00955N.png
+  - id: msrs_test_00959N
+    ir: data\raw\msrs\test\ir\00959N.png
+    vi: data\raw\msrs\test\vi\00959N.png
+  - id: msrs_test_00964N
+    ir: data\raw\msrs\test\ir\00964N.png
+    vi: data\raw\msrs\test\vi\00964N.png
+  - id: msrs_test_00968N
+    ir: data\raw\msrs\test\ir\00968N.png
+    vi: data\raw\msrs\test\vi\00968N.png
+  - id: msrs_test_00972N
+    ir: data\raw\msrs\test\ir\00972N.png
+    vi: data\raw\msrs\test\vi\00972N.png
+  - id: msrs_test_00976N
+    ir: data\raw\msrs\test\ir\00976N.png
+    vi: data\raw\msrs\test\vi\00976N.png
+  - id: msrs_test_00980N
+    ir: data\raw\msrs\test\ir\00980N.png
+    vi: data\raw\msrs\test\vi\00980N.png
+  - id: msrs_test_00984N
+    ir: data\raw\msrs\test\ir\00984N.png
+    vi: data\raw\msrs\test\vi\00984N.png
+  - id: msrs_test_00988N
+    ir: data\raw\msrs\test\ir\00988N.png
+    vi: data\raw\msrs\test\vi\00988N.png
+  - id: msrs_test_00992N
+    ir: data\raw\msrs\test\ir\00992N.png
+    vi: data\raw\msrs\test\vi\00992N.png
+  - id: msrs_test_00996N
+    ir: data\raw\msrs\test\ir\00996N.png
+    vi: data\raw\msrs\test\vi\00996N.png
+  - id: msrs_test_01000N
+    ir: data\raw\msrs\test\ir\01000N.png
+    vi: data\raw\msrs\test\vi\01000N.png
+  - id: msrs_test_01004N
+    ir: data\raw\msrs\test\ir\01004N.png
+    vi: data\raw\msrs\test\vi\01004N.png
+  - id: msrs_test_01008N
+    ir: data\raw\msrs\test\ir\01008N.png
+    vi: data\raw\msrs\test\vi\01008N.png
+  - id: msrs_test_01012N
+    ir: data\raw\msrs\test\ir\01012N.png
+    vi: data\raw\msrs\test\vi\01012N.png
+  - id: msrs_test_01016N
+    ir: data\raw\msrs\test\ir\01016N.png
+    vi: data\raw\msrs\test\vi\01016N.png
+  - id: msrs_test_01020N
+    ir: data\raw\msrs\test\ir\01020N.png
+    vi: data\raw\msrs\test\vi\01020N.png
+  - id: msrs_test_01024N
+    ir: data\raw\msrs\test\ir\01024N.png
+    vi: data\raw\msrs\test\vi\01024N.png
+  - id: msrs_test_01028N
+    ir: data\raw\msrs\test\ir\01028N.png
+    vi: data\raw\msrs\test\vi\01028N.png
+  - id: msrs_test_01033N
+    ir: data\raw\msrs\test\ir\01033N.png
+    vi: data\raw\msrs\test\vi\01033N.png
+  - id: msrs_test_01037N
+    ir: data\raw\msrs\test\ir\01037N.png
+    vi: data\raw\msrs\test\vi\01037N.png
+  - id: msrs_test_01041N
+    ir: data\raw\msrs\test\ir\01041N.png
+    vi: data\raw\msrs\test\vi\01041N.png
+  - id: msrs_test_01045N
+    ir: data\raw\msrs\test\ir\01045N.png
+    vi: data\raw\msrs\test\vi\01045N.png
+  - id: msrs_test_01049N
+    ir: data\raw\msrs\test\ir\01049N.png
+    vi: data\raw\msrs\test\vi\01049N.png
+  - id: msrs_test_01053N
+    ir: data\raw\msrs\test\ir\01053N.png
+    vi: data\raw\msrs\test\vi\01053N.png
+  - id: msrs_test_01057N
+    ir: data\raw\msrs\test\ir\01057N.png
+    vi: data\raw\msrs\test\vi\01057N.png
+  - id: msrs_test_01061N
+    ir: data\raw\msrs\test\ir\01061N.png
+    vi: data\raw\msrs\test\vi\01061N.png
+  - id: msrs_test_01066N
+    ir: data\raw\msrs\test\ir\01066N.png
+    vi: data\raw\msrs\test\vi\01066N.png
+  - id: msrs_test_01070N
+    ir: data\raw\msrs\test\ir\01070N.png
+    vi: data\raw\msrs\test\vi\01070N.png
+  - id: msrs_test_01074N
+    ir: data\raw\msrs\test\ir\01074N.png
+    vi: data\raw\msrs\test\vi\01074N.png
+  - id: msrs_test_01078N
+    ir: data\raw\msrs\test\ir\01078N.png
+    vi: data\raw\msrs\test\vi\01078N.png
+  - id: msrs_test_01082N
+    ir: data\raw\msrs\test\ir\01082N.png
+    vi: data\raw\msrs\test\vi\01082N.png
+  - id: msrs_test_01086N
+    ir: data\raw\msrs\test\ir\01086N.png
+    vi: data\raw\msrs\test\vi\01086N.png
+  - id: msrs_test_01090N
+    ir: data\raw\msrs\test\ir\01090N.png
+    vi: data\raw\msrs\test\vi\01090N.png
+  - id: msrs_test_01094N
+    ir: data\raw\msrs\test\ir\01094N.png
+    vi: data\raw\msrs\test\vi\01094N.png
+  - id: msrs_test_01098N
+    ir: data\raw\msrs\test\ir\01098N.png
+    vi: data\raw\msrs\test\vi\01098N.png
+  - id: msrs_test_01102N
+    ir: data\raw\msrs\test\ir\01102N.png
+    vi: data\raw\msrs\test\vi\01102N.png
+  - id: msrs_test_01106N
+    ir: data\raw\msrs\test\ir\01106N.png
+    vi: data\raw\msrs\test\vi\01106N.png
+  - id: msrs_test_01110N
+    ir: data\raw\msrs\test\ir\01110N.png
+    vi: data\raw\msrs\test\vi\01110N.png
+  - id: msrs_test_01114N
+    ir: data\raw\msrs\test\ir\01114N.png
+    vi: data\raw\msrs\test\vi\01114N.png
+  - id: msrs_test_01118N
+    ir: data\raw\msrs\test\ir\01118N.png
+    vi: data\raw\msrs\test\vi\01118N.png
+  - id: msrs_test_01122N
+    ir: data\raw\msrs\test\ir\01122N.png
+    vi: data\raw\msrs\test\vi\01122N.png
+  - id: msrs_test_01126N
+    ir: data\raw\msrs\test\ir\01126N.png
+    vi: data\raw\msrs\test\vi\01126N.png
+  - id: msrs_test_01130N
+    ir: data\raw\msrs\test\ir\01130N.png
+    vi: data\raw\msrs\test\vi\01130N.png
+  - id: msrs_test_01135N
+    ir: data\raw\msrs\test\ir\01135N.png
+    vi: data\raw\msrs\test\vi\01135N.png
+  - id: msrs_test_01139N
+    ir: data\raw\msrs\test\ir\01139N.png
+    vi: data\raw\msrs\test\vi\01139N.png
+  - id: msrs_test_01144N
+    ir: data\raw\msrs\test\ir\01144N.png
+    vi: data\raw\msrs\test\vi\01144N.png
+  - id: msrs_test_01148N
+    ir: data\raw\msrs\test\ir\01148N.png
+    vi: data\raw\msrs\test\vi\01148N.png
+  - id: msrs_test_01152N
+    ir: data\raw\msrs\test\ir\01152N.png
+    vi: data\raw\msrs\test\vi\01152N.png
+  - id: msrs_test_01158N
+    ir: data\raw\msrs\test\ir\01158N.png
+    vi: data\raw\msrs\test\vi\01158N.png
+  - id: msrs_test_01162N
+    ir: data\raw\msrs\test\ir\01162N.png
+    vi: data\raw\msrs\test\vi\01162N.png
+  - id: msrs_test_01166N
+    ir: data\raw\msrs\test\ir\01166N.png
+    vi: data\raw\msrs\test\vi\01166N.png
+  - id: msrs_test_01170N
+    ir: data\raw\msrs\test\ir\01170N.png
+    vi: data\raw\msrs\test\vi\01170N.png
+  - id: msrs_test_01174N
+    ir: data\raw\msrs\test\ir\01174N.png
+    vi: data\raw\msrs\test\vi\01174N.png
+  - id: msrs_test_01178N
+    ir: data\raw\msrs\test\ir\01178N.png
+    vi: data\raw\msrs\test\vi\01178N.png
+  - id: msrs_test_01182N
+    ir: data\raw\msrs\test\ir\01182N.png
+    vi: data\raw\msrs\test\vi\01182N.png
+  - id: msrs_test_01186N
+    ir: data\raw\msrs\test\ir\01186N.png
+    vi: data\raw\msrs\test\vi\01186N.png
+  - id: msrs_test_01190N
+    ir: data\raw\msrs\test\ir\01190N.png
+    vi: data\raw\msrs\test\vi\01190N.png
+  - id: msrs_test_01194N
+    ir: data\raw\msrs\test\ir\01194N.png
+    vi: data\raw\msrs\test\vi\01194N.png
+  - id: msrs_test_01198N
+    ir: data\raw\msrs\test\ir\01198N.png
+    vi: data\raw\msrs\test\vi\01198N.png
+  - id: msrs_test_01202N
+    ir: data\raw\msrs\test\ir\01202N.png
+    vi: data\raw\msrs\test\vi\01202N.png
+  - id: msrs_test_01206N
+    ir: data\raw\msrs\test\ir\01206N.png
+    vi: data\raw\msrs\test\vi\01206N.png
+  - id: msrs_test_01210N
+    ir: data\raw\msrs\test\ir\01210N.png
+    vi: data\raw\msrs\test\vi\01210N.png
+  - id: msrs_test_01214N
+    ir: data\raw\msrs\test\ir\01214N.png
+    vi: data\raw\msrs\test\vi\01214N.png
+  - id: msrs_test_01218N
+    ir: data\raw\msrs\test\ir\01218N.png
+    vi: data\raw\msrs\test\vi\01218N.png
+  - id: msrs_test_01222N
+    ir: data\raw\msrs\test\ir\01222N.png
+    vi: data\raw\msrs\test\vi\01222N.png
+  - id: msrs_test_01226N
+    ir: data\raw\msrs\test\ir\01226N.png
+    vi: data\raw\msrs\test\vi\01226N.png
+  - id: msrs_test_01230N
+    ir: data\raw\msrs\test\ir\01230N.png
+    vi: data\raw\msrs\test\vi\01230N.png
+  - id: msrs_test_01234N
+    ir: data\raw\msrs\test\ir\01234N.png
+    vi: data\raw\msrs\test\vi\01234N.png
+  - id: msrs_test_01238N
+    ir: data\raw\msrs\test\ir\01238N.png
+    vi: data\raw\msrs\test\vi\01238N.png
+  - id: msrs_test_01242N
+    ir: data\raw\msrs\test\ir\01242N.png
+    vi: data\raw\msrs\test\vi\01242N.png
+  - id: msrs_test_01246N
+    ir: data\raw\msrs\test\ir\01246N.png
+    vi: data\raw\msrs\test\vi\01246N.png
+  - id: msrs_test_01250N
+    ir: data\raw\msrs\test\ir\01250N.png
+    vi: data\raw\msrs\test\vi\01250N.png
+  - id: msrs_test_01254N
+    ir: data\raw\msrs\test\ir\01254N.png
+    vi: data\raw\msrs\test\vi\01254N.png
+  - id: msrs_test_01258N
+    ir: data\raw\msrs\test\ir\01258N.png
+    vi: data\raw\msrs\test\vi\01258N.png
+  - id: msrs_test_01262N
+    ir: data\raw\msrs\test\ir\01262N.png
+    vi: data\raw\msrs\test\vi\01262N.png
+  - id: msrs_test_01266N
+    ir: data\raw\msrs\test\ir\01266N.png
+    vi: data\raw\msrs\test\vi\01266N.png
+  - id: msrs_test_01270N
+    ir: data\raw\msrs\test\ir\01270N.png
+    vi: data\raw\msrs\test\vi\01270N.png
+  - id: msrs_test_01274N
+    ir: data\raw\msrs\test\ir\01274N.png
+    vi: data\raw\msrs\test\vi\01274N.png
+  - id: msrs_test_01278N
+    ir: data\raw\msrs\test\ir\01278N.png
+    vi: data\raw\msrs\test\vi\01278N.png
+  - id: msrs_test_01282N
+    ir: data\raw\msrs\test\ir\01282N.png
+    vi: data\raw\msrs\test\vi\01282N.png
+  - id: msrs_test_01286N
+    ir: data\raw\msrs\test\ir\01286N.png
+    vi: data\raw\msrs\test\vi\01286N.png
+  - id: msrs_test_01290N
+    ir: data\raw\msrs\test\ir\01290N.png
+    vi: data\raw\msrs\test\vi\01290N.png
+  - id: msrs_test_01294N
+    ir: data\raw\msrs\test\ir\01294N.png
+    vi: data\raw\msrs\test\vi\01294N.png
+  - id: msrs_test_01298N
+    ir: data\raw\msrs\test\ir\01298N.png
+    vi: data\raw\msrs\test\vi\01298N.png
+  - id: msrs_test_01302N
+    ir: data\raw\msrs\test\ir\01302N.png
+    vi: data\raw\msrs\test\vi\01302N.png
+  - id: msrs_test_01306N
+    ir: data\raw\msrs\test\ir\01306N.png
+    vi: data\raw\msrs\test\vi\01306N.png
+  - id: msrs_test_01310N
+    ir: data\raw\msrs\test\ir\01310N.png
+    vi: data\raw\msrs\test\vi\01310N.png
+  - id: msrs_test_01315N
+    ir: data\raw\msrs\test\ir\01315N.png
+    vi: data\raw\msrs\test\vi\01315N.png
+  - id: msrs_test_01319N
+    ir: data\raw\msrs\test\ir\01319N.png
+    vi: data\raw\msrs\test\vi\01319N.png
+  - id: msrs_test_01323N
+    ir: data\raw\msrs\test\ir\01323N.png
+    vi: data\raw\msrs\test\vi\01323N.png
+  - id: msrs_test_01327N
+    ir: data\raw\msrs\test\ir\01327N.png
+    vi: data\raw\msrs\test\vi\01327N.png
+  - id: msrs_test_01331N
+    ir: data\raw\msrs\test\ir\01331N.png
+    vi: data\raw\msrs\test\vi\01331N.png
+  - id: msrs_test_01335N
+    ir: data\raw\msrs\test\ir\01335N.png
+    vi: data\raw\msrs\test\vi\01335N.png
+  - id: msrs_test_01340N
+    ir: data\raw\msrs\test\ir\01340N.png
+    vi: data\raw\msrs\test\vi\01340N.png
+  - id: msrs_test_01344N
+    ir: data\raw\msrs\test\ir\01344N.png
+    vi: data\raw\msrs\test\vi\01344N.png
+  - id: msrs_test_01348N
+    ir: data\raw\msrs\test\ir\01348N.png
+    vi: data\raw\msrs\test\vi\01348N.png
+  - id: msrs_test_01352N
+    ir: data\raw\msrs\test\ir\01352N.png
+    vi: data\raw\msrs\test\vi\01352N.png
+  - id: msrs_test_01356N
+    ir: data\raw\msrs\test\ir\01356N.png
+    vi: data\raw\msrs\test\vi\01356N.png
+  - id: msrs_test_01360N
+    ir: data\raw\msrs\test\ir\01360N.png
+    vi: data\raw\msrs\test\vi\01360N.png
+  - id: msrs_test_01364N
+    ir: data\raw\msrs\test\ir\01364N.png
+    vi: data\raw\msrs\test\vi\01364N.png
+  - id: msrs_test_01368N
+    ir: data\raw\msrs\test\ir\01368N.png
+    vi: data\raw\msrs\test\vi\01368N.png
+  - id: msrs_test_01372N
+    ir: data\raw\msrs\test\ir\01372N.png
+    vi: data\raw\msrs\test\vi\01372N.png
+  - id: msrs_test_01376N
+    ir: data\raw\msrs\test\ir\01376N.png
+    vi: data\raw\msrs\test\vi\01376N.png
+  - id: msrs_test_01380D
+    ir: data\raw\msrs\test\ir\01380D.png
+    vi: data\raw\msrs\test\vi\01380D.png
+  - id: msrs_test_01384D
+    ir: data\raw\msrs\test\ir\01384D.png
+    vi: data\raw\msrs\test\vi\01384D.png
+  - id: msrs_test_01388D
+    ir: data\raw\msrs\test\ir\01388D.png
+    vi: data\raw\msrs\test\vi\01388D.png
+  - id: msrs_test_01392D
+    ir: data\raw\msrs\test\ir\01392D.png
+    vi: data\raw\msrs\test\vi\01392D.png
+  - id: msrs_test_01396D
+    ir: data\raw\msrs\test\ir\01396D.png
+    vi: data\raw\msrs\test\vi\01396D.png
+  - id: msrs_test_01401D
+    ir: data\raw\msrs\test\ir\01401D.png
+    vi: data\raw\msrs\test\vi\01401D.png
+  - id: msrs_test_01405D
+    ir: data\raw\msrs\test\ir\01405D.png
+    vi: data\raw\msrs\test\vi\01405D.png
+  - id: msrs_test_01409D
+    ir: data\raw\msrs\test\ir\01409D.png
+    vi: data\raw\msrs\test\vi\01409D.png
+  - id: msrs_test_01413D
+    ir: data\raw\msrs\test\ir\01413D.png
+    vi: data\raw\msrs\test\vi\01413D.png
+  - id: msrs_test_01417D
+    ir: data\raw\msrs\test\ir\01417D.png
+    vi: data\raw\msrs\test\vi\01417D.png
+  - id: msrs_test_01423D
+    ir: data\raw\msrs\test\ir\01423D.png
+    vi: data\raw\msrs\test\vi\01423D.png
+  - id: msrs_test_01427D
+    ir: data\raw\msrs\test\ir\01427D.png
+    vi: data\raw\msrs\test\vi\01427D.png
+  - id: msrs_test_01431D
+    ir: data\raw\msrs\test\ir\01431D.png
+    vi: data\raw\msrs\test\vi\01431D.png
+  - id: msrs_test_01435D
+    ir: data\raw\msrs\test\ir\01435D.png
+    vi: data\raw\msrs\test\vi\01435D.png
+  - id: msrs_test_01441D
+    ir: data\raw\msrs\test\ir\01441D.png
+    vi: data\raw\msrs\test\vi\01441D.png
+  - id: msrs_test_01445D
+    ir: data\raw\msrs\test\ir\01445D.png
+    vi: data\raw\msrs\test\vi\01445D.png
+  - id: msrs_test_01449D
+    ir: data\raw\msrs\test\ir\01449D.png
+    vi: data\raw\msrs\test\vi\01449D.png
+  - id: msrs_test_01453D
+    ir: data\raw\msrs\test\ir\01453D.png
+    vi: data\raw\msrs\test\vi\01453D.png
+  - id: msrs_test_01458D
+    ir: data\raw\msrs\test\ir\01458D.png
+    vi: data\raw\msrs\test\vi\01458D.png
+  - id: msrs_test_01462D
+    ir: data\raw\msrs\test\ir\01462D.png
+    vi: data\raw\msrs\test\vi\01462D.png
+  - id: msrs_test_01466D
+    ir: data\raw\msrs\test\ir\01466D.png
+    vi: data\raw\msrs\test\vi\01466D.png
+  - id: msrs_test_01470D
+    ir: data\raw\msrs\test\ir\01470D.png
+    vi: data\raw\msrs\test\vi\01470D.png
+  - id: msrs_test_01474D
+    ir: data\raw\msrs\test\ir\01474D.png
+    vi: data\raw\msrs\test\vi\01474D.png
+  - id: msrs_test_01478D
+    ir: data\raw\msrs\test\ir\01478D.png
+    vi: data\raw\msrs\test\vi\01478D.png
+  - id: msrs_test_01482D
+    ir: data\raw\msrs\test\ir\01482D.png
+    vi: data\raw\msrs\test\vi\01482D.png
+  - id: msrs_test_01486D
+    ir: data\raw\msrs\test\ir\01486D.png
+    vi: data\raw\msrs\test\vi\01486D.png
+  - id: msrs_test_01493D
+    ir: data\raw\msrs\test\ir\01493D.png
+    vi: data\raw\msrs\test\vi\01493D.png
+  - id: msrs_test_01498D
+    ir: data\raw\msrs\test\ir\01498D.png
+    vi: data\raw\msrs\test\vi\01498D.png
+  - id: msrs_test_01502D
+    ir: data\raw\msrs\test\ir\01502D.png
+    vi: data\raw\msrs\test\vi\01502D.png
+  - id: msrs_test_01506D
+    ir: data\raw\msrs\test\ir\01506D.png
+    vi: data\raw\msrs\test\vi\01506D.png
+  - id: msrs_test_01510D
+    ir: data\raw\msrs\test\ir\01510D.png
+    vi: data\raw\msrs\test\vi\01510D.png
+  - id: msrs_test_01514D
+    ir: data\raw\msrs\test\ir\01514D.png
+    vi: data\raw\msrs\test\vi\01514D.png
+  - id: msrs_test_01520D
+    ir: data\raw\msrs\test\ir\01520D.png
+    vi: data\raw\msrs\test\vi\01520D.png
+  - id: msrs_test_01527D
+    ir: data\raw\msrs\test\ir\01527D.png
+    vi: data\raw\msrs\test\vi\01527D.png
+  - id: msrs_test_01531D
+    ir: data\raw\msrs\test\ir\01531D.png
+    vi: data\raw\msrs\test\vi\01531D.png
+  - id: msrs_test_01535D
+    ir: data\raw\msrs\test\ir\01535D.png
+    vi: data\raw\msrs\test\vi\01535D.png
+  - id: msrs_test_01539D
+    ir: data\raw\msrs\test\ir\01539D.png
+    vi: data\raw\msrs\test\vi\01539D.png
+  - id: msrs_test_01543D
+    ir: data\raw\msrs\test\ir\01543D.png
+    vi: data\raw\msrs\test\vi\01543D.png
+  - id: msrs_test_01547D
+    ir: data\raw\msrs\test\ir\01547D.png
+    vi: data\raw\msrs\test\vi\01547D.png
+  - id: msrs_test_01551D
+    ir: data\raw\msrs\test\ir\01551D.png
+    vi: data\raw\msrs\test\vi\01551D.png
+  - id: msrs_test_01555D
+    ir: data\raw\msrs\test\ir\01555D.png
+    vi: data\raw\msrs\test\vi\01555D.png
+  - id: msrs_test_01559D
+    ir: data\raw\msrs\test\ir\01559D.png
+    vi: data\raw\msrs\test\vi\01559D.png
+  - id: msrs_test_01566D
+    ir: data\raw\msrs\test\ir\01566D.png
+    vi: data\raw\msrs\test\vi\01566D.png
+  - id: msrs_test_01570D
+    ir: data\raw\msrs\test\ir\01570D.png
+    vi: data\raw\msrs\test\vi\01570D.png
+  - id: msrs_test_01574D
+    ir: data\raw\msrs\test\ir\01574D.png
+    vi: data\raw\msrs\test\vi\01574D.png
+  - id: msrs_test_01578D
+    ir: data\raw\msrs\test\ir\01578D.png
+    vi: data\raw\msrs\test\vi\01578D.png
+  - id: msrs_test_01583D
+    ir: data\raw\msrs\test\ir\01583D.png
+    vi: data\raw\msrs\test\vi\01583D.png
+  - id: msrs_test_01587D
+    ir: data\raw\msrs\test\ir\01587D.png
+    vi: data\raw\msrs\test\vi\01587D.png
+  - id: msrs_test_01591D
+    ir: data\raw\msrs\test\ir\01591D.png
+    vi: data\raw\msrs\test\vi\01591D.png
+  - id: msrs_test_01595D
+    ir: data\raw\msrs\test\ir\01595D.png
+    vi: data\raw\msrs\test\vi\01595D.png
+  - id: msrs_test_01599D
+    ir: data\raw\msrs\test\ir\01599D.png
+    vi: data\raw\msrs\test\vi\01599D.png
+  - id: msrs_test_01603D
+    ir: data\raw\msrs\test\ir\01603D.png
+    vi: data\raw\msrs\test\vi\01603D.png

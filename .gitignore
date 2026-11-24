@@ -1,5 +1,7 @@
 data/
 results/fused/
+results/dev_cache/
+.pytest_cache/
 *.pth
 *.pkl
 *.model*
