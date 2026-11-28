@@ -22,14 +22,14 @@ def compute_gradient_magnitude(image: np.ndarray) -> np.ndarray:
     Returns:
         Gradient magnitude array of shape (H, W), normalized to [0, 1].
     """
-    img_32 = image.astype(np.float32)
-    gx = cv2.Sobel(img_32, cv2.CV_32F, 1, 0, ksize=3, borderType=cv2.BORDER_REFLECT) / 8.0
-    gy = cv2.Sobel(img_32, cv2.CV_32F, 0, 1, ksize=3, borderType=cv2.BORDER_REFLECT) / 8.0
-    magnitude = np.sqrt(gx**2 + gy**2)
-    max_val = np.max(magnitude)
+    img_32 = np.asarray(image, dtype=np.float32)
+    gx = cv2.Sobel(img_32, cv2.CV_32F, 1, 0, ksize=3, scale=0.125, borderType=cv2.BORDER_REFLECT)
+    gy = cv2.Sobel(img_32, cv2.CV_32F, 0, 1, ksize=3, scale=0.125, borderType=cv2.BORDER_REFLECT)
+    magnitude = cv2.magnitude(gx, gy)
+    max_val = float(np.max(magnitude))
     if max_val > 1e-8:
-        magnitude = magnitude / max_val
-    return magnitude.astype(image.dtype)
+        magnitude *= np.float32(1.0 / max_val)
+    return magnitude if image.dtype == np.float32 else magnitude.astype(image.dtype)
 
 
 def perona_malik_diffusion(
@@ -44,7 +44,8 @@ def perona_malik_diffusion(
     Solves the PDE:
         dI/dt = div( g(|grad I|) grad I )
     using a 4-neighborhood discretization with Neumann boundary conditions.
-    Optimized with preallocated float32 buffers and vectorized difference stencils.
+    Exploits directional flux antisymmetry (flux_S = -flux_N, flux_W = -flux_E)
+    with preallocated float32 buffers and SIMD-accelerated cv2.exp.
 
     Conduction functions:
         - exponential (g1): g(s) = exp(-(s / kappa)^2)
@@ -66,44 +67,60 @@ def perona_malik_diffusion(
         raise ValueError("Iterations must be non-negative.")
     if kappa <= 0:
         raise ValueError("Kappa must be strictly positive.")
+    if conduction not in ("exponential", "rational"):
+        raise ValueError(f"Unknown conduction function: {conduction}")
 
-    u = image.astype(np.float32, copy=True)
-    kappa_sq = np.float32(kappa**2)
-    inv_kappa = np.float32(1.0 / kappa)
+    u = np.array(image, dtype=np.float32, copy=True)
+    if iterations == 0:
+        np.clip(u, 0.0, 1.0, out=u)
+        return u if image.dtype == np.float32 else u.astype(image.dtype)
+
+    h, w = u.shape
+    inv_kappa_sq = np.float32(1.0 / (kappa * kappa))
+    neg_inv_kappa_sq = np.float32(-inv_kappa_sq)
     step = np.float32(step_size)
 
-    delta_n = np.zeros_like(u)
-    delta_s = np.zeros_like(u)
-    delta_e = np.zeros_like(u)
-    delta_w = np.zeros_like(u)
+    dv = np.empty((max(h - 1, 0), w), dtype=np.float32)
+    dh = np.empty((h, max(w - 1, 0)), dtype=np.float32)
+    tmp_v = np.empty_like(dv)
+    tmp_h = np.empty_like(dh)
 
     for _ in range(iterations):
-        delta_n[:-1, :] = u[1:, :] - u[:-1, :]
-        delta_n[-1, :] = 0.0
-        delta_s[1:, :] = u[:-1, :] - u[1:, :]
-        delta_s[0, :] = 0.0
-        delta_e[:, :-1] = u[:, 1:] - u[:, :-1]
-        delta_e[:, -1] = 0.0
-        delta_w[:, 1:] = u[:, :-1] - u[:, 1:]
-        delta_w[:, 0] = 0.0
+        if h > 1:
+            np.subtract(u[1:, :], u[:-1, :], out=dv)
+            np.multiply(dv, dv, out=tmp_v)
+            if conduction == "exponential":
+                tmp_v *= neg_inv_kappa_sq
+                cv2.exp(tmp_v, tmp_v)
+            else:
+                tmp_v *= inv_kappa_sq
+                tmp_v += np.float32(1.0)
+                np.divide(np.float32(1.0), tmp_v, out=tmp_v)
+            tmp_v *= dv
+            tmp_v *= step
 
-        if conduction == "exponential":
-            c_n = np.exp(-((delta_n * inv_kappa) ** 2))
-            c_s = np.exp(-((delta_s * inv_kappa) ** 2))
-            c_e = np.exp(-((delta_e * inv_kappa) ** 2))
-            c_w = np.exp(-((delta_w * inv_kappa) ** 2))
-        elif conduction == "rational":
-            c_n = 1.0 / (1.0 + (delta_n**2) / kappa_sq)
-            c_s = 1.0 / (1.0 + (delta_s**2) / kappa_sq)
-            c_e = 1.0 / (1.0 + (delta_e**2) / kappa_sq)
-            c_w = 1.0 / (1.0 + (delta_w**2) / kappa_sq)
-        else:
-            raise ValueError(f"Unknown conduction function: {conduction}")
+        if w > 1:
+            np.subtract(u[:, 1:], u[:, :-1], out=dh)
+            np.multiply(dh, dh, out=tmp_h)
+            if conduction == "exponential":
+                tmp_h *= neg_inv_kappa_sq
+                cv2.exp(tmp_h, tmp_h)
+            else:
+                tmp_h *= inv_kappa_sq
+                tmp_h += np.float32(1.0)
+                np.divide(np.float32(1.0), tmp_h, out=tmp_h)
+            tmp_h *= dh
+            tmp_h *= step
 
-        flux = c_n * delta_n + c_s * delta_s + c_e * delta_e + c_w * delta_w
-        u += step * flux
+        if h > 1:
+            u[:-1, :] += tmp_v
+            u[1:, :] -= tmp_v
+        if w > 1:
+            u[:, :-1] += tmp_h
+            u[:, 1:] -= tmp_h
 
-    return np.clip(u, 0.0, 1.0).astype(image.dtype)
+    np.clip(u, 0.0, 1.0, out=u)
+    return u if image.dtype == np.float32 else u.astype(image.dtype)
 
 
 def decompose_structures(

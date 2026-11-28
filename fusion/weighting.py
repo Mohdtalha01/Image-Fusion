@@ -11,11 +11,26 @@ import numpy as np
 import cv2
 
 
+def precompute_guide_stats(
+    guide: np.ndarray,
+    radius: int = 5,
+    eps: float = 1e-4,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Precompute guide mean and regularized variance for reuse across guided filter calls."""
+    ksize = (2 * radius + 1, 2 * radius + 1)
+    guide_32 = np.asarray(guide, dtype=np.float32)
+    mean_i = cv2.boxFilter(guide_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+    corr_i = cv2.boxFilter(guide_32 * guide_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+    var_i_eps = (corr_i - mean_i * mean_i) + np.float32(eps)
+    return guide_32, mean_i, var_i_eps
+
+
 def fast_guided_filter(
     guide: np.ndarray,
     src: np.ndarray,
     radius: int = 5,
     eps: float = 1e-4,
+    guide_stats: Optional[Tuple[np.ndarray, np.ndarray, np.ndarray]] = None,
 ) -> np.ndarray:
     """Fast Guided Image Filter with O(1) box filtering.
 
@@ -27,30 +42,30 @@ def fast_guided_filter(
         src: Source/filtering input image of shape (H, W).
         radius: Filter window radius r (filter size is 2r + 1).
         eps: Regularization parameter.
+        guide_stats: Optional precomputed (guide_32, mean_i, var_i + eps) tuple.
 
     Returns:
         Filtered image of shape (H, W).
     """
     ksize = (2 * radius + 1, 2 * radius + 1)
-    guide_32 = guide.astype(np.float32)
-    src_32 = src.astype(np.float32)
+    if guide_stats is None:
+        guide_32, mean_i, var_i_eps = precompute_guide_stats(guide, radius=radius, eps=eps)
+    else:
+        guide_32, mean_i, var_i_eps = guide_stats
 
-    mean_i = cv2.boxFilter(guide_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+    src_32 = np.asarray(src, dtype=np.float32)
     mean_p = cv2.boxFilter(src_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-    corr_i = cv2.boxFilter(guide_32 * guide_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
     corr_ip = cv2.boxFilter(guide_32 * src_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
 
-    var_i = corr_i - mean_i * mean_i
     cov_ip = corr_ip - mean_i * mean_p
-
-    a = cov_ip / (var_i + eps)
+    a = cov_ip / var_i_eps
     b = mean_p - a * mean_i
 
     mean_a = cv2.boxFilter(a, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
     mean_b = cv2.boxFilter(b, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
 
     q = mean_a * guide_32 + mean_b
-    return q.astype(src.dtype)
+    return q if src.dtype == np.float32 else q.astype(src.dtype)
 
 
 def compute_local_spatial_frequency(
@@ -66,19 +81,21 @@ def compute_local_spatial_frequency(
     Returns:
         Local spatial frequency map (H, W).
     """
-    img = image.astype(np.float32)
+    img = np.asarray(image, dtype=np.float32)
     diff_row = np.zeros_like(img)
-    diff_row[1:, :] = (img[1:, :] - img[:-1, :]) ** 2
+    dr = img[1:, :] - img[:-1, :]
+    np.multiply(dr, dr, out=diff_row[1:, :])
 
     diff_col = np.zeros_like(img)
-    diff_col[:, 1:] = (img[:, 1:] - img[:, :-1]) ** 2
+    dc = img[:, 1:] - img[:, :-1]
+    np.multiply(dc, dc, out=diff_col[:, 1:])
 
     ksize = (window_size, window_size)
     rf_sq = cv2.boxFilter(diff_row, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
     cf_sq = cv2.boxFilter(diff_col, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
 
-    sf = np.sqrt(np.maximum(0.0, rf_sq + cf_sq))
-    return sf.astype(image.dtype)
+    sf = np.sqrt(np.maximum(np.float32(0.0), rf_sq + cf_sq))
+    return sf if image.dtype == np.float32 else sf.astype(image.dtype)
 
 
 def compute_component_saliency(
@@ -102,33 +119,32 @@ def compute_component_saliency(
     Returns:
         Saliency map of shape (H, W).
     """
-    c = component.astype(np.float32)
+    c = np.asarray(component, dtype=np.float32)
     ksize = (window_size, window_size)
 
     if component_type == "GT":
         mean_c = cv2.boxFilter(c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-        mean_c2 = cv2.boxFilter(c**2, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-        local_energy = mean_c2
-        local_var = np.maximum(0.0, mean_c2 - mean_c**2)
-        local_contrast = np.sqrt(local_var)
-        saliency = local_energy * (1.0 + local_contrast)
+        mean_c2 = cv2.boxFilter(c * c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+        local_var = np.maximum(np.float32(0.0), mean_c2 - mean_c * mean_c)
+        saliency = mean_c2 * (np.float32(1.0) + np.sqrt(local_var))
 
     elif component_type == "GE":
         saliency = cv2.boxFilter(c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
 
     elif component_type == "FT":
         mean_c = cv2.boxFilter(c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-        mean_c2 = cv2.boxFilter(c**2, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-        local_var = np.maximum(0.0, mean_c2 - mean_c**2)
+        mean_c2 = cv2.boxFilter(c * c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+        local_var = np.maximum(np.float32(0.0), mean_c2 - mean_c * mean_c)
         local_sf = compute_local_spatial_frequency(c, window_size=window_size)
-        saliency = local_var * (1.0 + local_sf)
+        saliency = local_var * (np.float32(1.0) + local_sf)
 
     elif component_type == "FE":
-        saliency = cv2.boxFilter(c**2, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+        saliency = cv2.boxFilter(c * c, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
     else:
         raise ValueError(f"Unknown component type: {component_type}")
 
-    return np.maximum(0.0, saliency).astype(np.float32)
+    np.maximum(saliency, np.float32(0.0), out=saliency)
+    return saliency
 
 
 def compute_inter_source_weights(
@@ -138,6 +154,7 @@ def compute_inter_source_weights(
     guides: Optional[List[np.ndarray]] = None,
     guided_radius: int = 5,
     guided_eps: float = 1e-4,
+    guide_stats_list: Optional[List[Tuple[np.ndarray, np.ndarray, np.ndarray]]] = None,
 ) -> List[np.ndarray]:
     """Compute normalized and smoothed weight maps across N source modalities.
 
@@ -148,55 +165,67 @@ def compute_inter_source_weights(
         guides: Optional list of guidance images (source luminance) for guided filtering.
         guided_radius: Radius for guided filtering.
         guided_eps: Regularization parameter for guided filtering.
+        guide_stats_list: Optional precomputed guide stats matching guides.
 
     Returns:
         List of N weight maps, each (H, W), satisfying sum_i w_i = 1 for all pixels.
     """
     n = len(saliency_list)
-    h, w = saliency_list[0].shape
-    eps = 1e-8
+    eps = np.float32(1e-8)
 
     if normalization == "linear":
-        total_saliency = np.zeros((h, w), dtype=np.float64)
-        for s in saliency_list:
-            total_saliency += s.astype(np.float64)
+        total_saliency = np.asarray(saliency_list[0], dtype=np.float32).copy()
+        for s in saliency_list[1:]:
+            total_saliency += np.asarray(s, dtype=np.float32)
+        inv_denom = np.float32(1.0) / (total_saliency + eps)
+        eps_term = np.float32(1e-8 / n)
         weights = [
-            (s.astype(np.float64) + eps / n) / (total_saliency + eps)
+            (np.asarray(s, dtype=np.float32) + eps_term) * inv_denom
             for s in saliency_list
         ]
     elif normalization == "softmax":
-        scaled = [s.astype(np.float64) / max(temperature, 1e-4) for s in saliency_list]
+        inv_temp = np.float32(1.0 / max(temperature, 1e-4))
+        scaled = [np.asarray(s, dtype=np.float32) * inv_temp for s in saliency_list]
         max_s = np.maximum.reduce(scaled)
         exp_s = [np.exp(s - max_s) for s in scaled]
-        sum_exp = np.sum(exp_s, axis=0) + eps
-        weights = [e / sum_exp for e in exp_s]
+        sum_exp = exp_s[0].copy()
+        for e in exp_s[1:]:
+            sum_exp += e
+        inv_sum_exp = np.float32(1.0) / (sum_exp + eps)
+        weights = [e * inv_sum_exp for e in exp_s]
     else:
         raise ValueError(f"Unknown normalization: {normalization}")
 
     # Apply guided filter smoothing if guides are provided
     if guides is not None and len(guides) == n and guided_radius > 0:
         smoothed_weights = []
-        for w_map, guide in zip(weights, guides):
+        for idx, (w_map, guide) in enumerate(zip(weights, guides)):
+            g_stats = guide_stats_list[idx] if guide_stats_list is not None else None
             filtered = fast_guided_filter(
                 guide=guide,
                 src=w_map,
                 radius=guided_radius,
                 eps=guided_eps,
+                guide_stats=g_stats,
             )
-            smoothed_weights.append(np.maximum(0.0, filtered))
+            np.maximum(filtered, np.float32(0.0), out=filtered)
+            smoothed_weights.append(filtered)
 
         # Re-normalize across sources to preserve exact partition of unity
-        total_smoothed = np.sum(smoothed_weights, axis=0) + eps
-        weights = [sw / total_smoothed for sw in smoothed_weights]
+        total_smoothed = smoothed_weights[0].copy()
+        for sw in smoothed_weights[1:]:
+            total_smoothed += sw
+        inv_total = np.float32(1.0) / (total_smoothed + eps)
+        weights = [sw * inv_total for sw in smoothed_weights]
 
-    return [w_map.astype(np.float32) for w_map in weights]
+    return weights
 
 
 def fuse_cluster_components(
     components1: Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray],
     components2: Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray],
-    masks1: np.ndarray,
-    masks2: np.ndarray,
+    masks1: Optional[np.ndarray],
+    masks2: Optional[np.ndarray],
     guide1: np.ndarray,
     guide2: np.ndarray,
     window_size: int = 7,
@@ -204,14 +233,15 @@ def fuse_cluster_components(
     temperature: float = 0.1,
     guided_radius: int = 5,
     guided_eps: float = 1e-4,
+    active_components: Tuple[str, ...] = ("GT", "GE", "FT", "FE"),
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """Fuse GT, GE, FT, FE across K clusters using the multi-structured weighting network.
 
     Args:
         components1: (GT1, GE1, FT1, FE1) for source 1.
         components2: (GT2, GE2, FT2, FE2) for source 2.
-        masks1: Cluster masks for source 1 of shape (K, H, W).
-        masks2: Cluster masks for source 2 of shape (K, H, W).
+        masks1: Cluster masks for source 1 of shape (K, H, W), or None for unclustered (K=1).
+        masks2: Cluster masks for source 2 of shape (K, H, W), or None for unclustered (K=1).
         guide1: Guidance luminance for source 1.
         guide2: Guidance luminance for source 2.
         window_size: Statistics window size.
@@ -219,31 +249,47 @@ def fuse_cluster_components(
         temperature: Softmax temperature.
         guided_radius: Guided filter radius.
         guided_eps: Guided filter epsilon.
+        active_components: Subset of ('GT', 'GE', 'FT', 'FE') to fuse; inactive ones return zeros.
 
     Returns:
         Tuple of (fused_GT, fused_GE, fused_FT, fused_FE), each of shape (H, W).
     """
-    comp_names = ["GT", "GE", "FT", "FE"]
-    n_clusters = masks1.shape[0]
+    comp_names = ("GT", "GE", "FT", "FE")
+    active_set = set(active_components)
     h, w = guide1.shape
+    unclustered = masks1 is None or masks2 is None
+    n_clusters = 1 if unclustered else masks1.shape[0]
+
+    guide_stats_list = None
+    if guided_radius > 0:
+        guide_stats_list = [
+            precompute_guide_stats(guide1, radius=guided_radius, eps=guided_eps),
+            precompute_guide_stats(guide2, radius=guided_radius, eps=guided_eps),
+        ]
 
     fused_outputs = {name: np.zeros((h, w), dtype=np.float32) for name in comp_names}
 
     for k in range(n_clusters):
-        m1_k = masks1[k]
-        m2_k = masks2[k]
+        m1_k = None if unclustered else masks1[k]
+        m2_k = None if unclustered else masks2[k]
 
-        # Process each component type in this cluster
+        # Process each active component type in this cluster
         for name, c1, c2 in zip(comp_names, components1, components2):
-            # Cluster-gated components
-            c1_k = c1 * m1_k
-            c2_k = c2 * m2_k
+            if name not in active_set:
+                continue
+
+            if unclustered:
+                c1_k = c1
+                c2_k = c2
+            else:
+                c1_k = c1 * m1_k
+                c2_k = c2 * m2_k
 
             # Saliency maps
             s1_k = compute_component_saliency(name, c1_k, window_size=window_size)
             s2_k = compute_component_saliency(name, c2_k, window_size=window_size)
 
-            # Guided weights
+            # Guided weights reusing precomputed guide statistics
             w1_k, w2_k = compute_inter_source_weights(
                 [s1_k, s2_k],
                 normalization=normalization,
@@ -251,11 +297,15 @@ def fuse_cluster_components(
                 guides=[guide1, guide2],
                 guided_radius=guided_radius,
                 guided_eps=guided_eps,
+                guide_stats_list=guide_stats_list,
             )
 
             # Fused cluster component
             fused_c_k = w1_k * c1_k + w2_k * c2_k
-            fused_outputs[name] += fused_c_k
+            if unclustered:
+                fused_outputs[name] = fused_c_k
+            else:
+                fused_outputs[name] += fused_c_k
 
     return (
         fused_outputs["GT"],
@@ -291,7 +341,9 @@ def reconstruct_fused_image(
     Returns:
         Reconstructed 2D float array in [0.0, 1.0].
     """
-    edge_term = fused_ge + fused_fe
-    edge_compensation = np.sign(fused_ft) * edge_term
-    fused = alpha * fused_gt + beta * fused_ft + gamma * edge_compensation
-    return np.clip(fused, 0.0, 1.0).astype(np.float32)
+    fused = np.float32(alpha) * fused_gt + np.float32(beta) * fused_ft
+    if gamma != 0.0:
+        edge_term = fused_ge + fused_fe
+        fused += np.float32(gamma) * np.sign(fused_ft) * edge_term
+    np.clip(fused, 0.0, 1.0, out=fused)
+    return fused.astype(np.float32, copy=False)

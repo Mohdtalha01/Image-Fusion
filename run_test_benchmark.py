@@ -8,8 +8,7 @@ import cv2
 import pandas as pd
 import yaml
 
-from fusion.fuse import extract_luminance_and_chroma, ycbcr_to_rgb
-from fusion.weighting import fuse_cluster_components, reconstruct_fused_image
+from fusion.fuse import CADMSWNFusion
 from baselines.averaging import fuse_averaging
 from baselines.gff import fuse_gff
 from baselines.dwt import fuse_dwt
@@ -20,63 +19,24 @@ from metrics.information import compute_entropy, compute_mutual_information
 from metrics.features import compute_standard_deviation, compute_spatial_frequency, compute_average_gradient
 from metrics.structural import compute_qabf_and_nabf, compute_ssim, compute_vif
 
+_FROZEN_CADM_CONFIG = {
+    "color": {"color_space": "YCbCr"},
+    "clustering": {"n_clusters": 1, "window_size": 7, "random_state": 42},
+    "diffusion": {"iterations": 20, "kappa": 0.1176, "step_size": 0.20, "conduction": "exponential"},
+    "weighting": {
+        "window_size": 7,
+        "normalization": "linear",
+        "temperature": 0.1,
+        "guided_filter": {"enabled": True, "radius": 5, "eps": 0.0001},
+        "reconstruction": {"alpha": 1.0, "beta": 1.0, "gamma": 0.0, "signed_fine_edge": False},
+    },
+}
+_FROZEN_PIPELINE = CADMSWNFusion(config=_FROZEN_CADM_CONFIG)
+
+
 def fuse_cadm_frozen(im1, im2):
     """CADM-MSWN v2 winning configuration: T=20, K=1, gamma=0.0, linear norm, r=5."""
-    lum1, chroma1, is_col1 = extract_luminance_and_chroma(im1, "YCbCr")
-    lum2, chroma2, is_col2 = extract_luminance_and_chroma(im2, "YCbCr")
-
-    if is_col1 and not is_col2:
-        target_cb, target_cr = chroma1[0], chroma1[1]
-        is_color = True
-    elif is_col2 and not is_col1:
-        target_cb, target_cr = chroma2[0], chroma2[1]
-        is_color = True
-    elif is_col1 and is_col2:
-        target_cb = 0.5 * (chroma1[0] + chroma2[0])
-        target_cr = 0.5 * (chroma1[1] + chroma2[1])
-        is_color = True
-    else:
-        is_color = False
-
-    u1 = lum1.astype(np.float32, copy=True)
-    u2 = lum2.astype(np.float32, copy=True)
-    inv_kappa = np.float32(1.0 / 0.1176)
-    step = np.float32(0.20)
-
-    for _ in range(20):
-        for u in (u1, u2):
-            dn = np.zeros_like(u); dn[:-1, :] = u[1:, :] - u[:-1, :]
-            ds = np.zeros_like(u); ds[1:, :] = u[:-1, :] - u[1:, :]
-            de = np.zeros_like(u); de[:, :-1] = u[:, 1:] - u[:, :-1]
-            dw = np.zeros_like(u); dw[:, 1:] = u[:, :-1] - u[:, 1:]
-
-            cn = np.exp(-((dn * inv_kappa) ** 2))
-            cs = np.exp(-((ds * inv_kappa) ** 2))
-            ce = np.exp(-((de * inv_kappa) ** 2))
-            cw = np.exp(-((dw * inv_kappa) ** 2))
-
-            u += step * (cn * dn + cs * ds + ce * de + cw * dw)
-
-    gt1 = u1; ft1 = lum1 - gt1
-    gt2 = u2; ft2 = lum2 - gt2
-    ge1 = np.zeros_like(gt1); fe1 = np.zeros_like(ft1)
-    ge2 = np.zeros_like(gt2); fe2 = np.zeros_like(ft2)
-
-    m1 = np.ones((1, *lum1.shape), dtype=np.float32)
-    m2 = np.ones((1, *lum2.shape), dtype=np.float32)
-
-    f_gt, f_ge, f_ft, f_fe = fuse_cluster_components(
-        (gt1, ge1, ft1, fe1), (gt2, ge2, ft2, fe2),
-        m1, m2, lum1, lum2,
-        window_size=7, normalization="linear", temperature=0.1,
-        guided_radius=5, guided_eps=0.0001
-    )
-
-    f_lum = reconstruct_fused_image(f_gt, f_ge, f_ft, f_fe, alpha=1.0, beta=1.0, gamma=0.0)
-
-    if is_color:
-        return ycbcr_to_rgb(f_lum, target_cb, target_cr)
-    return f_lum
+    return _FROZEN_PIPELINE.fuse(im1, im2)
 
 def evaluate_metrics(fused, im1, im2):
     qabf, nabf = compute_qabf_and_nabf(fused, im1, im2)

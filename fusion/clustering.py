@@ -37,7 +37,7 @@ def extract_pixel_features(
         Feature array of shape (H, W, 4) in [0, 1].
     """
     h, w = image.shape
-    img_32 = image.astype(np.float32)
+    img_32 = np.asarray(image, dtype=np.float32)
 
     # 1. Intensity
     feat_i = img_32
@@ -47,27 +47,29 @@ def extract_pixel_features(
     feat_mean = cv2.boxFilter(img_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
 
     # 3. Local Standard Deviation
-    img_sq_mean = cv2.boxFilter(img_32**2, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
-    variance = np.maximum(0.0, img_sq_mean - feat_mean**2)
+    img_sq_mean = cv2.boxFilter(img_32 * img_32, cv2.CV_32F, ksize, borderType=cv2.BORDER_REFLECT)
+    variance = np.maximum(0.0, img_sq_mean - feat_mean * feat_mean)
     feat_std = np.sqrt(variance)
 
     # 4. Gradient Magnitude
     feat_grad = compute_gradient_magnitude(img_32)
 
-    features = [feat_i, feat_mean, feat_std, feat_grad]
-    normalized_features = []
-
-    for f in features:
+    out = np.empty((h, w, 4), dtype=np.float32)
+    for idx, f in enumerate((feat_i, feat_mean, feat_std, feat_grad)):
         min_v = float(np.min(f))
         max_v = float(np.max(f))
         diff = max_v - min_v
         if diff > 1e-8:
-            norm_f = (f - min_v) / diff
+            np.clip(
+                (f - np.float32(min_v)) * np.float32(1.0 / diff),
+                0.0,
+                1.0,
+                out=out[..., idx],
+            )
         else:
-            norm_f = np.zeros_like(f)
-        normalized_features.append(norm_f)
+            out[..., idx] = 0.0
 
-    return np.stack(normalized_features, axis=-1).astype(np.float32)
+    return out
 
 
 def fuzzy_c_means(
@@ -92,30 +94,29 @@ def fuzzy_c_means(
         Hard cluster assignment labels of shape (N,).
     """
     rng = np.random.RandomState(random_state)
-    n_samples, n_features = data.shape
+    n_samples, _ = data.shape
+    data_64 = np.asarray(data, dtype=np.float64)
+    data_norm_sq = np.sum(data_64 * data_64, axis=1)  # (N,)
+    inv_m_minus_1 = -1.0 / (m - 1.0)
 
     # Initialize random membership matrix U
     u = rng.rand(n_clusters, n_samples)
-    u = u / np.sum(u, axis=0, keepdims=True)
+    u /= np.sum(u, axis=0, keepdims=True)
 
     for _ in range(max_iter):
-        u_prev = u.copy()
+        u_prev = u
         um = u**m
 
         # Compute cluster centers: shape (K, D)
-        centers = np.dot(um, data) / np.sum(um, axis=1, keepdims=True)
+        centers = (um @ data_64) / np.sum(um, axis=1, keepdims=True)
+        centers_norm_sq = np.sum(centers * centers, axis=1)[:, None]  # (K, 1)
 
-        # Compute distances: shape (K, N)
-        # ||x_j - c_i||
-        dist = np.zeros((n_clusters, n_samples), dtype=np.float64)
-        for i in range(n_clusters):
-            dist[i] = np.linalg.norm(data - centers[i], axis=1)
+        # Vectorized squared distances ||x_j - c_i||^2 = ||x_j||^2 + ||c_i||^2 - 2 c_i . x_j
+        dist_sq = centers_norm_sq + data_norm_sq[None, :] - 2.0 * (centers @ data_64.T)
+        np.maximum(dist_sq, 1e-20, out=dist_sq)
 
-        dist = np.fmax(dist, 1e-10)
-
-        # Update membership matrix U
-        # u_ij = 1 / sum_k (d_ij / d_kj)^(2 / (m - 1))
-        inv_dist = dist ** (-2.0 / (m - 1.0))
+        # Update membership matrix U using dist_sq^(-1/(m-1)) == dist^(-2/(m-1))
+        inv_dist = dist_sq**inv_m_minus_1
         u = inv_dist / np.sum(inv_dist, axis=0, keepdims=True)
 
         if np.max(np.abs(u - u_prev)) < tol:
@@ -175,10 +176,9 @@ def generate_cluster_masks(
     else:
         raise ValueError(f"Unknown clustering method: {method}")
 
-    # Build hard one-hot masks
+    # Build hard one-hot masks in one vectorized scatter
     masks = np.zeros((n_clusters, h * w), dtype=np.float32)
-    for k in range(n_clusters):
-        masks[k, labels == k] = 1.0
+    masks[labels, np.arange(h * w)] = 1.0
 
     return masks.reshape(n_clusters, h, w)
 
@@ -212,6 +212,11 @@ def cluster_source_pair(
     Returns:
         Tuple of (masks1, masks2), each of shape (K, H, W).
     """
+    if n_clusters == 1:
+        h, w = img1.shape
+        ones = np.ones((1, h, w), dtype=np.float32)
+        return ones, ones.copy()
+
     feat1 = extract_pixel_features(img1, window_size=window_size)
     feat2 = extract_pixel_features(img2, window_size=window_size)
 

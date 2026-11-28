@@ -9,7 +9,7 @@ from typing import Optional, Dict, Any, Tuple, Union
 import numpy as np
 import cv2
 
-from fusion.decomposition import decompose_structures
+from fusion.decomposition import decompose_structures, perona_malik_diffusion
 from fusion.clustering import cluster_source_pair
 from fusion.weighting import fuse_cluster_components, reconstruct_fused_image
 
@@ -85,9 +85,12 @@ def extract_luminance_and_chroma(
     Returns:
         Tuple of (luminance_2d, chroma_tuple_or_None, is_color_boolean).
     """
-    img = image.astype(np.float32)
-    if img.max() > 1.0:
-        img = img / 255.0
+    if image.dtype == np.uint8:
+        img = image.astype(np.float32) * np.float32(1.0 / 255.0)
+    else:
+        img = np.asarray(image, dtype=np.float32)
+        if float(np.max(img)) > 1.0:
+            img = img * np.float32(1.0 / 255.0)
 
     if img.ndim == 2:
         return np.clip(img, 0.0, 1.0), None, False
@@ -169,34 +172,58 @@ class CADMSWNFusion:
         Returns:
             Fused luminance array (H, W) in [0, 1].
         """
-        # Step 1: Pixel Feature Extraction & Clustering
-        masks1, masks2 = cluster_source_pair(
-            lum1,
-            lum2,
-            n_clusters=self.n_clusters,
-            method=self.cluster_method,
-            mode=self.cluster_mode,
-            window_size=self.cluster_window,
-            random_state=self.random_state,
-        )
+        # Step 1: Pixel Feature Extraction & Clustering (skipped when K == 1)
+        if self.n_clusters == 1:
+            masks1, masks2 = None, None
+        else:
+            masks1, masks2 = cluster_source_pair(
+                lum1,
+                lum2,
+                n_clusters=self.n_clusters,
+                method=self.cluster_method,
+                mode=self.cluster_mode,
+                window_size=self.cluster_window,
+                random_state=self.random_state,
+            )
 
-        # Steps 2 & 3: Structural Decomposition (GT, GE, FT, FE)
-        comp1 = decompose_structures(
-            lum1,
-            iterations=self.diff_iterations,
-            kappa=self.diff_kappa,
-            step_size=self.diff_step_size,
-            conduction=self.diff_conduction,
-            signed_fe=self.signed_fe,
-        )
-        comp2 = decompose_structures(
-            lum2,
-            iterations=self.diff_iterations,
-            kappa=self.diff_kappa,
-            step_size=self.diff_step_size,
-            conduction=self.diff_conduction,
-            signed_fe=self.signed_fe,
-        )
+        # Steps 2 & 3: Structural Decomposition (skip edge maps when gamma == 0.0)
+        if self.gamma == 0.0:
+            gt1 = perona_malik_diffusion(
+                lum1,
+                iterations=self.diff_iterations,
+                kappa=self.diff_kappa,
+                step_size=self.diff_step_size,
+                conduction=self.diff_conduction,
+            )
+            gt2 = perona_malik_diffusion(
+                lum2,
+                iterations=self.diff_iterations,
+                kappa=self.diff_kappa,
+                step_size=self.diff_step_size,
+                conduction=self.diff_conduction,
+            )
+            empty = np.empty((0, 0), dtype=np.float32)
+            comp1 = (gt1, empty, lum1 - gt1, empty)
+            comp2 = (gt2, empty, lum2 - gt2, empty)
+            active_comps = ("GT", "FT")
+        else:
+            comp1 = decompose_structures(
+                lum1,
+                iterations=self.diff_iterations,
+                kappa=self.diff_kappa,
+                step_size=self.diff_step_size,
+                conduction=self.diff_conduction,
+                signed_fe=self.signed_fe,
+            )
+            comp2 = decompose_structures(
+                lum2,
+                iterations=self.diff_iterations,
+                kappa=self.diff_kappa,
+                step_size=self.diff_step_size,
+                conduction=self.diff_conduction,
+                signed_fe=self.signed_fe,
+            )
+            active_comps = ("GT", "GE", "FT", "FE")
 
         # Steps 4 & 5: Multi-Structured Weighted Fusion
         fused_gt, fused_ge, fused_ft, fused_fe = fuse_cluster_components(
@@ -211,6 +238,7 @@ class CADMSWNFusion:
             temperature=self.temperature,
             guided_radius=self.gf_radius,
             guided_eps=self.gf_eps,
+            active_components=active_comps,
         )
 
         # Composite Reconstruction
